@@ -1,5 +1,18 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
+  basePath: '/r9analyse_fb',
+  assetPrefix: '/r9analyse_fb/',
+  reactStrictMode: true,
+  swcMinify: true,
+  webpack: (config, { isServer }) => {
+@@ -14,17 +11,3 @@ const nextConfig = {
+};
+
+module.exports = nextConfig;
+
+/**
+const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   webpack: (config, { isServer }) => {
@@ -9,5 +22,5 @@ const nextConfig = {
     return config;
   },
 };
-
 module.exports = nextConfig;
+*/
