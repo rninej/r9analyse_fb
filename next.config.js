@@ -5,16 +5,9 @@ const nextConfig = {
   assetPrefix: '/r9analyse_fb/',
   reactStrictMode: true,
   swcMinify: true,
-  webpack: (config, { isServer }) => {
-@@ -14,17 +11,3 @@ const nextConfig = {
-};
-
-module.exports = nextConfig;
-
-/**
-const nextConfig = {
-  reactStrictMode: true,
-  swcMinify: true,
+  images: {
+    unoptimized: true,
+  },
   webpack: (config, { isServer }) => {
     if (!isServer) {
       config.resolve.fallback.fs = false;
@@ -22,5 +15,5 @@ const nextConfig = {
     return config;
   },
 };
+
 module.exports = nextConfig;
-*/
