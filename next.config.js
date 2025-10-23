@@ -1,8 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  basePath: '/r9analyse_fb',
-  assetPrefix: '/r9analyse_fb/',
   reactStrictMode: true,
   swcMinify: true,
   images: {
