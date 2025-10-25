@@ -9,7 +9,6 @@ import { Icon } from "@iconify/react";
 import { useRouter } from "next/router";
 import NavLink from "@/components/NavLink";
 import Image from "next/image";
-import { styled } from "@mui/material/styles";
 import ChessComSearch from "@/components/ChessComSearch";
 
 interface Props {

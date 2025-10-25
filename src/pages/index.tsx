@@ -200,9 +200,9 @@ export default function GameAnalysis() {
         <DialogTitle>Welcome to MrAnalyse</DialogTitle>
         <DialogContent>
           <p>
-            To get started, please enter your Chess.com username below. This will
-            allow MrAnalyse to automatically fetch and analyze your games as you
-            play them.
+            To get started, please enter your Chess.com username below. This
+            will allow MrAnalyse to automatically fetch and analyze your games
+            as you play them.
           </p>
           <ChessComSearch />
         </DialogContent>

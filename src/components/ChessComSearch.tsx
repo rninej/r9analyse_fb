@@ -22,7 +22,11 @@ export default function ChessComSearch() {
   return (
     <Box sx={{ display: "flex", alignItems: "center" }}>
       {watchingUsername ? (
-        <Button variant="contained" onClick={handleStop} sx={{ height: "35px" }}>
+        <Button
+          variant="contained"
+          onClick={handleStop}
+          sx={{ height: "35px" }}
+        >
           Watching {watchingUsername}
         </Button>
       ) : (
