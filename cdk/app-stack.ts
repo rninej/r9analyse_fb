@@ -4,6 +4,9 @@ import {
   AccessLevel,
   Distribution,
   ResponseHeadersPolicy,
+  Function, 
+  FunctionCode, 
+  FunctionEventType
 } from "aws-cdk-lib/aws-cloudfront";
 import { S3BucketOrigin } from "aws-cdk-lib/aws-cloudfront-origins";
 import { Bucket, BucketAccessControl } from "aws-cdk-lib/aws-s3";
@@ -13,7 +16,6 @@ import {
   Source,
 } from "aws-cdk-lib/aws-s3-deployment";
 import path from "path";
-import { renameSync } from "fs";
 import { ARecord, HostedZone, RecordTarget } from "aws-cdk-lib/aws-route53";
 import { CloudFrontTarget } from "aws-cdk-lib/aws-route53-targets";
 import { DnsValidatedCertificate } from "aws-cdk-lib/aws-certificatemanager";
@@ -27,13 +29,6 @@ export class AppStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props: AppStackProps) {
     super(scope, id, props);
     const { domainName, pagePaths } = props;
-
-    for (const pageName of pagePaths) {
-      renameSync(
-        path.resolve(__dirname, `../out/${pageName}.html`),
-        path.resolve(__dirname, `../out/${pageName}`)
-      );
-    }
 
     const mainBucket = new Bucket(this, "Bucket", {
       accessControl: BucketAccessControl.PRIVATE,
@@ -72,7 +67,7 @@ export class AppStack extends cdk.Stack {
         }),
       ],
       exclude: ["*"],
-      include: [...pagePaths, "*.html"],
+      include: ["*.html"],
       memoryLimit: 512,
       cacheControl: [
         CacheControl.noCache(),
@@ -129,6 +124,22 @@ export class AppStack extends cdk.Stack {
       }
     );
 
+    const rewriteFunction = new Function(this, 'RewriteFunction', {
+        code: FunctionCode.fromInline(`
+          function handler(event) {
+            var request = event.request;
+            var uri = request.uri;
+
+            if (uri.endsWith('/')) {
+                request.uri += 'index.html';
+            } else if (!uri.split('/').pop().includes('.')) {
+                request.uri += '.html';
+            }
+
+            return request;
+        }`),
+      });
+
     const hostedZone = HostedZone.fromLookup(this, "HostedZone", {
       domainName,
     });
@@ -157,6 +168,10 @@ export class AppStack extends cdk.Stack {
       defaultBehavior: {
         origin: mainOriginAccessControl,
         responseHeadersPolicy,
+        functionAssociations: [{
+            function: rewriteFunction,
+            eventType: FunctionEventType.VIEWER_REQUEST,
+        }],
       },
       additionalBehaviors: {
         "/engines/*": {

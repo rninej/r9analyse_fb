@@ -1,4 +1,3 @@
-
 import { EngineWorker } from "@/types/engine";
 import { isIosDevice, isMobileDevice } from "./shared";
 
@@ -46,7 +45,7 @@ export const sendCommandsToWorker = (
 };
 
 export const getRecommendedWorkersNb = (): number => {
-  if (typeof navigator === 'undefined') {
+  if (typeof navigator === "undefined") {
     return 1; // Default to a single worker on the server
   }
 

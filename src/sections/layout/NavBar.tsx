@@ -10,23 +10,12 @@ import { useRouter } from "next/router";
 import NavLink from "@/components/NavLink";
 import Image from "next/image";
 import { styled } from "@mui/material/styles";
+import ChessComSearch from "@/components/ChessComSearch";
 
 interface Props {
   darkMode: boolean;
   switchDarkMode: () => void;
 }
-
-// Styled component to make the link look like a button
-const StyledIconButtonLink = styled("a")({
-  color: "inherit",
-  display: "inline-flex",
-  alignItems: "center",
-  justifyContent: "center",
-  textDecoration: "none", // Remove underline from link
-  "&:hover": {
-    cursor: "pointer", // Change cursor on hover
-  },
-});
 
 export default function NavBar({ darkMode, switchDarkMode }: Props) {
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -80,26 +69,9 @@ export default function NavBar({ darkMode, switchDarkMode }: Props) {
             </Typography>
           </NavLink>
 
-          <StyledIconButtonLink
-            href="https://discord.gg/Yr99abAcUr"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <IconButton color="inherit" component="span">
-              <Icon icon="ri:discord-fill" />
-            </IconButton>
-          </StyledIconButtonLink>
+          <Box sx={{ flexGrow: 1 }} />
 
-          <StyledIconButtonLink
-            href="https://github.com/GuillaumeSD/MrAnalyse"
-            target="_blank"
-            rel="noopener noreferrer"
-            sx={{ ml: "min(0.6rem, 0.8vw)" }}
-          >
-            <IconButton color="inherit" component="span">
-              <Icon icon="mdi:github" />
-            </IconButton>
-          </StyledIconButtonLink>
+          <ChessComSearch />
 
           <IconButton
             sx={{ ml: "min(0.6rem, 0.8vw)" }}

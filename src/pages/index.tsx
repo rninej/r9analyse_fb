@@ -1,18 +1,18 @@
-
-import Board from "@/sections/analysis/board";
-import PanelHeader from "@/sections/analysis/panelHeader";
-import PanelToolBar from "@/sections/analysis/panelToolbar";
-import AnalysisTab from "@/sections/analysis/panelBody/analysisTab";
-import ClassificationTab from "@/sections/analysis/panelBody/classificationTab";
-import { boardAtom, gameAtom, gameEvalAtom } from "@/sections/analysis/states";
+import {
+  boardAtom,
+  chessComUsernameSearchAtom,
+  gameAtom,
+  gameEvalAtom,
+} from "@/sections/analysis/states";
 import {
   Alert,
   Box,
-  Button,
+  Dialog,
+  DialogContent,
+  DialogTitle,
   Divider,
   Grid2 as Grid,
   Snackbar,
-  TextField,
   useMediaQuery,
   useTheme,
 } from "@mui/material";
@@ -24,10 +24,22 @@ import { PageTitle } from "@/components/pageTitle";
 import ChessComWatcher from "@/services/chessComWatcher";
 import { LoadedGame } from "@/types/game";
 import { Chess } from "chess.js";
+import { useRouter } from "next/router";
+import Board from "@/sections/analysis/board";
+import PanelHeader from "@/sections/analysis/panelHeader";
+import PanelToolBar from "@/sections/analysis/panelToolbar";
+import AnalysisTab from "@/sections/analysis/panelBody/analysisTab";
+import ClassificationTab from "@/sections/analysis/panelBody/classificationTab";
+import ChessComSearch from "@/components/ChessComSearch";
 
 export default function GameAnalysis() {
   const theme = useTheme();
   const isLgOrGreater = useMediaQuery(theme.breakpoints.up("lg"));
+  const router = useRouter();
+  const { chessComUsername: chessComUsernameFromUrl } = router.query;
+  const chessComUsernameFromSearch = useAtomValue(chessComUsernameSearchAtom);
+  const chessComUsername =
+    chessComUsernameFromSearch || (chessComUsernameFromUrl as string);
 
   const gameEval = useAtomValue(gameEvalAtom);
   const game = useAtomValue(gameAtom);
@@ -36,10 +48,8 @@ export default function GameAnalysis() {
 
   const showMovesTab = game.history().length > 0 || board.history().length > 0;
 
-  const [username, setUsername] = useState("");
   const [watcher, setWatcher] = useState<ChessComWatcher | null>(null);
   const [newGame, setNewGame] = useState<LoadedGame | null>(null);
-  const [isWatching, setIsWatching] = useState(false);
   const [isAutoAnalyzing, setIsAutoAnalyzing] = useState(false);
 
   useEffect(() => {
@@ -60,21 +70,16 @@ export default function GameAnalysis() {
     }
   }, [gameEval, isAutoAnalyzing]);
 
-  const startWatcher = () => {
-    const newWatcher = new ChessComWatcher(username);
-    newWatcher.startWatching((game) => {
-      setNewGame(game);
-    });
-    setWatcher(newWatcher);
-    setIsWatching(true);
-  };
+  useEffect(() => {
+    if (typeof chessComUsername === "string" && chessComUsername) {
+      const startWatcher = () => {
+        const newWatcher = new ChessComWatcher(chessComUsername);
+        newWatcher.startWatching((game) => {
+          setNewGame(game);
+        });
+        setWatcher(newWatcher);
+      };
 
-  const handleToggleWatching = () => {
-    if (isWatching) {
-      watcher?.stopWatching();
-      setWatcher(null);
-      setIsWatching(false);
-    } else {
       if (Notification.permission !== "granted") {
         Notification.requestPermission().then((permission) => {
           if (permission === "granted") {
@@ -85,24 +90,16 @@ export default function GameAnalysis() {
         startWatcher();
       }
     }
-  };
+
+    return () => {
+      watcher?.stopWatching();
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [chessComUsername]);
 
   return (
     <Grid container gap={4} justifyContent="space-evenly" alignItems="start">
       <PageTitle title="MrAnalyse Game Analysis" />
-
-      <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center', gap: 2, alignItems: 'center' }}>
-        <TextField 
-          label="Chess.com Username" 
-          variant="outlined" 
-          value={username} 
-          onChange={(e) => setUsername(e.target.value)} 
-          disabled={isWatching}
-        />
-        <Button variant="contained" onClick={handleToggleWatching}>
-          {isWatching ? "Stop Watching" : "Start Watching"}
-        </Button>
-      </Box>
 
       <Board />
 
@@ -154,11 +151,16 @@ export default function GameAnalysis() {
             <ClassificationTab id="tabContent1" />
           </>
         ) : (
-          <Box width="100%" display="flex" flexDirection="column" alignItems="center">
+          <Box
+            width="100%"
+            display="flex"
+            flexDirection="column"
+            alignItems="center"
+          >
             <AnalysisTab id="tabContent0" />
-            {gameEval && <Divider sx={{width: "90%", my: 2}}/>}
+            {gameEval && <Divider sx={{ width: "90%", my: 2 }} />}
             {gameEval && <GraphTab id="tabContent2" />}
-            {showMovesTab && <Divider sx={{width: "90%", my: 2}}/>}
+            {showMovesTab && <Divider sx={{ width: "90%", my: 2 }} />}
             {showMovesTab && <ClassificationTab id="tabContent1" />}
           </Box>
         )}
@@ -183,12 +185,28 @@ export default function GameAnalysis() {
         open={!!newGame}
         autoHideDuration={6000}
         onClose={() => setNewGame(null)}
-        anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
+        anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
       >
-        <Alert onClose={() => setNewGame(null)} severity="success" sx={{ width: '100%' }}>
+        <Alert
+          onClose={() => setNewGame(null)}
+          severity="success"
+          sx={{ width: "100%" }}
+        >
           New game found: {newGame?.white.name} vs {newGame?.black.name}
         </Alert>
       </Snackbar>
+
+      <Dialog open={!chessComUsername} fullWidth maxWidth="sm">
+        <DialogTitle>Welcome to MrAnalyse</DialogTitle>
+        <DialogContent>
+          <p>
+            To get started, please enter your Chess.com username below. This will
+            allow MrAnalyse to automatically fetch and analyze your games as you
+            play them.
+          </p>
+          <ChessComSearch />
+        </DialogContent>
+      </Dialog>
     </Grid>
   );
 }

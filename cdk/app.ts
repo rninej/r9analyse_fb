@@ -4,7 +4,8 @@ import { AppStack } from "./app-stack";
 const app = new cdk.App();
 
 new AppStack(app, "FreechessWebapp", {
-  env: { region: "eu-west-3", account: process.env.CDK_DEFAULT_ACCOUNT },
+  // TODO: Replace with your AWS account number
+  env: { region: "eu-west-3", account: "123456789012" },
   domainName: "chesskit.org",
-  pagePaths: ["play", "database"],
+  pagePaths: ["play", "database", "review"],
 });

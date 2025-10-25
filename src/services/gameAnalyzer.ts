@@ -1,14 +1,12 @@
-
 import { Stockfish17 } from "@/lib/engine/stockfish17";
 import { UciEngine } from "@/lib/engine/uciEngine";
-import { Game } from "@/types/game";
 
 class GameAnalyzer {
   private engine: UciEngine | null = null;
 
-  public async analyzeGame(pgn: string): Promise<any> {
+  public async analyzeGame(pgn: string) {
     if (!this.engine) {
-      this.engine = await Stockfish17.create(true); 
+      this.engine = await Stockfish17.create(true);
     }
 
     // This is a placeholder for the actual analysis logic.
