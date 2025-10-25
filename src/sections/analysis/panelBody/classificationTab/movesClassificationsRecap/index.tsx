@@ -20,7 +20,7 @@ export default function MovesClassificationsRecap() {
       sx={{ scrollbarWidth: "thin", overflowY: "auto" }}
       height="100%"
       maxHeight="22rem"
-      size={6}
+      size={12}
     >
       <Grid
         container
@@ -33,7 +33,7 @@ export default function MovesClassificationsRecap() {
           {white.name}
         </Typography>
 
-        <Typography width="7rem" />
+        <Typography width="10rem" />
 
         <Typography width="12rem" align="center" noWrap fontSize="0.9rem">
           {black.name}

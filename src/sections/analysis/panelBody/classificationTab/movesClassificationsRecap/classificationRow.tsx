@@ -93,7 +93,7 @@ export default function ClassificationRow({ classification }: Props) {
         container
         justifyContent="start"
         alignItems="center"
-        width={"7rem"}
+        width={"10rem"}
         gap={1}
         wrap="nowrap"
       >

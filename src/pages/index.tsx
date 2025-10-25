@@ -89,7 +89,7 @@ export default function GameAnalysis() {
 
   return (
     <Grid container gap={4} justifyContent="space-evenly" alignItems="start">
-      <PageTitle title="Chesskit Game Analysis" />
+      <PageTitle title="MrAnalyse Game Analysis" />
 
       <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center', gap: 2, alignItems: 'center' }}>
         <TextField 
