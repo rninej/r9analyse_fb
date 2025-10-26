@@ -63,9 +63,26 @@ export default function GameAnalysis() {
 
   useEffect(() => {
     if (gameEval && isAutoAnalyzing) {
-      new Notification("Game Analysis Complete", {
-        body: "Your new game has been automatically analyzed.",
-      });
+      try {
+        if (
+          "serviceWorker" in navigator &&
+          navigator.serviceWorker.controller
+        ) {
+          navigator.serviceWorker.getRegistration().then((registration) => {
+            if (registration) {
+              registration.showNotification("Game Analysis Complete", {
+                body: "Your new game has been automatically analyzed.",
+              });
+            }
+          });
+        } else {
+          new Notification("Game Analysis Complete", {
+            body: "Your new game has been automatically analyzed.",
+          });
+        }
+      } catch (error) {
+        console.error("Failed to create notification:", error);
+      }
       setIsAutoAnalyzing(false);
     }
   }, [gameEval, isAutoAnalyzing]);
