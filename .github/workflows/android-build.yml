@@ -32,12 +32,6 @@ jobs:
       - name: Install Capacitor CLI
         run: npm install @capacitor/cli
 
-      - name: Initialize Capacitor
-        run: npx cap init "MrAnalyse" "com.mranalyse.app" --web-dir="out"
-
-      - name: Install Capacitor Android
-        run: npm install @capacitor/android
-
       - name: Add Android platform
         run: npx cap add android
 
