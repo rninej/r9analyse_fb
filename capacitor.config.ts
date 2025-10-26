@@ -9,6 +9,11 @@ const config: CapacitorConfig = {
       presentationOptions: ["badge", "sound", "alert"],
     },
   },
+  android: {
+    buildOptions: {
+      javaVersion: 17,
+    },
+  },
 };
 
 export default config;
