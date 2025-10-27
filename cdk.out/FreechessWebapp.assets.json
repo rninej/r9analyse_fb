@@ -1,0 +1,111 @@
+{
+  "version": "41.0.0",
+  "files": {
+    "faa95a81ae7d7373f3e1f242268f904eb748d8d0fdd306e8a6fe515a1905a7d6": {
+      "displayName": "FreechessWebapp/Custom::S3AutoDeleteObjectsCustomResourceProvider Code",
+      "source": {
+        "path": "asset.faa95a81ae7d7373f3e1f242268f904eb748d8d0fdd306e8a6fe515a1905a7d6",
+        "packaging": "zip"
+      },
+      "destinations": {
+        "123456789012-eu-west-3": {
+          "bucketName": "cdk-hnb659fds-assets-123456789012-eu-west-3",
+          "objectKey": "faa95a81ae7d7373f3e1f242268f904eb748d8d0fdd306e8a6fe515a1905a7d6.zip",
+          "region": "eu-west-3",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::123456789012:role/cdk-hnb659fds-file-publishing-role-123456789012-eu-west-3"
+        }
+      }
+    },
+    "8341cb239e4e1842be4d85a62c1b0a519b37f6f3b0e6acc9758db8a98f518fa3": {
+      "displayName": "BucketDeployment/AwsCliLayer/Code",
+      "source": {
+        "path": "asset.8341cb239e4e1842be4d85a62c1b0a519b37f6f3b0e6acc9758db8a98f518fa3.zip",
+        "packaging": "file"
+      },
+      "destinations": {
+        "123456789012-eu-west-3": {
+          "bucketName": "cdk-hnb659fds-assets-123456789012-eu-west-3",
+          "objectKey": "8341cb239e4e1842be4d85a62c1b0a519b37f6f3b0e6acc9758db8a98f518fa3.zip",
+          "region": "eu-west-3",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::123456789012:role/cdk-hnb659fds-file-publishing-role-123456789012-eu-west-3"
+        }
+      }
+    },
+    "4fe0aba5e672b596d0f72505a9eec502f98d46906bb30fae2511fbdc1df4956f": {
+      "displayName": "Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB/Code",
+      "source": {
+        "path": "asset.4fe0aba5e672b596d0f72505a9eec502f98d46906bb30fae2511fbdc1df4956f",
+        "packaging": "zip"
+      },
+      "destinations": {
+        "123456789012-eu-west-3": {
+          "bucketName": "cdk-hnb659fds-assets-123456789012-eu-west-3",
+          "objectKey": "4fe0aba5e672b596d0f72505a9eec502f98d46906bb30fae2511fbdc1df4956f.zip",
+          "region": "eu-west-3",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::123456789012:role/cdk-hnb659fds-file-publishing-role-123456789012-eu-west-3"
+        }
+      }
+    },
+    "08798a2e83edb9f784e1962d03cc7844660c6d0299ee8e20343ca08a3abb4615": {
+      "displayName": "BucketDeployment/Asset1",
+      "source": {
+        "path": "asset.08798a2e83edb9f784e1962d03cc7844660c6d0299ee8e20343ca08a3abb4615",
+        "packaging": "zip"
+      },
+      "destinations": {
+        "123456789012-eu-west-3": {
+          "bucketName": "cdk-hnb659fds-assets-123456789012-eu-west-3",
+          "objectKey": "08798a2e83edb9f784e1962d03cc7844660c6d0299ee8e20343ca08a3abb4615.zip",
+          "region": "eu-west-3",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::123456789012:role/cdk-hnb659fds-file-publishing-role-123456789012-eu-west-3"
+        }
+      }
+    },
+    "3756120132bdac19bcec3a5cb8300c90432b983eb66cc01a565865868839c10c": {
+      "displayName": "BucketEnginesDeployment/Asset1",
+      "source": {
+        "path": "asset.3756120132bdac19bcec3a5cb8300c90432b983eb66cc01a565865868839c10c",
+        "packaging": "zip"
+      },
+      "destinations": {
+        "123456789012-eu-west-3": {
+          "bucketName": "cdk-hnb659fds-assets-123456789012-eu-west-3",
+          "objectKey": "3756120132bdac19bcec3a5cb8300c90432b983eb66cc01a565865868839c10c.zip",
+          "region": "eu-west-3",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::123456789012:role/cdk-hnb659fds-file-publishing-role-123456789012-eu-west-3"
+        }
+      }
+    },
+    "b073cebcf4d61fb152a30f5a5e57a94df7f980a549fdf1a79a0b18c5750522d8": {
+      "displayName": "Certificate/CertificateRequestorFunction/Code",
+      "source": {
+        "path": "asset.b073cebcf4d61fb152a30f5a5e57a94df7f980a549fdf1a79a0b18c5750522d8",
+        "packaging": "zip"
+      },
+      "destinations": {
+        "123456789012-eu-west-3": {
+          "bucketName": "cdk-hnb659fds-assets-123456789012-eu-west-3",
+          "objectKey": "b073cebcf4d61fb152a30f5a5e57a94df7f980a549fdf1a79a0b18c5750522d8.zip",
+          "region": "eu-west-3",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::123456789012:role/cdk-hnb659fds-file-publishing-role-123456789012-eu-west-3"
+        }
+      }
+    },
+    "4daa03e3a2768576d3f6b05c75280288d1fdc1f301b80722de2902e187abad3e": {
+      "displayName": "FreechessWebapp Template",
+      "source": {
+        "path": "FreechessWebapp.template.json",
+        "packaging": "file"
+      },
+      "destinations": {
+        "123456789012-eu-west-3": {
+          "bucketName": "cdk-hnb659fds-assets-123456789012-eu-west-3",
+          "objectKey": "4daa03e3a2768576d3f6b05c75280288d1fdc1f301b80722de2902e187abad3e.json",
+          "region": "eu-west-3",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::123456789012:role/cdk-hnb659fds-file-publishing-role-123456789012-eu-west-3"
+        }
+      }
+    }
+  },
+  "dockerImages": {}
+}

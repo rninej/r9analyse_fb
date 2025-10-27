@@ -1,0 +1,15 @@
+{
+	"appId": "com.mranalyse.app",
+	"appName": "MrAnalyse",
+	"webDir": "out",
+	"plugins": {
+		"PushNotifications": {
+			"presentationOptions": [
+				"badge",
+				"sound",
+				"alert"
+			]
+		}
+	},
+	"android": {}
+}
