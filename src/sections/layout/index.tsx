@@ -37,6 +37,10 @@ export default function Layout({ children }: PropsWithChildren) {
         switchDarkMode={() => setDarkMode((val) => !val)}
       />
       <main style={{ margin: "2vh 1vw" }}>{children}</main>
+      <footer style={{ textAlign: "center", padding: "1rem" }}>
+        <p>Version: 0.1.0</p>
+        <p>Notes: Implemented robust background notifications.</p>
+      </footer>
     </ThemeProvider>
   );
 }
