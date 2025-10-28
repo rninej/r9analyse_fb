@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
 
 android {
     namespace "com.mranalyse.app"
@@ -40,6 +41,10 @@ dependencies {
     androidTestImplementation "androidx.test.ext:junit:$androidxJunitVersion"
     androidTestImplementation "androidx.test.espresso:espresso-core:$androidxEspressoCoreVersion"
     implementation project(':capacitor-cordova-android-plugins')
+
+    // Firebase and WorkManager dependencies
+    implementation 'com.google.firebase:firebase-messaging:23.0.8'
+    implementation 'androidx.work:work-runtime-ktx:2.7.1'
 }
 
 apply from: 'capacitor.build.gradle'
