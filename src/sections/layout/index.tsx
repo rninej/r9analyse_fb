@@ -1,4 +1,9 @@
-import { CssBaseline, ThemeProvider, createTheme } from "@mui/material";
+import {
+  CssBaseline,
+  ThemeProvider,
+  createTheme,
+  GlobalStyles,
+} from "@mui/material";
 import { PropsWithChildren, useMemo } from "react";
 import NavBar from "./NavBar";
 import { red } from "@mui/material/colors";
@@ -20,7 +25,7 @@ export default function Layout({ children }: PropsWithChildren) {
             main: MAIN_THEME_COLOR,
           },
           secondary: {
-            main: isDarkMode ? "#424242" : "#ffffff",
+            main: isDarkMode ? "#424242" : "#FFF8E1",
           },
         },
       }),
@@ -32,6 +37,15 @@ export default function Layout({ children }: PropsWithChildren) {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
+      <GlobalStyles
+        styles={{
+          body: {
+            backgroundImage: isDarkMode
+              ? "linear-gradient(to right, #4d2600, #804000)"
+              : "linear-gradient(to right, #fff5e6, #ffe0b3)",
+          },
+        }}
+      />
       <NavBar
         darkMode={isDarkMode}
         switchDarkMode={() => setDarkMode((val) => !val)}

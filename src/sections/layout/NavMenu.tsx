@@ -9,9 +9,7 @@ import {
   ListItemIcon,
   ListItemText,
   Toolbar,
-  Typography,
 } from "@mui/material";
-import packageJson from "../../../../package.json";
 
 const MenuOptions = [
   { text: "Play", icon: "streamline:chess-pawn", href: "/play" },
@@ -32,7 +30,15 @@ export default function NavMenu({ open, onClose }: Props) {
   return (
     <Drawer anchor="left" open={open} onClose={onClose}>
       <Toolbar />
-      <Box sx={{ width: 250, overflow: "hidden", display: "flex", flexDirection: "column", height: "100%" }}>
+      <Box
+        sx={{
+          width: 250,
+          overflow: "hidden",
+          display: "flex",
+          flexDirection: "column",
+          height: "100%",
+        }}
+      >
         <List>
           {MenuOptions.map(({ text, icon, href }) => (
             <ListItem key={text} disablePadding sx={{ margin: 0.7 }}>
@@ -47,11 +53,6 @@ export default function NavMenu({ open, onClose }: Props) {
             </ListItem>
           ))}
         </List>
-        <Box sx={{ marginTop: "auto", padding: "1em", textAlign: "center" }}>
-          <Typography variant="caption" color="text.secondary">
-            v{packageJson.version}
-          </Typography>
-        </Box>
       </Box>
     </Drawer>
   );
