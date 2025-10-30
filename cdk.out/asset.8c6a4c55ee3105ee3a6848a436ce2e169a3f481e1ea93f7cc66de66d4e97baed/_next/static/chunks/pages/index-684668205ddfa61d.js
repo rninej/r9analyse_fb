@@ -1,1 +1,2487 @@
-(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[332],{16760:(e,t,n)=>{(window.__NEXT_P=window.__NEXT_P||[]).push(["/",function(){return n(87095)}])},34428:(e,t,n)=>{"use strict";n.d(t,{A:()=>a});var i=n(37876),r=n(9227),o=n(77018);function a(e){let{title:t,whiteValue:n,blackValue:a}=e;return(0,i.jsxs)(r.A,{justifyContent:"center",alignItems:"center",flexDirection:"row",columnGap:{xs:"8vw",md:10},children:[(0,i.jsx)(s,{value:n,color:"white"}),(0,i.jsx)(o.A,{align:"center",fontSize:"0.8em",noWrap:!0,children:t}),(0,i.jsx)(s,{value:a,color:"black"})]})}let s=e=>{let{value:t,color:n}=e;return(0,i.jsx)(o.A,{align:"center",sx:{backgroundColor:n,color:"white"===n?"black":"white"},borderRadius:"5px",lineHeight:"1em",fontSize:"0.9em",padding:.8,fontWeight:"500",border:"1px solid #424242",noWrap:!0,children:t})}},45175:(e,t,n)=>{"use strict";n.d(t,{A:()=>p});var i=n(37876),r=n(19271),o=n(31084),a=n(77018),s=n(85278),l=n(52547),d=n(14232),c=n(54587),h=n.n(c),u=n(658),m=n(65897),g=n(92094);function p(e){let{classification:t}=e,n=(0,s.md)(l.Mx),c=(0,s.md)(l.Sd),p=(0,s.md)(l._X),{goToMove:x}=(0,m.j)(l.Sd),v=(0,d.useMemo)(()=>n?n.positions.filter((e,n)=>n%2!=0&&e.moveClassification===t).length:0,[n,t]),f=(0,d.useMemo)(()=>n?n.positions.filter((e,n)=>n%2==0&&e.moveClassification===t).length:0,[n,t]),j=e=>{if(!n||e===r.Q1.White&&!v||e===r.Q1.Black&&!f)return;let i=t=>t%2!=0&&e===r.Q1.White||t%2==0&&e===r.Q1.Black,o=c.history().length,a=n.positions.findIndex((e,n)=>i(n)&&e.moveClassification===t&&n>o);if(a>0)x(a,p);else{let e=n.positions.findIndex((e,n)=>i(n)&&e.moveClassification===t);e>0&&e!==o&&x(e,p)}};return(0,i.jsxs)(o.A,{container:!0,justifyContent:"space-evenly",alignItems:"center",wrap:"nowrap",color:g.k_[t],size:12,children:[(0,i.jsx)(o.A,{container:!0,justifyContent:"center",alignItems:"center",width:"3rem",style:{cursor:v?"pointer":"default"},onClick:()=>j(r.Q1.White),fontSize:"0.9rem",children:v}),(0,i.jsxs)(o.A,{container:!0,justifyContent:"start",alignItems:"center",width:"10rem",gap:1,wrap:"nowrap",children:[(0,i.jsx)(h(),{src:"/icons/".concat(t,".png"),alt:"move-icon",width:18,height:18,style:{maxWidth:"3.5vw",maxHeight:"3.5vw"}}),(0,i.jsx)(a.A,{align:"center",fontSize:"0.9rem",children:(0,u.ZH)(t)})]}),(0,i.jsx)(o.A,{container:!0,justifyContent:"center",alignItems:"center",width:"3rem",style:{cursor:f?"pointer":"default"},onClick:()=>j(r.Q1.Black),fontSize:"0.9rem",children:f})]})}},79534:e=>{e.exports={style:{fontFamily:"'chessFont', 'chessFont Fallback'"},className:"__className_bd706f"}},87095:(e,t,n)=>{"use strict";n.r(t),n.d(t,{default:()=>tc});var i=n(37876),r=n(52547),o=n(30566),a=n(14232),s=n.t(a,2),l=n(99659),d=n(32432),c=n(76975);let h={...s}.useSyncExternalStore;function u(e={}){let{themeId:t}=e;return function(e,n={}){let i=(0,c.A)();i&&t&&(i=i[t]||i);let r="undefined"!=typeof window&&void 0!==window.matchMedia,{defaultMatches:o=!1,matchMedia:s=r?window.matchMedia:null,ssrMatchMedia:u=null,noSsr:m=!1}=(0,d.A)({name:"MuiUseMediaQuery",props:n,theme:i}),g="function"==typeof e?e(i):e;return(void 0!==h?function(e,t,n,i,r){let o=a.useCallback(()=>t,[t]),s=a.useMemo(()=>{if(r&&n)return()=>n(e).matches;if(null!==i){let{matches:t}=i(e);return()=>t}return o},[o,e,i,r,n]),[l,d]=a.useMemo(()=>{if(null===n)return[o,()=>()=>{}];let t=n(e);return[()=>t.matches,e=>(t.addEventListener("change",e),()=>{t.removeEventListener("change",e)})]},[o,n,e]);return h(d,l,s)}:function(e,t,n,i,r){let[o,s]=a.useState(()=>r&&n?n(e).matches:i?i(e).matches:t);return(0,l.A)(()=>{if(!n)return;let t=n(e),i=()=>{s(t.matches)};return i(),t.addEventListener("change",i),()=>{t.removeEventListener("change",i)}},[e,n]),o})(g=g.replace(/^@media( ?)/m,""),o,s,u,m)}}u();let m=u({themeId:n(3637).A});var g=n(31084),p=n(11494),x=n(71538),v=n(49516),f=n(46061),j=n(85278),y=n(69241),w=n(4697),A=n(68197),b=n(80027),k=n(47951),C=n(45879);function I(e){return(0,C.Ay)("MuiFab",e)}let S=(0,k.A)("MuiFab",["root","primary","secondary","extended","circular","focusVisible","disabled","colorInherit","sizeSmall","sizeMedium","sizeLarge","info","error","warning","success"]);var z=n(68275),M=n(54773),E=n(82987),W=n(78457),P=n(52196);let R=e=>{let{color:t,variant:n,classes:i,size:r}=e,o={root:["root",n,"size".concat((0,b.A)(r)),"inherit"===t?"colorInherit":t]},a=(0,w.A)(o,I,i);return{...i,...a}},L=(0,M.Ay)(A.A,{name:"MuiFab",slot:"Root",shouldForwardProp:e=>(0,z.A)(e)||"classes"===e,overridesResolver:(e,t)=>{let{ownerState:n}=e;return[t.root,t[n.variant],t["size".concat((0,b.A)(n.size))],"inherit"===n.color&&t.colorInherit,t[(0,b.A)(n.size)],t[n.color]]}})((0,E.A)(e=>{var t,n;let{theme:i}=e;return{...i.typography.button,minHeight:36,transition:i.transitions.create(["background-color","box-shadow","border-color"],{duration:i.transitions.duration.short}),borderRadius:"50%",padding:0,minWidth:0,width:56,height:56,zIndex:(i.vars||i).zIndex.fab,boxShadow:(i.vars||i).shadows[6],"&:active":{boxShadow:(i.vars||i).shadows[12]},color:i.vars?i.vars.palette.text.primary:null===(t=(n=i.palette).getContrastText)||void 0===t?void 0:t.call(n,i.palette.grey[300]),backgroundColor:(i.vars||i).palette.grey[300],"&:hover":{backgroundColor:(i.vars||i).palette.grey.A100,"@media (hover: none)":{backgroundColor:(i.vars||i).palette.grey[300]},textDecoration:"none"},["&.".concat(S.focusVisible)]:{boxShadow:(i.vars||i).shadows[6]},variants:[{props:{size:"small"},style:{width:40,height:40}},{props:{size:"medium"},style:{width:48,height:48}},{props:{variant:"extended"},style:{borderRadius:24,padding:"0 16px",width:"auto",minHeight:"auto",minWidth:48,height:48}},{props:{variant:"extended",size:"small"},style:{width:"auto",padding:"0 8px",borderRadius:17,minWidth:34,height:34}},{props:{variant:"extended",size:"medium"},style:{width:"auto",padding:"0 16px",borderRadius:20,minWidth:40,height:40}},{props:{color:"inherit"},style:{color:"inherit"}}]}}),(0,E.A)(e=>{let{theme:t}=e;return{variants:[...Object.entries(t.palette).filter((0,W.A)(["dark","contrastText"])).map(e=>{let[n]=e;return{props:{color:n},style:{color:(t.vars||t).palette[n].contrastText,backgroundColor:(t.vars||t).palette[n].main,"&:hover":{backgroundColor:(t.vars||t).palette[n].dark,"@media (hover: none)":{backgroundColor:(t.vars||t).palette[n].main}}}}})]}}),(0,E.A)(e=>{let{theme:t}=e;return{["&.".concat(S.disabled)]:{color:(t.vars||t).palette.action.disabled,boxShadow:(t.vars||t).shadows[0],backgroundColor:(t.vars||t).palette.action.disabledBackground}}})),X=a.forwardRef(function(e,t){let n=(0,P.b)({props:e,name:"MuiFab"}),{children:r,className:o,color:a="default",component:s="button",disabled:l=!1,disableFocusRipple:d=!1,focusVisibleClassName:c,size:h="large",variant:u="circular",...m}=n,g={...n,color:a,component:s,disabled:l,disableFocusRipple:d,size:h,variant:u},p=R(g);return(0,i.jsx)(L,{className:(0,y.A)(p.root,o),component:s,disabled:l,focusRipple:!d,focusVisibleClassName:(0,y.A)(p.focusVisible,c),ownerState:g,ref:t,...m,classes:p,children:r})});var K=n(18259),_=n(19271),B=n(84147),N=n(47866),F=n(3034),G=n(77018),H=n(88713),T=n(90405),O=n(35779),$=n(83290),Q=n(6003),Y=n(78523),D=n(24705),V=n(35656),U=n(82260),q=n(37242);function J(){let[e,t]=(0,q.v)("show-arrow-best-move",r.XL),[n,o]=(0,q.v)("show-icon-player-move",r.a2);return(0,i.jsxs)(g.A,{container:!0,justifyContent:"space-evenly",alignItems:"center",size:12,gap:3,children:[(0,i.jsx)(V.A,{control:(0,i.jsx)(U.A,{checked:e,onChange:(e,n)=>t(n)}),label:"Show engine best move arrow",sx:{marginX:0}}),(0,i.jsx)(V.A,{control:(0,i.jsx)(U.A,{checked:n,onChange:(e,t)=>o(t)}),label:"Show played move icon",sx:{marginX:0}})]})}var Z=n(47713),ee=n(43699),et=n(99509),en=n(54587),ei=n.n(en),er=n(92094),eo=n(92634);function ea(e){let{open:t,onClose:n}=e,[s,l]=(0,q.v)("engine-depth",r.B2),[d,c]=(0,q.v)("engine-multi-pv",r.FR),[h,u]=(0,q.v)("engine-name",r.Ju),[m,x]=(0,j.fp)(et.U),[v,f]=(0,j.fp)(et._),[y,w]=(0,j.fp)(r.pN),A="dark"===(0,o.A)().palette.mode;return(0,a.useEffect)(()=>{(0,Z.N9)(h)||(ee.m.isSupported()?u(_.Qz.Stockfish16_1Lite):u(_.Qz.Stockfish11))},[u,h]),(0,i.jsxs)(B.A,{open:t,onClose:n,maxWidth:"md",fullWidth:!0,children:[(0,i.jsx)(N.A,{variant:"h5",sx:{paddingBottom:1},children:"Settings"}),(0,i.jsx)(F.A,{sx:{paddingBottom:0},children:(0,i.jsxs)(g.A,{container:!0,justifyContent:"center",alignItems:"center",paddingTop:1,spacing:3,size:12,children:[(0,i.jsx)(g.A,{container:!0,justifyContent:"center",size:{xs:12,sm:7,md:8},children:(0,i.jsxs)(G.A,{variant:"body2",children:[er.H[er.T3].small," is the default engine if your device support its requirements. It offers the best balance between speed and strength."," ",er.H[er.RS].small," is the strongest engine available, note that it requires a one time download of"," ",er.H[er.RS].sizeMb,"MB and is much more compute intensive."]})}),(0,i.jsx)(g.A,{container:!0,justifyContent:"center",size:{xs:12,sm:5,md:4},children:(0,i.jsxs)(H.A,{variant:"outlined",children:[(0,i.jsx)(T.A,{id:"dialog-select-label",children:"Engine"}),(0,i.jsx)(O.A,{labelId:"dialog-select-label",id:"dialog-select",displayEmpty:!0,input:(0,i.jsx)($.A,{label:"Engine"}),value:h,onChange:e=>u(e.target.value),sx:{width:280,maxWidth:"100%"},children:Object.values(_.Qz).map(e=>(0,i.jsx)(Q.A,{value:e,disabled:!(0,Z.N9)(e),children:er.H[e].full},e))})]})}),(0,i.jsx)(K.A,{label:"Maximum depth",value:s,setValue:l,min:10,max:30,marksFilter:2}),(0,i.jsx)(K.A,{label:"Number of lines",value:d,setValue:c,min:2,max:6,marksFilter:1,size:6}),(0,i.jsx)(J,{}),(0,i.jsx)(g.A,{container:!0,justifyContent:"center",size:{xs:12,sm:8,md:9},children:(0,i.jsx)(K.A,{label:"Board hue",value:m,setValue:x,min:0,max:360})}),(0,i.jsx)(g.A,{container:!0,justifyContent:"center",alignItems:"center",size:{xs:12,sm:4,md:3},children:(0,i.jsxs)(H.A,{variant:"outlined",children:[(0,i.jsx)(T.A,{id:"dialog-select-label",children:"Piece set"}),(0,i.jsx)(O.A,{labelId:"dialog-select-label",id:"dialog-select",displayEmpty:!0,input:(0,i.jsx)($.A,{label:"Piece set"}),value:v,onChange:e=>f(e.target.value),sx:{width:200,maxWidth:"100%"},children:er.PE.map(e=>(0,i.jsx)(Q.A,{value:e,children:(0,i.jsxs)(p.A,{sx:{display:"flex",alignItems:"center",gap:1},children:[(0,i.jsx)(ei(),{loading:"lazy",src:"/piece/".concat(e,"/").concat(A?"w":"b","N.svg"),alt:"".concat(e," knight"),width:24,height:24}),e]})},e))})]})}),(0,i.jsx)(g.A,{container:!0,justifyContent:"center",alignItems:"center",size:{xs:12,md:11},children:(0,i.jsx)(K.A,{label:"Number of threads",value:y,setValue:w,min:1,max:12,marksFilter:1,infoContent:(0,i.jsxs)(i.Fragment,{children:["More threads means faster analysis, but only if your device can handle them, otherwise it may have the opposite effect. The estimated optimal value for your device is"," ",(0,eo.PN)(),". Due to privacy restrictions in some browsers, this value might be underestimated. Don't hesitate to try different values to find the best one for your device."]})})})]})}),(0,i.jsx)(Y.A,{sx:{m:1},children:(0,i.jsx)(D.A,{variant:"contained",onClick:n,children:"Close"})})]})}var es=n(98594);function el(){let[e,t]=(0,a.useState)(!1);return(0,i.jsxs)(i.Fragment,{children:[(0,i.jsx)(X,{title:"Engine settings",color:"secondary",size:"small",sx:{top:"auto",right:16,bottom:16,left:"auto",position:"fixed"},onClick:()=>t(!0),children:(0,i.jsx)(es.In,{icon:"mdi:settings",height:20})}),(0,i.jsx)(ea,{open:e,onClose:()=>t(!1)})]})}var ed=n(89243),ec=n(97121),eh=n(3816);class eu{startWatching(e){this.intervalId=setInterval(async()=>{let t=await (0,eh.V)(this.username);if(t.length>0){let n=t[0];n.id!==this.lastGameId&&(this.lastGameId=n.id,e(n))}},1e4)}stopWatching(){this.intervalId&&clearInterval(this.intervalId)}constructor(e){this.lastGameId=null,this.intervalId=null,this.username=e}}var em=n(22277),eg=n(89099),ep=n(69846),ex=n(19410),ev=n(82831);function ef(){let e=(0,ep.l)(),t=(0,j.md)(r.MA),n=(0,j.md)(r.XL),{white:o,black:s}=(0,ev.K)(r._X),l=(0,a.useMemo)(()=>{var t;let n=e.width,i=e.height;return(null===(t=window)||void 0===t?void 0:t.innerWidth)<1200?Math.min(n-15,i-150):Math.min(n-700,.92*i)},[e]);return(0,i.jsx)(ex.h,{id:"AnalysisBoard",boardSize:l,canPlay:!0,gameAtom:r.Sd,whitePlayer:o,blackPlayer:s,boardOrientation:t?_.Q1.White:_.Q1.Black,currentPositionAtom:r.eU,showBestMoveArrow:n,showPlayerMoveIconAtom:r.a2,showEvaluationBar:!0})}var ej=n(27064);function ey(){let{gameFromUrl:e}=(0,ej.R)(),t=(0,j.md)(r._X).getHeaders();if(!(void 0!==e||t.White&&"?"!==t.White))return null;let n=(null==e?void 0:e.termination)||t.Termination||"?",o=n.split(" ").length>2?n:(null==e?void 0:e.result)||t.Result||"?";return(0,i.jsxs)(g.A,{container:!0,justifyContent:"space-evenly",alignItems:"center",rowGap:1,columnGap:3,size:11,children:[(0,i.jsx)(g.A,{container:!0,justifyContent:"center",alignItems:"center",size:"grow",children:(0,i.jsxs)(G.A,{noWrap:!0,fontSize:"0.9rem",children:["Site : ",(null==e?void 0:e.site)||t.Site||"?"]})}),(0,i.jsx)(g.A,{container:!0,justifyContent:"center",alignItems:"center",size:"grow",children:(0,i.jsxs)(G.A,{noWrap:!0,fontSize:"0.9rem",children:["Date : ",(null==e?void 0:e.date)||t.Date||"?"]})}),(0,i.jsx)(g.A,{container:!0,justifyContent:"center",alignItems:"center",size:"grow",children:(0,i.jsxs)(G.A,{noWrap:!0,fontSize:"0.9rem",children:["Result : ",o]})})]})}var ew=n(88546),eA=n(65897),eb=n(3242);function ek(){let e=(0,eg.useRouter)(),t=(0,j.md)(r._X),{setPgn:n}=(0,eA.j)(r._X),{resetToStartingPosition:o}=(0,eA.j)(r.Sd),{gameFromUrl:s}=(0,ej.R)(),l=(0,j.Xr)(r.Mx),d=(0,j.Xr)(r.MA),c=(0,j.md)(r.xg),h=(0,a.useMemo)(()=>t.history().join(),[t]),u=(0,a.useCallback)((e,t,i)=>{let r=new em.d$;r.loadPgn(e),h!==r.history().join()&&(o(e),l(i),n(e),d(null==t||t))},[h,o,n,l,d]),{lichessGameId:m,orientation:g}=e.query;(0,a.useEffect)(()=>{let e=async e=>{let t=await (0,eb.e1)(e);"string"==typeof t&&u(t,"black"!==g)};if(s){let e="Chesskit.org"!==s.site||"You"!==s.black.name;u(s.pgn,e,s.eval)}else"string"==typeof m&&m&&e(m)},[s,m,g,u]),(0,a.useEffect)(()=>{let e=e=>{try{var t;if(!(null==e?void 0:null===(t=e.data)||void 0===t?void 0:t.pgn))return;let{pgn:n,orientation:i}=e.data;u(n,"black"!==i)}catch(e){console.error("Error processing message event:",e)}};return window.addEventListener("message",e),()=>{window.removeEventListener("message",e)}},[u]);let p=void 0!==s||!!t.getHeaders().White&&"?"!==t.getHeaders().White||t.history().length>0;return c?null:(0,i.jsx)(ew.A,{label:p?"Load another game":"Load game",size:"small",setGame:async t=>{await e.push("/"),u(t.pgn())}})}var eC=n(24307),eI=n(27449),eS=n(7045),ez=n(7957),eM=n(581);function eE(e){return(0,C.Ay)("MuiLoadingButton",e)}let eW=(0,k.A)("MuiLoadingButton",["root","label","loading","loadingIndicator","loadingIndicatorCenter","loadingIndicatorStart","loadingIndicatorEnd","endIconLoadingEnd","startIconLoadingStart"]),eP=e=>{let{loading:t,loadingPosition:n,classes:i}=e,r={root:["root",t&&"loading"],label:["label"],startIcon:[t&&`startIconLoading${(0,b.A)(n)}`],endIcon:[t&&`endIconLoading${(0,b.A)(n)}`],loadingIndicator:["loadingIndicator",t&&`loadingIndicator${(0,b.A)(n)}`]},o=(0,w.A)(r,eE,i);return{...i,...o}},eR=e=>"ownerState"!==e&&"theme"!==e&&"sx"!==e&&"as"!==e&&"classes"!==e,eL=(0,M.Ay)(D.A,{shouldForwardProp:e=>eR(e)||"classes"===e,name:"MuiLoadingButton",slot:"Root",overridesResolver:(e,t)=>[t.root,t.startIconLoadingStart&&{[`& .${eW.startIconLoadingStart}`]:t.startIconLoadingStart},t.endIconLoadingEnd&&{[`& .${eW.endIconLoadingEnd}`]:t.endIconLoadingEnd}]})((0,E.A)(({theme:e})=>({display:"inline-flex",[`& .${eW.startIconLoadingStart}, & .${eW.endIconLoadingEnd}`]:{transition:e.transitions.create(["opacity"],{duration:e.transitions.duration.short}),opacity:0},variants:[{props:{loadingPosition:"center"},style:{transition:e.transitions.create(["background-color","box-shadow","border-color"],{duration:e.transitions.duration.short}),[`&.${eW.loading}`]:{color:"transparent"}}},{props:({ownerState:e})=>"start"===e.loadingPosition&&e.fullWidth,style:{[`& .${eW.startIconLoadingStart}, & .${eW.endIconLoadingEnd}`]:{transition:e.transitions.create(["opacity"],{duration:e.transitions.duration.short}),opacity:0,marginRight:-8}}},{props:({ownerState:e})=>"end"===e.loadingPosition&&e.fullWidth,style:{[`& .${eW.startIconLoadingStart}, & .${eW.endIconLoadingEnd}`]:{transition:e.transitions.create(["opacity"],{duration:e.transitions.duration.short}),opacity:0,marginLeft:-8}}}]}))),eX=(0,M.Ay)("span",{name:"MuiLoadingButton",slot:"LoadingIndicator",overridesResolver:(e,t)=>{let{ownerState:n}=e;return[t.loadingIndicator,t[`loadingIndicator${(0,b.A)(n.loadingPosition)}`]]}})((0,E.A)(({theme:e})=>({position:"absolute",visibility:"visible",display:"flex",variants:[{props:{loadingPosition:"start",size:"small"},style:{left:10}},{props:({loadingPosition:e,ownerState:t})=>"start"===e&&"small"!==t.size,style:{left:14}},{props:{variant:"text",loadingPosition:"start"},style:{left:6}},{props:{loadingPosition:"center"},style:{left:"50%",transform:"translate(-50%)",color:(e.vars||e).palette.action.disabled}},{props:{loadingPosition:"end",size:"small"},style:{right:10}},{props:({loadingPosition:e,ownerState:t})=>"end"===e&&"small"!==t.size,style:{right:14}},{props:{variant:"text",loadingPosition:"end"},style:{right:6}},{props:({ownerState:e})=>"start"===e.loadingPosition&&e.fullWidth,style:{position:"relative",left:-10}},{props:({ownerState:e})=>"end"===e.loadingPosition&&e.fullWidth,style:{position:"relative",right:-10}}]}))),eK=(0,M.Ay)("span",{name:"MuiLoadingButton",slot:"Label",overridesResolver:(e,t)=>[t.label]})({display:"inherit",alignItems:"inherit",justifyContent:"inherit"}),e_=a.forwardRef(function(e,t){let n=a.useContext(eS.A),r=(0,eM.A)(n,e),o=(0,P.b)({props:r,name:"MuiLoadingButton"}),{children:s,disabled:l=!1,id:d,loading:c=!1,loadingIndicator:h,loadingPosition:u="center",variant:m="text",...g}=o,p=(0,eI.A)(d),x=h??(0,i.jsx)(ez.A,{"aria-labelledby":p,color:"inherit",size:16}),v={...o,disabled:l,loading:c,loadingIndicator:x,loadingPosition:u,variant:m},f=eP(v),j=c?(0,i.jsx)(eX,{className:f.loadingIndicator,ownerState:v,children:x}):null;return(0,i.jsxs)(eL,{disabled:l||c,id:p,ref:t,...g,variant:m,classes:f,ownerState:v,children:["end"===v.loadingPosition?(0,i.jsx)(eK,{className:f.label,children:s}):j,"end"===v.loadingPosition?j:(0,i.jsx)(eK,{className:f.label,children:s})]})});var eB=n(32253),eN=n(9320),eF=n(29791),eG=n(44371);let eH=e=>{let[t,n]=(0,j.fp)(r.eU),i=(0,j.md)(r.Mx),o=(0,j.md)(r._X),s=(0,j.md)(r.Sd),l=(0,j.md)(r.B2),d=(0,j.md)(r.FR),[c,h]=(0,j.fp)(r.Sp);return(0,a.useEffect)(()=>{var t;let r=s.history({verbose:!0}),a={lastMove:r.at(-1)},u=o.history();if(r.length<=u.length&&u.slice(0,r.length).join()===r.map(e=>e.san).join()&&(a.currentMoveIdx=r.length,i)){let e=r.length;a.eval={...i.positions[e],lines:i.positions[e].lines.slice(0,d)},a.lastEval=e>0?{...i.positions[e-1],lines:i.positions[e-1].lines.slice(0,d)}:void 0}if(!(null===(t=a.eval)||void 0===t?void 0:t.opening))for(let e of r.slice().reverse()){let t=e.after.split(" ")[0],n=eG.m.find(e=>e.fen===t);if(n){a.opening=n.name;break}}if(n(a),!a.eval&&(null==e?void 0:e.getIsReady())&&e.name&&!s.isCheckmate()&&!s.isStalemate()){let t=async(t,n)=>{var i,r,o;if(!e.getIsReady())throw Error("Engine not ready");let a=c[t];if(a&&a.engine===e.name&&(null!==(r=null===(i=a.lines)||void 0===i?void 0:i.length)&&void 0!==r?r:0)>=d&&(null!==(o=a.lines[0].depth)&&void 0!==o?o:0)>=l){let e={...a,lines:a.lines.slice(0,d)};return null==n||n(e),e}let s=await e.evaluatePositionWithUpdate({fen:t,depth:l,multiPv:d,setPartialEval:n});return h(n=>({...n,[t]:{...s,engine:e.name}})),s};(async()=>{let e=await t(s.fen(),e=>{n({...a,eval:e})});if(0===r.length)return;let i=(0,eC.kf)(s),o=i.fens.slice("w"===s.turn()?-3:-4),l=i.uciMoves.slice("w"===s.turn()?-2:-3),d=await t(o.slice(-2)[0]),c=o.map((t,n)=>n===o.length-2?d:n===o.length-1?e:{lines:[{pv:[],depth:0,multiPv:1,cp:1}]}),h=(0,eF.R)(c,l,o);n({...a,eval:h.slice(-1)[0],lastEval:h.slice(-2)[0]})})()}return()=>{(null==e?void 0:e.getIsReady())&&(null==e||e.stopAllCurrentJobs())}},[i,s,o,e,l,d]),t};function eT(){let e=(0,j.md)(r.Ju),t=(0,eB.K)(e);eH(t);let n=(0,j.md)(r.pN),[o,s]=(0,j.fp)(r.xg),l=(0,j.md)(r.B2),d=(0,j.md)(r.FR),{setGameEval:c,gameFromUrl:h}=(0,ej.R)(),[u,m]=(0,j.fp)(r.Mx),g=(0,j.md)(r._X),p=(0,j.Xr)(r.Sp),{white:x,black:v}=(0,ev.K)(r._X),f=(null==t?void 0:t.getIsReady())&&g.history().length>0&&!o,y=(0,a.useCallback)(async()=>{let i=(0,eC.kf)(g);if(!(null==t?void 0:t.getIsReady())||0===i.fens.length||o)return;let r=await t.evaluateGame({...i,depth:l,multiPv:d,setEvaluationProgress:s,playersRatings:{white:null==x?void 0:x.rating,black:null==v?void 0:v.rating},workersNb:n});m(r),s(0),h&&c(h.id,r);let a=i.fens.reduce((t,n,i)=>(t[n]={...r.positions[i],engine:e},t),{});p(e=>({...e,...a})),(0,eN.$)("analyze_game",{engine:e,depth:l,multiPv:d,nbPositions:i.fens.length})},[t,e,n,g,l,d,o,s,m,h,c,p,x.rating,v.rating]);return((0,a.useEffect)(()=>{s(0)},[t,s]),(0,a.useEffect)(()=>{!u&&f&&y()},[u,f,y]),o)?null:(0,i.jsx)(e_,{variant:"contained",size:"small",startIcon:(0,i.jsx)(es.In,{icon:"streamline:magnifying-glass-solid",height:12}),onClick:y,disabled:!f,children:(0,i.jsx)(G.A,{fontSize:"0.9em",fontWeight:"500",lineHeight:"1.4em",children:u?"Analyze again":"Analyze"})})}var eO=n(75328),e$=n(6800);let eQ=e=>0===e.value?null:(0,i.jsxs)(g.A,{container:!0,alignItems:"center",justifyContent:"center",wrap:"nowrap",width:"90%",columnGap:2,size:12,children:[(0,i.jsx)(G.A,{variant:"caption",align:"center",children:e.label}),(0,i.jsx)(g.A,{sx:{width:"100%"},children:(0,i.jsx)(eO.A,{variant:"determinate",...e,sx:e=>({borderRadius:"5px",height:"5px",["&.".concat(e$.A.colorPrimary)]:{backgroundColor:e.palette.grey["light"===e.palette.mode?200:700]},["& .".concat(e$.A.bar)]:{borderRadius:5,backgroundColor:er.sl}})})}),(0,i.jsx)(g.A,{children:(0,i.jsx)(G.A,{variant:"body2",color:"text.secondary",children:"".concat(Math.round(e.value),"%")})})]});function eY(){let e=(0,j.md)(r.xg);return(0,i.jsxs)(g.A,{container:!0,justifyContent:"center",alignItems:"center",rowGap:2,size:12,children:[(0,i.jsxs)(g.A,{container:!0,justifyContent:"center",alignItems:"center",columnGap:1,size:12,children:[(0,i.jsx)(es.In,{icon:"streamline:clipboard-check",height:24}),(0,i.jsx)(G.A,{variant:"h5",align:"center",children:"Game Analysis"})]}),(0,i.jsxs)(g.A,{container:!0,justifyContent:"center",alignItems:"center",rowGap:2,columnGap:12,size:12,children:[(0,i.jsx)(ey,{}),(0,i.jsx)(ek,{}),(0,i.jsx)(eT,{}),(0,i.jsx)(eQ,{value:e,label:"Analyzing..."})]})]})}var eD=n(22430),eV=n(70946);function eU(){let e=(0,j.Xr)(r.MA);return(0,a.useEffect)(()=>{let t=t=>{"f"===t.key&&e(e=>!e)};return window.addEventListener("keydown",t),()=>{window.removeEventListener("keydown",t)}},[e]),(0,i.jsx)(eD.A,{title:"Flip board",children:(0,i.jsx)(eV.A,{onClick:()=>e(e=>!e),sx:{paddingX:1.2,paddingY:.5},children:(0,i.jsx)(es.In,{icon:"eva:flip-fill"})})})}function eq(){let{playMove:e}=(0,eA.j)(r.Sd),t=(0,j.md)(r._X),n=(0,j.md)(r.Sd),o=t.history(),s=n.history(),l=s.length<o.length&&o.slice(0,s.length).join()===s.join(),d=(0,a.useCallback)(()=>{var n;if(!l)return;let i=s.length,r=t.history({verbose:!0})[i],o=null===(n=t.getComments().find(e=>e.fen===r.after))||void 0===n?void 0:n.comment;r&&e({from:r.from,to:r.to,promotion:r.promotion,comment:o})},[l,s,t,e]);return(0,a.useEffect)(()=>{let e=e=>{"ArrowRight"===e.key&&d()};return window.addEventListener("keydown",e),()=>{window.removeEventListener("keydown",e)}},[d]),(0,i.jsx)(eD.A,{title:"Go to next move",children:(0,i.jsx)(g.A,{children:(0,i.jsx)(eV.A,{onClick:()=>d(),disabled:!l,sx:{paddingX:1.2,paddingY:.5},children:(0,i.jsx)(es.In,{icon:"ri:arrow-right-s-line",height:30})})})})}function eJ(){let{setPgn:e}=(0,eA.j)(r.Sd),t=(0,j.md)(r._X),n=(0,j.md)(r.Sd),o=t.history(),s=n.history()>=o;return(0,a.useEffect)(()=>{let n=n=>{"ArrowUp"!==n.key||s||e(t.pgn())};return window.addEventListener("keydown",n),()=>{window.removeEventListener("keydown",n)}},[s,e,t]),(0,i.jsx)(eD.A,{title:"Go to final position",children:(0,i.jsx)(g.A,{children:(0,i.jsx)(eV.A,{onClick:()=>{s||e(t.pgn())},disabled:s,sx:{paddingX:1.2,paddingY:.5},children:(0,i.jsx)(es.In,{icon:"ri:skip-forward-line"})})})})}function eZ(){let e=(0,j.md)(r._X),t=(0,j.md)(r.Sd),n=(0,j.md)(r.Mx),{addGame:o,setGameEval:a,gameFromUrl:s}=(0,ej.R)(),l=(0,eg.useRouter)(),d=!s&&(t.history().length||e.history().length),c=async()=>{if(!d)return;let i=(0,eC.FA)(e,t),r=await o(i);n&&await a(r,n),l.replace({query:{gameId:r},pathname:l.pathname},void 0,{shallow:!0,scroll:!1})};return(0,i.jsx)(i.Fragment,{children:s?(0,i.jsx)(eD.A,{title:"Game saved in database",children:(0,i.jsx)(g.A,{children:(0,i.jsx)(eV.A,{disabled:!0,sx:{paddingX:1.2,paddingY:.5},children:(0,i.jsx)(es.In,{icon:"ri:folder-check-line"})})})}):(0,i.jsx)(eD.A,{title:"Save game",children:(0,i.jsx)(g.A,{children:(0,i.jsx)(eV.A,{onClick:c,disabled:!d,sx:{paddingX:1.2,paddingY:.5},children:(0,i.jsx)(es.In,{icon:"ri:save-3-line"})})})})})}function e0(){let e=(0,j.md)(r.Sd),{resetToStartingPosition:t,undoMove:n}=(0,eA.j)(r.Sd),o=e.history(),s=(0,j.md)(r._X);return(0,a.useEffect)(()=>{let e=e=>{0!==o.length&&("ArrowLeft"===e.key?n():"ArrowDown"===e.key&&t())};return window.addEventListener("keydown",e),()=>{window.removeEventListener("keydown",e)}},[n,o,t,e]),(0,i.jsxs)(g.A,{container:!0,justifyContent:"center",alignItems:"center",size:12,children:[(0,i.jsx)(eU,{}),(0,i.jsx)(eD.A,{title:"Reset board",children:(0,i.jsx)(g.A,{children:(0,i.jsx)(eV.A,{onClick:()=>t(),disabled:0===o.length,sx:{paddingX:1.2,paddingY:.5},children:(0,i.jsx)(es.In,{icon:"ri:skip-back-line"})})})}),(0,i.jsx)(eD.A,{title:"Go to previous move",children:(0,i.jsx)(g.A,{children:(0,i.jsx)(eV.A,{onClick:()=>n(),disabled:0===o.length,sx:{paddingX:1.2,paddingY:.5},children:(0,i.jsx)(es.In,{icon:"ri:arrow-left-s-line",height:30})})})}),(0,i.jsx)(eq,{}),(0,i.jsx)(eJ,{}),(0,i.jsx)(eD.A,{title:"Copy pgn",children:(0,i.jsx)(g.A,{children:(0,i.jsx)(eV.A,{disabled:0===s.history().length,onClick:()=>{var e,t;null===(t=navigator.clipboard)||void 0===t||null===(e=t.writeText)||void 0===e||e.call(t,s.pgn())},sx:{paddingX:1.2,paddingY:.5},children:(0,i.jsx)(es.In,{icon:"ri:clipboard-line"})})})}),(0,i.jsx)(eZ,{})]})}var e1=n(9227),e2=n(34428),e5=n(68327),e4=n(79534),e7=n.n(e4);function e3(e){let{san:t,color:n,additionalText:r,typographyProps:s,boxProps:l}=e,d="dark"===(0,o.A)().palette.mode,{icon:c,text:h}=(0,a.useMemo)(()=>{let e=t.charAt(0);if(!["K","Q","R","B","N"].includes(e))return{text:t};let i=d?n:"w"===n?"b":"w";return{icon:e9[e][i],text:t.slice(1)}},[t,n,d]);return(0,i.jsxs)(p.A,{component:"span",...l,children:[c&&(0,i.jsx)(G.A,{component:"span",fontFamily:e7().style.fontFamily,...s,children:c}),(0,i.jsxs)(G.A,{component:"span",noWrap:!0,...s,children:[h,r]})]})}let e9={K:{w:"♚",b:"♔"},Q:{w:"♛",b:"♕"},R:{w:"♜",b:"♖"},B:{w:"♝",b:"♗"},N:{w:"♞",b:"♘"}};function e8(){var e,t,n,o,s,l,d,c;let h=(0,j.md)(r.eU),u=(0,j.md)(r.Sd),m=null==h?void 0:null===(e=h.lastEval)||void 0===e?void 0:e.bestMove,g=(0,a.useMemo)(()=>{var e;if(!m)return;let t=null===(e=u.history({verbose:!0}).at(-1))||void 0===e?void 0:e.before;if(t)return(0,eC.AC)(t)(m)},[m,u]);if(0===u.history().length)return null;if(!g)return(0,i.jsx)(e1.A,{direction:"row",alignItems:"center",columnGap:5,marginTop:.8,children:(0,i.jsx)(e5.A,{variant:"rounded",animation:"wave",width:"12em",sx:{color:"transparent",maxWidth:"7vw"},children:(0,i.jsx)(G.A,{align:"center",fontSize:"0.9rem",children:"placeholder"})})});let p=null===(t=h.eval)||void 0===t?void 0:t.moveClassification,x=p!==_.eK.Best&&p!==_.eK.Opening&&p!==_.eK.Forced&&p!==_.eK.Splendid&&p!==_.eK.Perfect;return(0,i.jsxs)(e1.A,{direction:"row",alignItems:"center",justifyContent:"center",columnGap:4,marginTop:.5,flexWrap:"wrap",children:[p&&(0,i.jsxs)(e1.A,{direction:"row",alignItems:"center",spacing:1,children:[(0,i.jsx)(ei(),{src:"/icons/".concat(p,".png"),alt:"move-icon",width:16,height:16,style:{maxWidth:"3.5vw",maxHeight:"3.5vw"}}),(0,i.jsx)(e3,{typographyProps:{fontSize:"0.9rem"},san:null!==(l=null===(n=h.lastMove)||void 0===n?void 0:n.san)&&void 0!==l?l:"",color:null!==(d=null===(o=h.lastMove)||void 0===o?void 0:o.color)&&void 0!==d?d:"w",additionalText:" is "+e6[p]})]}),x&&(0,i.jsxs)(e1.A,{direction:"row",alignItems:"center",spacing:1,children:[(0,i.jsx)(ei(),{src:"/icons/best.png",alt:"move-icon",width:16,height:16,style:{maxWidth:"3.5vw",maxHeight:"3.5vw"}}),(0,i.jsx)(e3,{typographyProps:{fontSize:"0.9rem"},san:g,color:null!==(c=null===(s=h.lastMove)||void 0===s?void 0:s.color)&&void 0!==c?c:"w",additionalText:" was the best move"})]})]})}let e6={[_.eK.Opening]:"an opening move",[_.eK.Forced]:"forced",[_.eK.Splendid]:"splendid !!",[_.eK.Perfect]:"the only good move !",[_.eK.Best]:"the best move",[_.eK.Excellent]:"excellent",[_.eK.Okay]:"an okay move",[_.eK.Inaccuracy]:"an inaccuracy",[_.eK.Mistake]:"a mistake",[_.eK.Blunder]:"a blunder"};function te(){var e;let t=(0,j.md)(r.eU);if(!(null==t?void 0:t.lastMove))return null;let n=(null==t?void 0:null===(e=t.eval)||void 0===e?void 0:e.opening)||t.opening;return n?(0,i.jsx)(g.A,{children:(0,i.jsx)(G.A,{align:"center",fontSize:"0.9rem",maxWidth:"20rem",children:n})}):(0,i.jsx)(g.A,{justifyItems:"center",alignContent:"center",children:(0,i.jsx)(e5.A,{variant:"rounded",animation:"wave",width:"12em",sx:{color:"transparent",maxWidth:"7vw",maxHeight:"3.5vw"},children:(0,i.jsx)(G.A,{align:"center",fontSize:"0.9rem",children:"placeholder"})})})}var tt=n(63009),tn=n(12572);function ti(e){let{line:t}=e,n=(0,j.md)(r.Sd),{addMoves:o}=(0,eA.j)(r.Sd),a=(0,eC.l3)(t),s=void 0!==t.cp&&t.cp<0||void 0!==t.mate&&t.mate<0,l=t.depth<6,d=(0,eC.AC)(n.fen()),c=n.turn(),h=e=>e%2==0?c:"w"===c?"b":"w";return(0,i.jsxs)(tn.Ay,{disablePadding:!0,children:[(0,i.jsx)(G.A,{marginRight:1.5,marginY:.3,paddingY:.2,noWrap:!0,overflow:"visible",width:"3.5em",minWidth:"3.5em",textAlign:"center",fontSize:"0.8rem",sx:{backgroundColor:s?"black":"white",color:s?"white":"black"},borderRadius:"5px",border:"1px solid #424242",fontWeight:"500",children:l?(0,i.jsx)(e5.A,{variant:"rounded",animation:"wave",sx:{color:"transparent"},children:"placeholder"}):a}),(0,i.jsx)(G.A,{noWrap:!0,fontSize:"0.9rem",children:l?(0,i.jsx)(e5.A,{variant:"rounded",animation:"wave",width:"20em"}):t.pv.map((e,n)=>{let r=d(e),a=h(n);return(0,i.jsx)(e3,{san:r,color:a,additionalText:n<t.pv.length-1?",":"",boxProps:{onClick:()=>{o(t.pv.slice(0,n+1))},sx:{cursor:"pointer",ml:.5*!!n,transition:"opacity 0.2s ease-in-out","&:hover":{opacity:.5}}}},n)})})]})}function tr(e){var t,n;let o=(0,j.md)(r.Sd),a=(0,j.md)(r.FR),s=(0,j.md)(r.eU),l=Array.from({length:a}).map((e,t)=>({pv:["".concat(t)],depth:0,multiPv:t+1})),d=(null==s?void 0:null===(n=s.eval)||void 0===n?void 0:null===(t=n.lines)||void 0===t?void 0:t.length)?s.eval.lines:l;return o.isCheckmate()?null:(0,i.jsx)(g.A,{container:!0,justifyContent:"center",alignItems:"center",...e,children:(0,i.jsx)(tt.A,{sx:{width:"95%",padding:0},children:d.map(e=>(0,i.jsx)(ti,{line:e},e.multiPv))})})}function to(e){let t=(0,j.md)(r.Mx),n=(0,j.md)(r._X),o=(0,j.md)(r.Sd),a=o.history(),s=n.history(),l=a.length>0&&(o.isCheckmate()||o.isDraw()||a.join()===s.join());return(0,i.jsxs)(g.A,{container:!0,size:12,justifyContent:{xs:"center",lg:t?"start":"center"},alignItems:"center",flexWrap:{lg:t?"nowrap":void 0},gap:2,marginY:{lg:t?1:void 0},paddingX:{xs:0,lg:"calc(4% - 2rem)"},...e,sx:e.hidden?{display:"none"}:e.sx,children:[(0,i.jsxs)(e1.A,{justifyContent:"center",alignItems:"center",rowGap:1,minWidth:t?"min(25rem, 95vw)":void 0,children:[t&&(0,i.jsx)(e2.A,{title:"Accuracy",whiteValue:"".concat(t.accuracy.white.toFixed(1)," %"),blackValue:"".concat(t.accuracy.black.toFixed(1)," %")}),(null==t?void 0:t.estimatedElo)&&(0,i.jsx)(e2.A,{title:"Game Rating",whiteValue:Math.round(t.estimatedElo.white),blackValue:Math.round(t.estimatedElo.black)}),(0,i.jsx)(e8,{}),(0,i.jsx)(te,{}),l&&(0,i.jsx)(G.A,{align:"center",fontSize:"0.9rem",noWrap:!0,children:"Game is over"})]}),(0,i.jsx)(tr,{size:{lg:t?void 0:12}})]})}var ta=n(45175);function ts(){let{white:e,black:t}=(0,ev.K)(r._X),n=(0,j.md)(r.Mx);return(null==n?void 0:n.positions.length)?(0,i.jsxs)(g.A,{container:!0,justifyContent:"center",alignItems:"center",rowGap:.7,sx:{scrollbarWidth:"thin",overflowY:"auto"},height:"100%",maxHeight:"22rem",size:12,children:[(0,i.jsxs)(g.A,{container:!0,alignItems:"center",justifyContent:"space-evenly",wrap:"nowrap",size:12,children:[(0,i.jsx)(G.A,{width:"12rem",align:"center",noWrap:!0,fontSize:"0.9rem",children:e.name}),(0,i.jsx)(G.A,{width:"10rem"}),(0,i.jsx)(G.A,{width:"12rem",align:"center",noWrap:!0,fontSize:"0.9rem",children:t.name})]}),tl.map(e=>(0,i.jsx)(ta.A,{classification:e},e))]}):null}let tl=[_.eK.Splendid,_.eK.Perfect,_.eK.Best,_.eK.Excellent,_.eK.Okay,_.eK.Opening,_.eK.Inaccuracy,_.eK.Mistake,_.eK.Blunder];function td(e){return(0,i.jsx)(g.A,{container:!0,justifyContent:"center",alignItems:"center",size:12,flexGrow:1,...e,sx:{...e.hidden?{display:"none"}:{overflow:"hidden",...e.sx},flexDirection:"column"},children:(0,i.jsx)(ts,{})})}function tc(){let e=m((0,o.A)().breakpoints.up("lg")),{chessComUsername:t}=(0,eg.useRouter)().query,n=(0,j.md)(r.Mx),s=(0,j.md)(r._X),l=(0,j.md)(r.Sd),d=(0,j.Xr)(r._X),c=s.history().length>0||l.history().length>0,[h,u]=(0,a.useState)(null),[y,w]=(0,a.useState)(null),[A,b]=(0,a.useState)(!1);return(0,a.useEffect)(()=>{if(y){let e=new em.d$;e.loadPgn(y.pgn),d(e),b(!0)}},[y,d]),(0,a.useEffect)(()=>{n&&A&&(new Notification("Game Analysis Complete",{body:"Your new game has been automatically analyzed."}),b(!1))},[n,A]),(0,a.useEffect)(()=>{if("string"==typeof t&&t){let e=()=>{let e=new eu(t);e.startWatching(e=>{w(e)}),u(e)};"granted"!==Notification.permission?Notification.requestPermission().then(t=>{"granted"===t&&e()}):e()}return()=>{null==h||h.stopWatching()}},[t,h]),(0,i.jsxs)(g.A,{container:!0,gap:4,justifyContent:"space-evenly",alignItems:"start",children:[(0,i.jsx)(ec.s,{title:"MrAnalyse Game Analysis"}),(0,i.jsx)(ef,{}),(0,i.jsxs)(g.A,{container:!0,justifyContent:"start",alignItems:"center",borderRadius:2,border:1,borderColor:"secondary.main",sx:{backgroundColor:"secondary.main",borderColor:"primary.main",borderWidth:2,boxShadow:"0 2px 10px rgba(0, 0, 0, 0.5)"},padding:2,style:{maxWidth:"1200px"},rowGap:2,height:{xs:"auto",lg:"calc(95vh - 60px)"},display:"flex",flexDirection:"column",flexWrap:"nowrap",size:{xs:12,lg:"grow"},children:[e?(0,i.jsxs)(p.A,{width:"100%",children:[(0,i.jsx)(eY,{},"analysis-panel-header"),(0,i.jsx)(x.A,{sx:{marginX:"5%",marginTop:2.5}})]}):(0,i.jsx)(e0,{},"review-panel-toolbar"),!e&&!n&&(0,i.jsx)(x.A,{sx:{marginX:"5%"}}),!e&&!n&&(0,i.jsx)(eY,{},"analysis-panel-header"),e?(0,i.jsxs)(i.Fragment,{children:[(0,i.jsx)(ed.A,{id:"tabContent2"}),(0,i.jsx)(to,{id:"tabContent0"}),(0,i.jsx)(td,{id:"tabContent1"})]}):(0,i.jsxs)(p.A,{width:"100%",display:"flex",flexDirection:"column",alignItems:"center",children:[(0,i.jsx)(to,{id:"tabContent0"}),n&&(0,i.jsx)(x.A,{sx:{width:"90%",my:2}}),n&&(0,i.jsx)(ed.A,{id:"tabContent2"}),c&&(0,i.jsx)(x.A,{sx:{width:"90%",my:2}}),c&&(0,i.jsx)(td,{id:"tabContent1"})]}),e&&(0,i.jsxs)(p.A,{width:"100%",children:[(0,i.jsx)(x.A,{sx:{marginX:"5%",marginBottom:1.5}}),(0,i.jsx)(e0,{},"review-panel-toolbar")]}),!e&&n&&(0,i.jsxs)(p.A,{width:"100%",children:[(0,i.jsx)(x.A,{sx:{marginX:"5%",marginBottom:2.5}}),(0,i.jsx)(eY,{},"analysis-panel-header")]})]}),(0,i.jsx)(el,{}),(0,i.jsx)(v.A,{open:!!y,autoHideDuration:6e3,onClose:()=>w(null),anchorOrigin:{vertical:"bottom",horizontal:"right"},children:(0,i.jsxs)(f.A,{onClose:()=>w(null),severity:"success",sx:{width:"100%"},children:["New game found: ",null==y?void 0:y.white.name," vs ",null==y?void 0:y.black.name]})})]})}},89243:(e,t,n)=>{"use strict";n.d(t,{A:()=>A});var i=n(37876),r=n(14232),o=n(31084),a=n(11494),s=n(85278),l=n(80252),d=n(57377),c=n(22333),h=n(24354),u=n(1874),m=n(56321),g=n(75271),p=n(52547),x=n(24307);function v(e){let{active:t,payload:n}=e;if(!t||!(null==n?void 0:n.length))return null;let r=n[0].payload;return(0,i.jsx)("div",{style:{backgroundColor:"#f0f0f0",padding:5,color:"black",opacity:.9,border:"1px solid black",borderRadius:3},children:(0,x.l3)(r)})}var f=n(92094);function j(e){let{cx:t,cy:n,r,payload:o}=e,a=(null==o?void 0:o.moveClassification)?f.k_[o.moveClassification]:"grey";return(0,i.jsx)("circle",{cx:t,cy:n,r:r,stroke:a,strokeWidth:5,fill:a,fillOpacity:1})}var y=n(19271),w=n(65897);function A(e){var t;let n=(0,s.md)(p.Mx),x=(0,s.md)(p.eU),{goToMove:A}=(0,w.j)(p.Sd),k=(0,s.md)(p._X),C=(0,r.useMemo)(()=>{var e;return null!==(e=null==n?void 0:n.positions.map(b))&&void 0!==e?e:[]},[n]),I=(0,r.useMemo)(()=>{let e=C.filter(e=>e.moveClassification===y.eK.Best),t=Math.ceil(.15*e.length),n=e.map(e=>e.moveNb);for(let e=n.length-1;e>0;e--){let t=Math.floor(Math.random()*(e+1));[n[e],n[t]]=[n[t],n[e]]}return new Set(n.slice(0,t))},[C]),S=(null===(t=x.eval)||void 0===t?void 0:t.moveClassification)?f.k_[x.eval.moveClassification]:"grey",z=(0,r.useCallback)(e=>{let t=e.payload,n=null==t?void 0:t.moveClassification;return n&&([y.eK.Splendid,y.eK.Perfect,y.eK.Blunder,y.eK.Mistake].includes(n)||n===y.eK.Best&&I.has(t.moveNb))?(0,r.createElement)(j,{...e,key:e.key,payload:t}):(0,i.jsx)("svg",{},e.key)},[I]);return n?(0,i.jsx)(o.A,{container:!0,justifyContent:"center",alignItems:"center",minHeight:"min(10rem, 8vh)",height:{xs:"8rem",lg:"none"},maxHeight:"10rem",...e,sx:e.hidden?{display:"none"}:e.sx,size:12,children:(0,i.jsx)(a.A,{height:"100%",width:{xs:"100%",lg:"90%"},sx:{backgroundColor:"#2e2e2e",borderRadius:"15px",overflow:"hidden"},children:(0,i.jsx)(l.u,{width:"100%",height:"100%",children:(0,i.jsxs)(d.Q,{width:500,height:400,data:C,margin:{top:0,left:0,right:0,bottom:0},onClick:e=>{var t,n;let i=null==e?void 0:null===(n=e.activePayload)||void 0===n?void 0:null===(t=n[0])||void 0===t?void 0:t.payload;i&&A(i.moveNb,k)},style:{cursor:"pointer"},children:[(0,i.jsx)(c.W,{dataKey:"moveNb",hide:!0,stroke:"red"}),(0,i.jsx)(h.h,{domain:[0,20],hide:!0}),(0,i.jsx)(u.m,{content:(0,i.jsx)(v,{}),isAnimationActive:!1,cursor:{stroke:"grey",strokeWidth:2,strokeOpacity:.3}}),(0,i.jsx)(m.G,{type:"monotone",dataKey:"value",stroke:"none",fill:"#ffffff",fillOpacity:1,dot:z,activeDot:(0,i.jsx)(j,{}),isAnimationActive:!1}),(0,i.jsx)(g.e,{y:10,stroke:"grey",strokeWidth:2,strokeOpacity:.4}),(0,i.jsx)(g.e,{x:x.currentMoveIdx,stroke:S,strokeWidth:4,strokeOpacity:.6})]})})})}):null}let b=(e,t)=>{let n=e.lines[0],i={moveNb:t,value:10,cp:n.cp,mate:n.mate,moveClassification:e.moveClassification};return n.mate?{...i,value:20*(n.mate>0)}:n.cp?{...i,value:Math.max(Math.min(n.cp/100,10),-10)+10}:i}}},e=>{var t=t=>e(e.s=t);e.O(0,[774,453,696,927,358,986,703,947,546,636,593,792],()=>t(16760)),_N_E=e.O()}]);
+(self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
+  [332],
+  {
+    16760: (e, t, n) => {
+      (window.__NEXT_P = window.__NEXT_P || []).push([
+        "/",
+        function () {
+          return n(87095);
+        },
+      ]);
+    },
+    34428: (e, t, n) => {
+      "use strict";
+      n.d(t, { A: () => a });
+      var i = n(37876),
+        r = n(9227),
+        o = n(77018);
+      function a(e) {
+        let { title: t, whiteValue: n, blackValue: a } = e;
+        return (0, i.jsxs)(r.A, {
+          justifyContent: "center",
+          alignItems: "center",
+          flexDirection: "row",
+          columnGap: { xs: "8vw", md: 10 },
+          children: [
+            (0, i.jsx)(s, { value: n, color: "white" }),
+            (0, i.jsx)(o.A, {
+              align: "center",
+              fontSize: "0.8em",
+              noWrap: !0,
+              children: t,
+            }),
+            (0, i.jsx)(s, { value: a, color: "black" }),
+          ],
+        });
+      }
+      let s = (e) => {
+        let { value: t, color: n } = e;
+        return (0, i.jsx)(o.A, {
+          align: "center",
+          sx: { backgroundColor: n, color: "white" === n ? "black" : "white" },
+          borderRadius: "5px",
+          lineHeight: "1em",
+          fontSize: "0.9em",
+          padding: 0.8,
+          fontWeight: "500",
+          border: "1px solid #424242",
+          noWrap: !0,
+          children: t,
+        });
+      };
+    },
+    45175: (e, t, n) => {
+      "use strict";
+      n.d(t, { A: () => p });
+      var i = n(37876),
+        r = n(19271),
+        o = n(31084),
+        a = n(77018),
+        s = n(85278),
+        l = n(52547),
+        d = n(14232),
+        c = n(54587),
+        h = n.n(c),
+        u = n(658),
+        m = n(65897),
+        g = n(92094);
+      function p(e) {
+        let { classification: t } = e,
+          n = (0, s.md)(l.Mx),
+          c = (0, s.md)(l.Sd),
+          p = (0, s.md)(l._X),
+          { goToMove: x } = (0, m.j)(l.Sd),
+          v = (0, d.useMemo)(
+            () =>
+              n
+                ? n.positions.filter(
+                    (e, n) => n % 2 != 0 && e.moveClassification === t
+                  ).length
+                : 0,
+            [n, t]
+          ),
+          f = (0, d.useMemo)(
+            () =>
+              n
+                ? n.positions.filter(
+                    (e, n) => n % 2 == 0 && e.moveClassification === t
+                  ).length
+                : 0,
+            [n, t]
+          ),
+          j = (e) => {
+            if (!n || (e === r.Q1.White && !v) || (e === r.Q1.Black && !f))
+              return;
+            let i = (t) =>
+                (t % 2 != 0 && e === r.Q1.White) ||
+                (t % 2 == 0 && e === r.Q1.Black),
+              o = c.history().length,
+              a = n.positions.findIndex(
+                (e, n) => i(n) && e.moveClassification === t && n > o
+              );
+            if (a > 0) x(a, p);
+            else {
+              let e = n.positions.findIndex(
+                (e, n) => i(n) && e.moveClassification === t
+              );
+              e > 0 && e !== o && x(e, p);
+            }
+          };
+        return (0, i.jsxs)(o.A, {
+          container: !0,
+          justifyContent: "space-evenly",
+          alignItems: "center",
+          wrap: "nowrap",
+          color: g.k_[t],
+          size: 12,
+          children: [
+            (0, i.jsx)(o.A, {
+              container: !0,
+              justifyContent: "center",
+              alignItems: "center",
+              width: "3rem",
+              style: { cursor: v ? "pointer" : "default" },
+              onClick: () => j(r.Q1.White),
+              fontSize: "0.9rem",
+              children: v,
+            }),
+            (0, i.jsxs)(o.A, {
+              container: !0,
+              justifyContent: "start",
+              alignItems: "center",
+              width: "10rem",
+              gap: 1,
+              wrap: "nowrap",
+              children: [
+                (0, i.jsx)(h(), {
+                  src: "/icons/".concat(t, ".png"),
+                  alt: "move-icon",
+                  width: 18,
+                  height: 18,
+                  style: { maxWidth: "3.5vw", maxHeight: "3.5vw" },
+                }),
+                (0, i.jsx)(a.A, {
+                  align: "center",
+                  fontSize: "0.9rem",
+                  children: (0, u.ZH)(t),
+                }),
+              ],
+            }),
+            (0, i.jsx)(o.A, {
+              container: !0,
+              justifyContent: "center",
+              alignItems: "center",
+              width: "3rem",
+              style: { cursor: f ? "pointer" : "default" },
+              onClick: () => j(r.Q1.Black),
+              fontSize: "0.9rem",
+              children: f,
+            }),
+          ],
+        });
+      }
+    },
+    79534: (e) => {
+      e.exports = {
+        style: { fontFamily: "'chessFont', 'chessFont Fallback'" },
+        className: "__className_bd706f",
+      };
+    },
+    87095: (e, t, n) => {
+      "use strict";
+      n.r(t), n.d(t, { default: () => tc });
+      var i = n(37876),
+        r = n(52547),
+        o = n(30566),
+        a = n(14232),
+        s = n.t(a, 2),
+        l = n(99659),
+        d = n(32432),
+        c = n(76975);
+      let h = { ...s }.useSyncExternalStore;
+      function u(e = {}) {
+        let { themeId: t } = e;
+        return function (e, n = {}) {
+          let i = (0, c.A)();
+          i && t && (i = i[t] || i);
+          let r = "undefined" != typeof window && void 0 !== window.matchMedia,
+            {
+              defaultMatches: o = !1,
+              matchMedia: s = r ? window.matchMedia : null,
+              ssrMatchMedia: u = null,
+              noSsr: m = !1,
+            } = (0, d.A)({ name: "MuiUseMediaQuery", props: n, theme: i }),
+            g = "function" == typeof e ? e(i) : e;
+          return (
+            void 0 !== h
+              ? function (e, t, n, i, r) {
+                  let o = a.useCallback(() => t, [t]),
+                    s = a.useMemo(() => {
+                      if (r && n) return () => n(e).matches;
+                      if (null !== i) {
+                        let { matches: t } = i(e);
+                        return () => t;
+                      }
+                      return o;
+                    }, [o, e, i, r, n]),
+                    [l, d] = a.useMemo(() => {
+                      if (null === n) return [o, () => () => {}];
+                      let t = n(e);
+                      return [
+                        () => t.matches,
+                        (e) => (
+                          t.addEventListener("change", e),
+                          () => {
+                            t.removeEventListener("change", e);
+                          }
+                        ),
+                      ];
+                    }, [o, n, e]);
+                  return h(d, l, s);
+                }
+              : function (e, t, n, i, r) {
+                  let [o, s] = a.useState(() =>
+                    r && n ? n(e).matches : i ? i(e).matches : t
+                  );
+                  return (
+                    (0, l.A)(() => {
+                      if (!n) return;
+                      let t = n(e),
+                        i = () => {
+                          s(t.matches);
+                        };
+                      return (
+                        i(),
+                        t.addEventListener("change", i),
+                        () => {
+                          t.removeEventListener("change", i);
+                        }
+                      );
+                    }, [e, n]),
+                    o
+                  );
+                }
+          )((g = g.replace(/^@media( ?)/m, "")), o, s, u, m);
+        };
+      }
+      u();
+      let m = u({ themeId: n(3637).A });
+      var g = n(31084),
+        p = n(11494),
+        x = n(71538),
+        v = n(49516),
+        f = n(46061),
+        j = n(85278),
+        y = n(69241),
+        w = n(4697),
+        A = n(68197),
+        b = n(80027),
+        k = n(47951),
+        C = n(45879);
+      function I(e) {
+        return (0, C.Ay)("MuiFab", e);
+      }
+      let S = (0, k.A)("MuiFab", [
+        "root",
+        "primary",
+        "secondary",
+        "extended",
+        "circular",
+        "focusVisible",
+        "disabled",
+        "colorInherit",
+        "sizeSmall",
+        "sizeMedium",
+        "sizeLarge",
+        "info",
+        "error",
+        "warning",
+        "success",
+      ]);
+      var z = n(68275),
+        M = n(54773),
+        E = n(82987),
+        W = n(78457),
+        P = n(52196);
+      let R = (e) => {
+          let { color: t, variant: n, classes: i, size: r } = e,
+            o = {
+              root: [
+                "root",
+                n,
+                "size".concat((0, b.A)(r)),
+                "inherit" === t ? "colorInherit" : t,
+              ],
+            },
+            a = (0, w.A)(o, I, i);
+          return { ...i, ...a };
+        },
+        L = (0, M.Ay)(A.A, {
+          name: "MuiFab",
+          slot: "Root",
+          shouldForwardProp: (e) => (0, z.A)(e) || "classes" === e,
+          overridesResolver: (e, t) => {
+            let { ownerState: n } = e;
+            return [
+              t.root,
+              t[n.variant],
+              t["size".concat((0, b.A)(n.size))],
+              "inherit" === n.color && t.colorInherit,
+              t[(0, b.A)(n.size)],
+              t[n.color],
+            ];
+          },
+        })(
+          (0, E.A)((e) => {
+            var t, n;
+            let { theme: i } = e;
+            return {
+              ...i.typography.button,
+              minHeight: 36,
+              transition: i.transitions.create(
+                ["background-color", "box-shadow", "border-color"],
+                { duration: i.transitions.duration.short }
+              ),
+              borderRadius: "50%",
+              padding: 0,
+              minWidth: 0,
+              width: 56,
+              height: 56,
+              zIndex: (i.vars || i).zIndex.fab,
+              boxShadow: (i.vars || i).shadows[6],
+              "&:active": { boxShadow: (i.vars || i).shadows[12] },
+              color: i.vars
+                ? i.vars.palette.text.primary
+                : null === (t = (n = i.palette).getContrastText) || void 0 === t
+                  ? void 0
+                  : t.call(n, i.palette.grey[300]),
+              backgroundColor: (i.vars || i).palette.grey[300],
+              "&:hover": {
+                backgroundColor: (i.vars || i).palette.grey.A100,
+                "@media (hover: none)": {
+                  backgroundColor: (i.vars || i).palette.grey[300],
+                },
+                textDecoration: "none",
+              },
+              ["&.".concat(S.focusVisible)]: {
+                boxShadow: (i.vars || i).shadows[6],
+              },
+              variants: [
+                { props: { size: "small" }, style: { width: 40, height: 40 } },
+                { props: { size: "medium" }, style: { width: 48, height: 48 } },
+                {
+                  props: { variant: "extended" },
+                  style: {
+                    borderRadius: 24,
+                    padding: "0 16px",
+                    width: "auto",
+                    minHeight: "auto",
+                    minWidth: 48,
+                    height: 48,
+                  },
+                },
+                {
+                  props: { variant: "extended", size: "small" },
+                  style: {
+                    width: "auto",
+                    padding: "0 8px",
+                    borderRadius: 17,
+                    minWidth: 34,
+                    height: 34,
+                  },
+                },
+                {
+                  props: { variant: "extended", size: "medium" },
+                  style: {
+                    width: "auto",
+                    padding: "0 16px",
+                    borderRadius: 20,
+                    minWidth: 40,
+                    height: 40,
+                  },
+                },
+                { props: { color: "inherit" }, style: { color: "inherit" } },
+              ],
+            };
+          }),
+          (0, E.A)((e) => {
+            let { theme: t } = e;
+            return {
+              variants: [
+                ...Object.entries(t.palette)
+                  .filter((0, W.A)(["dark", "contrastText"]))
+                  .map((e) => {
+                    let [n] = e;
+                    return {
+                      props: { color: n },
+                      style: {
+                        color: (t.vars || t).palette[n].contrastText,
+                        backgroundColor: (t.vars || t).palette[n].main,
+                        "&:hover": {
+                          backgroundColor: (t.vars || t).palette[n].dark,
+                          "@media (hover: none)": {
+                            backgroundColor: (t.vars || t).palette[n].main,
+                          },
+                        },
+                      },
+                    };
+                  }),
+              ],
+            };
+          }),
+          (0, E.A)((e) => {
+            let { theme: t } = e;
+            return {
+              ["&.".concat(S.disabled)]: {
+                color: (t.vars || t).palette.action.disabled,
+                boxShadow: (t.vars || t).shadows[0],
+                backgroundColor: (t.vars || t).palette.action
+                  .disabledBackground,
+              },
+            };
+          })
+        ),
+        X = a.forwardRef(function (e, t) {
+          let n = (0, P.b)({ props: e, name: "MuiFab" }),
+            {
+              children: r,
+              className: o,
+              color: a = "default",
+              component: s = "button",
+              disabled: l = !1,
+              disableFocusRipple: d = !1,
+              focusVisibleClassName: c,
+              size: h = "large",
+              variant: u = "circular",
+              ...m
+            } = n,
+            g = {
+              ...n,
+              color: a,
+              component: s,
+              disabled: l,
+              disableFocusRipple: d,
+              size: h,
+              variant: u,
+            },
+            p = R(g);
+          return (0, i.jsx)(L, {
+            className: (0, y.A)(p.root, o),
+            component: s,
+            disabled: l,
+            focusRipple: !d,
+            focusVisibleClassName: (0, y.A)(p.focusVisible, c),
+            ownerState: g,
+            ref: t,
+            ...m,
+            classes: p,
+            children: r,
+          });
+        });
+      var K = n(18259),
+        _ = n(19271),
+        B = n(84147),
+        N = n(47866),
+        F = n(3034),
+        G = n(77018),
+        H = n(88713),
+        T = n(90405),
+        O = n(35779),
+        $ = n(83290),
+        Q = n(6003),
+        Y = n(78523),
+        D = n(24705),
+        V = n(35656),
+        U = n(82260),
+        q = n(37242);
+      function J() {
+        let [e, t] = (0, q.v)("show-arrow-best-move", r.XL),
+          [n, o] = (0, q.v)("show-icon-player-move", r.a2);
+        return (0, i.jsxs)(g.A, {
+          container: !0,
+          justifyContent: "space-evenly",
+          alignItems: "center",
+          size: 12,
+          gap: 3,
+          children: [
+            (0, i.jsx)(V.A, {
+              control: (0, i.jsx)(U.A, {
+                checked: e,
+                onChange: (e, n) => t(n),
+              }),
+              label: "Show engine best move arrow",
+              sx: { marginX: 0 },
+            }),
+            (0, i.jsx)(V.A, {
+              control: (0, i.jsx)(U.A, {
+                checked: n,
+                onChange: (e, t) => o(t),
+              }),
+              label: "Show played move icon",
+              sx: { marginX: 0 },
+            }),
+          ],
+        });
+      }
+      var Z = n(47713),
+        ee = n(43699),
+        et = n(99509),
+        en = n(54587),
+        ei = n.n(en),
+        er = n(92094),
+        eo = n(92634);
+      function ea(e) {
+        let { open: t, onClose: n } = e,
+          [s, l] = (0, q.v)("engine-depth", r.B2),
+          [d, c] = (0, q.v)("engine-multi-pv", r.FR),
+          [h, u] = (0, q.v)("engine-name", r.Ju),
+          [m, x] = (0, j.fp)(et.U),
+          [v, f] = (0, j.fp)(et._),
+          [y, w] = (0, j.fp)(r.pN),
+          A = "dark" === (0, o.A)().palette.mode;
+        return (
+          (0, a.useEffect)(() => {
+            (0, Z.N9)(h) ||
+              (ee.m.isSupported()
+                ? u(_.Qz.Stockfish16_1Lite)
+                : u(_.Qz.Stockfish11));
+          }, [u, h]),
+          (0, i.jsxs)(B.A, {
+            open: t,
+            onClose: n,
+            maxWidth: "md",
+            fullWidth: !0,
+            children: [
+              (0, i.jsx)(N.A, {
+                variant: "h5",
+                sx: { paddingBottom: 1 },
+                children: "Settings",
+              }),
+              (0, i.jsx)(F.A, {
+                sx: { paddingBottom: 0 },
+                children: (0, i.jsxs)(g.A, {
+                  container: !0,
+                  justifyContent: "center",
+                  alignItems: "center",
+                  paddingTop: 1,
+                  spacing: 3,
+                  size: 12,
+                  children: [
+                    (0, i.jsx)(g.A, {
+                      container: !0,
+                      justifyContent: "center",
+                      size: { xs: 12, sm: 7, md: 8 },
+                      children: (0, i.jsxs)(G.A, {
+                        variant: "body2",
+                        children: [
+                          er.H[er.T3].small,
+                          " is the default engine if your device support its requirements. It offers the best balance between speed and strength.",
+                          " ",
+                          er.H[er.RS].small,
+                          " is the strongest engine available, note that it requires a one time download of",
+                          " ",
+                          er.H[er.RS].sizeMb,
+                          "MB and is much more compute intensive.",
+                        ],
+                      }),
+                    }),
+                    (0, i.jsx)(g.A, {
+                      container: !0,
+                      justifyContent: "center",
+                      size: { xs: 12, sm: 5, md: 4 },
+                      children: (0, i.jsxs)(H.A, {
+                        variant: "outlined",
+                        children: [
+                          (0, i.jsx)(T.A, {
+                            id: "dialog-select-label",
+                            children: "Engine",
+                          }),
+                          (0, i.jsx)(O.A, {
+                            labelId: "dialog-select-label",
+                            id: "dialog-select",
+                            displayEmpty: !0,
+                            input: (0, i.jsx)($.A, { label: "Engine" }),
+                            value: h,
+                            onChange: (e) => u(e.target.value),
+                            sx: { width: 280, maxWidth: "100%" },
+                            children: Object.values(_.Qz).map((e) =>
+                              (0, i.jsx)(
+                                Q.A,
+                                {
+                                  value: e,
+                                  disabled: !(0, Z.N9)(e),
+                                  children: er.H[e].full,
+                                },
+                                e
+                              )
+                            ),
+                          }),
+                        ],
+                      }),
+                    }),
+                    (0, i.jsx)(K.A, {
+                      label: "Maximum depth",
+                      value: s,
+                      setValue: l,
+                      min: 10,
+                      max: 30,
+                      marksFilter: 2,
+                    }),
+                    (0, i.jsx)(K.A, {
+                      label: "Number of lines",
+                      value: d,
+                      setValue: c,
+                      min: 2,
+                      max: 6,
+                      marksFilter: 1,
+                      size: 6,
+                    }),
+                    (0, i.jsx)(J, {}),
+                    (0, i.jsx)(g.A, {
+                      container: !0,
+                      justifyContent: "center",
+                      size: { xs: 12, sm: 8, md: 9 },
+                      children: (0, i.jsx)(K.A, {
+                        label: "Board hue",
+                        value: m,
+                        setValue: x,
+                        min: 0,
+                        max: 360,
+                      }),
+                    }),
+                    (0, i.jsx)(g.A, {
+                      container: !0,
+                      justifyContent: "center",
+                      alignItems: "center",
+                      size: { xs: 12, sm: 4, md: 3 },
+                      children: (0, i.jsxs)(H.A, {
+                        variant: "outlined",
+                        children: [
+                          (0, i.jsx)(T.A, {
+                            id: "dialog-select-label",
+                            children: "Piece set",
+                          }),
+                          (0, i.jsx)(O.A, {
+                            labelId: "dialog-select-label",
+                            id: "dialog-select",
+                            displayEmpty: !0,
+                            input: (0, i.jsx)($.A, { label: "Piece set" }),
+                            value: v,
+                            onChange: (e) => f(e.target.value),
+                            sx: { width: 200, maxWidth: "100%" },
+                            children: er.PE.map((e) =>
+                              (0, i.jsx)(
+                                Q.A,
+                                {
+                                  value: e,
+                                  children: (0, i.jsxs)(p.A, {
+                                    sx: {
+                                      display: "flex",
+                                      alignItems: "center",
+                                      gap: 1,
+                                    },
+                                    children: [
+                                      (0, i.jsx)(ei(), {
+                                        loading: "lazy",
+                                        src: "/piece/"
+                                          .concat(e, "/")
+                                          .concat(A ? "w" : "b", "N.svg"),
+                                        alt: "".concat(e, " knight"),
+                                        width: 24,
+                                        height: 24,
+                                      }),
+                                      e,
+                                    ],
+                                  }),
+                                },
+                                e
+                              )
+                            ),
+                          }),
+                        ],
+                      }),
+                    }),
+                    (0, i.jsx)(g.A, {
+                      container: !0,
+                      justifyContent: "center",
+                      alignItems: "center",
+                      size: { xs: 12, md: 11 },
+                      children: (0, i.jsx)(K.A, {
+                        label: "Number of threads",
+                        value: y,
+                        setValue: w,
+                        min: 1,
+                        max: 12,
+                        marksFilter: 1,
+                        infoContent: (0, i.jsxs)(i.Fragment, {
+                          children: [
+                            "More threads means faster analysis, but only if your device can handle them, otherwise it may have the opposite effect. The estimated optimal value for your device is",
+                            " ",
+                            (0, eo.PN)(),
+                            ". Due to privacy restrictions in some browsers, this value might be underestimated. Don't hesitate to try different values to find the best one for your device.",
+                          ],
+                        }),
+                      }),
+                    }),
+                  ],
+                }),
+              }),
+              (0, i.jsx)(Y.A, {
+                sx: { m: 1 },
+                children: (0, i.jsx)(D.A, {
+                  variant: "contained",
+                  onClick: n,
+                  children: "Close",
+                }),
+              }),
+            ],
+          })
+        );
+      }
+      var es = n(98594);
+      function el() {
+        let [e, t] = (0, a.useState)(!1);
+        return (0, i.jsxs)(i.Fragment, {
+          children: [
+            (0, i.jsx)(X, {
+              title: "Engine settings",
+              color: "secondary",
+              size: "small",
+              sx: {
+                top: "auto",
+                right: 16,
+                bottom: 16,
+                left: "auto",
+                position: "fixed",
+              },
+              onClick: () => t(!0),
+              children: (0, i.jsx)(es.In, { icon: "mdi:settings", height: 20 }),
+            }),
+            (0, i.jsx)(ea, { open: e, onClose: () => t(!1) }),
+          ],
+        });
+      }
+      var ed = n(89243),
+        ec = n(97121),
+        eh = n(3816);
+      class eu {
+        startWatching(e) {
+          this.intervalId = setInterval(async () => {
+            let t = await (0, eh.V)(this.username);
+            if (t.length > 0) {
+              let n = t[0];
+              n.id !== this.lastGameId && ((this.lastGameId = n.id), e(n));
+            }
+          }, 1e4);
+        }
+        stopWatching() {
+          this.intervalId && clearInterval(this.intervalId);
+        }
+        constructor(e) {
+          (this.lastGameId = null),
+            (this.intervalId = null),
+            (this.username = e);
+        }
+      }
+      var em = n(22277),
+        eg = n(89099),
+        ep = n(69846),
+        ex = n(19410),
+        ev = n(82831);
+      function ef() {
+        let e = (0, ep.l)(),
+          t = (0, j.md)(r.MA),
+          n = (0, j.md)(r.XL),
+          { white: o, black: s } = (0, ev.K)(r._X),
+          l = (0, a.useMemo)(() => {
+            var t;
+            let n = e.width,
+              i = e.height;
+            return (null === (t = window) || void 0 === t
+              ? void 0
+              : t.innerWidth) < 1200
+              ? Math.min(n - 15, i - 150)
+              : Math.min(n - 700, 0.92 * i);
+          }, [e]);
+        return (0, i.jsx)(ex.h, {
+          id: "AnalysisBoard",
+          boardSize: l,
+          canPlay: !0,
+          gameAtom: r.Sd,
+          whitePlayer: o,
+          blackPlayer: s,
+          boardOrientation: t ? _.Q1.White : _.Q1.Black,
+          currentPositionAtom: r.eU,
+          showBestMoveArrow: n,
+          showPlayerMoveIconAtom: r.a2,
+          showEvaluationBar: !0,
+        });
+      }
+      var ej = n(27064);
+      function ey() {
+        let { gameFromUrl: e } = (0, ej.R)(),
+          t = (0, j.md)(r._X).getHeaders();
+        if (!(void 0 !== e || (t.White && "?" !== t.White))) return null;
+        let n = (null == e ? void 0 : e.termination) || t.Termination || "?",
+          o =
+            n.split(" ").length > 2
+              ? n
+              : (null == e ? void 0 : e.result) || t.Result || "?";
+        return (0, i.jsxs)(g.A, {
+          container: !0,
+          justifyContent: "space-evenly",
+          alignItems: "center",
+          rowGap: 1,
+          columnGap: 3,
+          size: 11,
+          children: [
+            (0, i.jsx)(g.A, {
+              container: !0,
+              justifyContent: "center",
+              alignItems: "center",
+              size: "grow",
+              children: (0, i.jsxs)(G.A, {
+                noWrap: !0,
+                fontSize: "0.9rem",
+                children: [
+                  "Site : ",
+                  (null == e ? void 0 : e.site) || t.Site || "?",
+                ],
+              }),
+            }),
+            (0, i.jsx)(g.A, {
+              container: !0,
+              justifyContent: "center",
+              alignItems: "center",
+              size: "grow",
+              children: (0, i.jsxs)(G.A, {
+                noWrap: !0,
+                fontSize: "0.9rem",
+                children: [
+                  "Date : ",
+                  (null == e ? void 0 : e.date) || t.Date || "?",
+                ],
+              }),
+            }),
+            (0, i.jsx)(g.A, {
+              container: !0,
+              justifyContent: "center",
+              alignItems: "center",
+              size: "grow",
+              children: (0, i.jsxs)(G.A, {
+                noWrap: !0,
+                fontSize: "0.9rem",
+                children: ["Result : ", o],
+              }),
+            }),
+          ],
+        });
+      }
+      var ew = n(88546),
+        eA = n(65897),
+        eb = n(3242);
+      function ek() {
+        let e = (0, eg.useRouter)(),
+          t = (0, j.md)(r._X),
+          { setPgn: n } = (0, eA.j)(r._X),
+          { resetToStartingPosition: o } = (0, eA.j)(r.Sd),
+          { gameFromUrl: s } = (0, ej.R)(),
+          l = (0, j.Xr)(r.Mx),
+          d = (0, j.Xr)(r.MA),
+          c = (0, j.md)(r.xg),
+          h = (0, a.useMemo)(() => t.history().join(), [t]),
+          u = (0, a.useCallback)(
+            (e, t, i) => {
+              let r = new em.d$();
+              r.loadPgn(e),
+                h !== r.history().join() &&
+                  (o(e), l(i), n(e), d(null == t || t));
+            },
+            [h, o, n, l, d]
+          ),
+          { lichessGameId: m, orientation: g } = e.query;
+        (0, a.useEffect)(() => {
+          let e = async (e) => {
+            let t = await (0, eb.e1)(e);
+            "string" == typeof t && u(t, "black" !== g);
+          };
+          if (s) {
+            let e = "Chesskit.org" !== s.site || "You" !== s.black.name;
+            u(s.pgn, e, s.eval);
+          } else "string" == typeof m && m && e(m);
+        }, [s, m, g, u]),
+          (0, a.useEffect)(() => {
+            let e = (e) => {
+              try {
+                var t;
+                if (
+                  !(null == e
+                    ? void 0
+                    : null === (t = e.data) || void 0 === t
+                      ? void 0
+                      : t.pgn)
+                )
+                  return;
+                let { pgn: n, orientation: i } = e.data;
+                u(n, "black" !== i);
+              } catch (e) {
+                console.error("Error processing message event:", e);
+              }
+            };
+            return (
+              window.addEventListener("message", e),
+              () => {
+                window.removeEventListener("message", e);
+              }
+            );
+          }, [u]);
+        let p =
+          void 0 !== s ||
+          (!!t.getHeaders().White && "?" !== t.getHeaders().White) ||
+          t.history().length > 0;
+        return c
+          ? null
+          : (0, i.jsx)(ew.A, {
+              label: p ? "Load another game" : "Load game",
+              size: "small",
+              setGame: async (t) => {
+                await e.push("/"), u(t.pgn());
+              },
+            });
+      }
+      var eC = n(24307),
+        eI = n(27449),
+        eS = n(7045),
+        ez = n(7957),
+        eM = n(581);
+      function eE(e) {
+        return (0, C.Ay)("MuiLoadingButton", e);
+      }
+      let eW = (0, k.A)("MuiLoadingButton", [
+          "root",
+          "label",
+          "loading",
+          "loadingIndicator",
+          "loadingIndicatorCenter",
+          "loadingIndicatorStart",
+          "loadingIndicatorEnd",
+          "endIconLoadingEnd",
+          "startIconLoadingStart",
+        ]),
+        eP = (e) => {
+          let { loading: t, loadingPosition: n, classes: i } = e,
+            r = {
+              root: ["root", t && "loading"],
+              label: ["label"],
+              startIcon: [t && `startIconLoading${(0, b.A)(n)}`],
+              endIcon: [t && `endIconLoading${(0, b.A)(n)}`],
+              loadingIndicator: [
+                "loadingIndicator",
+                t && `loadingIndicator${(0, b.A)(n)}`,
+              ],
+            },
+            o = (0, w.A)(r, eE, i);
+          return { ...i, ...o };
+        },
+        eR = (e) =>
+          "ownerState" !== e &&
+          "theme" !== e &&
+          "sx" !== e &&
+          "as" !== e &&
+          "classes" !== e,
+        eL = (0, M.Ay)(D.A, {
+          shouldForwardProp: (e) => eR(e) || "classes" === e,
+          name: "MuiLoadingButton",
+          slot: "Root",
+          overridesResolver: (e, t) => [
+            t.root,
+            t.startIconLoadingStart && {
+              [`& .${eW.startIconLoadingStart}`]: t.startIconLoadingStart,
+            },
+            t.endIconLoadingEnd && {
+              [`& .${eW.endIconLoadingEnd}`]: t.endIconLoadingEnd,
+            },
+          ],
+        })(
+          (0, E.A)(({ theme: e }) => ({
+            display: "inline-flex",
+            [`& .${eW.startIconLoadingStart}, & .${eW.endIconLoadingEnd}`]: {
+              transition: e.transitions.create(["opacity"], {
+                duration: e.transitions.duration.short,
+              }),
+              opacity: 0,
+            },
+            variants: [
+              {
+                props: { loadingPosition: "center" },
+                style: {
+                  transition: e.transitions.create(
+                    ["background-color", "box-shadow", "border-color"],
+                    { duration: e.transitions.duration.short }
+                  ),
+                  [`&.${eW.loading}`]: { color: "transparent" },
+                },
+              },
+              {
+                props: ({ ownerState: e }) =>
+                  "start" === e.loadingPosition && e.fullWidth,
+                style: {
+                  [`& .${eW.startIconLoadingStart}, & .${eW.endIconLoadingEnd}`]:
+                    {
+                      transition: e.transitions.create(["opacity"], {
+                        duration: e.transitions.duration.short,
+                      }),
+                      opacity: 0,
+                      marginRight: -8,
+                    },
+                },
+              },
+              {
+                props: ({ ownerState: e }) =>
+                  "end" === e.loadingPosition && e.fullWidth,
+                style: {
+                  [`& .${eW.startIconLoadingStart}, & .${eW.endIconLoadingEnd}`]:
+                    {
+                      transition: e.transitions.create(["opacity"], {
+                        duration: e.transitions.duration.short,
+                      }),
+                      opacity: 0,
+                      marginLeft: -8,
+                    },
+                },
+              },
+            ],
+          }))
+        ),
+        eX = (0, M.Ay)("span", {
+          name: "MuiLoadingButton",
+          slot: "LoadingIndicator",
+          overridesResolver: (e, t) => {
+            let { ownerState: n } = e;
+            return [
+              t.loadingIndicator,
+              t[`loadingIndicator${(0, b.A)(n.loadingPosition)}`],
+            ];
+          },
+        })(
+          (0, E.A)(({ theme: e }) => ({
+            position: "absolute",
+            visibility: "visible",
+            display: "flex",
+            variants: [
+              {
+                props: { loadingPosition: "start", size: "small" },
+                style: { left: 10 },
+              },
+              {
+                props: ({ loadingPosition: e, ownerState: t }) =>
+                  "start" === e && "small" !== t.size,
+                style: { left: 14 },
+              },
+              {
+                props: { variant: "text", loadingPosition: "start" },
+                style: { left: 6 },
+              },
+              {
+                props: { loadingPosition: "center" },
+                style: {
+                  left: "50%",
+                  transform: "translate(-50%)",
+                  color: (e.vars || e).palette.action.disabled,
+                },
+              },
+              {
+                props: { loadingPosition: "end", size: "small" },
+                style: { right: 10 },
+              },
+              {
+                props: ({ loadingPosition: e, ownerState: t }) =>
+                  "end" === e && "small" !== t.size,
+                style: { right: 14 },
+              },
+              {
+                props: { variant: "text", loadingPosition: "end" },
+                style: { right: 6 },
+              },
+              {
+                props: ({ ownerState: e }) =>
+                  "start" === e.loadingPosition && e.fullWidth,
+                style: { position: "relative", left: -10 },
+              },
+              {
+                props: ({ ownerState: e }) =>
+                  "end" === e.loadingPosition && e.fullWidth,
+                style: { position: "relative", right: -10 },
+              },
+            ],
+          }))
+        ),
+        eK = (0, M.Ay)("span", {
+          name: "MuiLoadingButton",
+          slot: "Label",
+          overridesResolver: (e, t) => [t.label],
+        })({
+          display: "inherit",
+          alignItems: "inherit",
+          justifyContent: "inherit",
+        }),
+        e_ = a.forwardRef(function (e, t) {
+          let n = a.useContext(eS.A),
+            r = (0, eM.A)(n, e),
+            o = (0, P.b)({ props: r, name: "MuiLoadingButton" }),
+            {
+              children: s,
+              disabled: l = !1,
+              id: d,
+              loading: c = !1,
+              loadingIndicator: h,
+              loadingPosition: u = "center",
+              variant: m = "text",
+              ...g
+            } = o,
+            p = (0, eI.A)(d),
+            x =
+              h ??
+              (0, i.jsx)(ez.A, {
+                "aria-labelledby": p,
+                color: "inherit",
+                size: 16,
+              }),
+            v = {
+              ...o,
+              disabled: l,
+              loading: c,
+              loadingIndicator: x,
+              loadingPosition: u,
+              variant: m,
+            },
+            f = eP(v),
+            j = c
+              ? (0, i.jsx)(eX, {
+                  className: f.loadingIndicator,
+                  ownerState: v,
+                  children: x,
+                })
+              : null;
+          return (0, i.jsxs)(eL, {
+            disabled: l || c,
+            id: p,
+            ref: t,
+            ...g,
+            variant: m,
+            classes: f,
+            ownerState: v,
+            children: [
+              "end" === v.loadingPosition
+                ? (0, i.jsx)(eK, { className: f.label, children: s })
+                : j,
+              "end" === v.loadingPosition
+                ? j
+                : (0, i.jsx)(eK, { className: f.label, children: s }),
+            ],
+          });
+        });
+      var eB = n(32253),
+        eN = n(9320),
+        eF = n(29791),
+        eG = n(44371);
+      let eH = (e) => {
+        let [t, n] = (0, j.fp)(r.eU),
+          i = (0, j.md)(r.Mx),
+          o = (0, j.md)(r._X),
+          s = (0, j.md)(r.Sd),
+          l = (0, j.md)(r.B2),
+          d = (0, j.md)(r.FR),
+          [c, h] = (0, j.fp)(r.Sp);
+        return (
+          (0, a.useEffect)(() => {
+            var t;
+            let r = s.history({ verbose: !0 }),
+              a = { lastMove: r.at(-1) },
+              u = o.history();
+            if (
+              r.length <= u.length &&
+              u.slice(0, r.length).join() === r.map((e) => e.san).join() &&
+              ((a.currentMoveIdx = r.length), i)
+            ) {
+              let e = r.length;
+              (a.eval = {
+                ...i.positions[e],
+                lines: i.positions[e].lines.slice(0, d),
+              }),
+                (a.lastEval =
+                  e > 0
+                    ? {
+                        ...i.positions[e - 1],
+                        lines: i.positions[e - 1].lines.slice(0, d),
+                      }
+                    : void 0);
+            }
+            if (!(null === (t = a.eval) || void 0 === t ? void 0 : t.opening))
+              for (let e of r.slice().reverse()) {
+                let t = e.after.split(" ")[0],
+                  n = eG.m.find((e) => e.fen === t);
+                if (n) {
+                  a.opening = n.name;
+                  break;
+                }
+              }
+            if (
+              (n(a),
+              !a.eval &&
+                (null == e ? void 0 : e.getIsReady()) &&
+                e.name &&
+                !s.isCheckmate() &&
+                !s.isStalemate())
+            ) {
+              let t = async (t, n) => {
+                var i, r, o;
+                if (!e.getIsReady()) throw Error("Engine not ready");
+                let a = c[t];
+                if (
+                  a &&
+                  a.engine === e.name &&
+                  (null !==
+                    (r =
+                      null === (i = a.lines) || void 0 === i
+                        ? void 0
+                        : i.length) && void 0 !== r
+                    ? r
+                    : 0) >= d &&
+                  (null !== (o = a.lines[0].depth) && void 0 !== o ? o : 0) >= l
+                ) {
+                  let e = { ...a, lines: a.lines.slice(0, d) };
+                  return null == n || n(e), e;
+                }
+                let s = await e.evaluatePositionWithUpdate({
+                  fen: t,
+                  depth: l,
+                  multiPv: d,
+                  setPartialEval: n,
+                });
+                return h((n) => ({ ...n, [t]: { ...s, engine: e.name } })), s;
+              };
+              (async () => {
+                let e = await t(s.fen(), (e) => {
+                  n({ ...a, eval: e });
+                });
+                if (0 === r.length) return;
+                let i = (0, eC.kf)(s),
+                  o = i.fens.slice("w" === s.turn() ? -3 : -4),
+                  l = i.uciMoves.slice("w" === s.turn() ? -2 : -3),
+                  d = await t(o.slice(-2)[0]),
+                  c = o.map((t, n) =>
+                    n === o.length - 2
+                      ? d
+                      : n === o.length - 1
+                        ? e
+                        : { lines: [{ pv: [], depth: 0, multiPv: 1, cp: 1 }] }
+                  ),
+                  h = (0, eF.R)(c, l, o);
+                n({ ...a, eval: h.slice(-1)[0], lastEval: h.slice(-2)[0] });
+              })();
+            }
+            return () => {
+              (null == e ? void 0 : e.getIsReady()) &&
+                (null == e || e.stopAllCurrentJobs());
+            };
+          }, [i, s, o, e, l, d]),
+          t
+        );
+      };
+      function eT() {
+        let e = (0, j.md)(r.Ju),
+          t = (0, eB.K)(e);
+        eH(t);
+        let n = (0, j.md)(r.pN),
+          [o, s] = (0, j.fp)(r.xg),
+          l = (0, j.md)(r.B2),
+          d = (0, j.md)(r.FR),
+          { setGameEval: c, gameFromUrl: h } = (0, ej.R)(),
+          [u, m] = (0, j.fp)(r.Mx),
+          g = (0, j.md)(r._X),
+          p = (0, j.Xr)(r.Sp),
+          { white: x, black: v } = (0, ev.K)(r._X),
+          f =
+            (null == t ? void 0 : t.getIsReady()) &&
+            g.history().length > 0 &&
+            !o,
+          y = (0, a.useCallback)(async () => {
+            let i = (0, eC.kf)(g);
+            if (
+              !(null == t ? void 0 : t.getIsReady()) ||
+              0 === i.fens.length ||
+              o
+            )
+              return;
+            let r = await t.evaluateGame({
+              ...i,
+              depth: l,
+              multiPv: d,
+              setEvaluationProgress: s,
+              playersRatings: {
+                white: null == x ? void 0 : x.rating,
+                black: null == v ? void 0 : v.rating,
+              },
+              workersNb: n,
+            });
+            m(r), s(0), h && c(h.id, r);
+            let a = i.fens.reduce(
+              (t, n, i) => ((t[n] = { ...r.positions[i], engine: e }), t),
+              {}
+            );
+            p((e) => ({ ...e, ...a })),
+              (0, eN.$)("analyze_game", {
+                engine: e,
+                depth: l,
+                multiPv: d,
+                nbPositions: i.fens.length,
+              });
+          }, [t, e, n, g, l, d, o, s, m, h, c, p, x.rating, v.rating]);
+        return ((0, a.useEffect)(() => {
+          s(0);
+        }, [t, s]),
+        (0, a.useEffect)(() => {
+          !u && f && y();
+        }, [u, f, y]),
+        o)
+          ? null
+          : (0, i.jsx)(e_, {
+              variant: "contained",
+              size: "small",
+              startIcon: (0, i.jsx)(es.In, {
+                icon: "streamline:magnifying-glass-solid",
+                height: 12,
+              }),
+              onClick: y,
+              disabled: !f,
+              children: (0, i.jsx)(G.A, {
+                fontSize: "0.9em",
+                fontWeight: "500",
+                lineHeight: "1.4em",
+                children: u ? "Analyze again" : "Analyze",
+              }),
+            });
+      }
+      var eO = n(75328),
+        e$ = n(6800);
+      let eQ = (e) =>
+        0 === e.value
+          ? null
+          : (0, i.jsxs)(g.A, {
+              container: !0,
+              alignItems: "center",
+              justifyContent: "center",
+              wrap: "nowrap",
+              width: "90%",
+              columnGap: 2,
+              size: 12,
+              children: [
+                (0, i.jsx)(G.A, {
+                  variant: "caption",
+                  align: "center",
+                  children: e.label,
+                }),
+                (0, i.jsx)(g.A, {
+                  sx: { width: "100%" },
+                  children: (0, i.jsx)(eO.A, {
+                    variant: "determinate",
+                    ...e,
+                    sx: (e) => ({
+                      borderRadius: "5px",
+                      height: "5px",
+                      ["&.".concat(e$.A.colorPrimary)]: {
+                        backgroundColor:
+                          e.palette.grey[
+                            "light" === e.palette.mode ? 200 : 700
+                          ],
+                      },
+                      ["& .".concat(e$.A.bar)]: {
+                        borderRadius: 5,
+                        backgroundColor: er.sl,
+                      },
+                    }),
+                  }),
+                }),
+                (0, i.jsx)(g.A, {
+                  children: (0, i.jsx)(G.A, {
+                    variant: "body2",
+                    color: "text.secondary",
+                    children: "".concat(Math.round(e.value), "%"),
+                  }),
+                }),
+              ],
+            });
+      function eY() {
+        let e = (0, j.md)(r.xg);
+        return (0, i.jsxs)(g.A, {
+          container: !0,
+          justifyContent: "center",
+          alignItems: "center",
+          rowGap: 2,
+          size: 12,
+          children: [
+            (0, i.jsxs)(g.A, {
+              container: !0,
+              justifyContent: "center",
+              alignItems: "center",
+              columnGap: 1,
+              size: 12,
+              children: [
+                (0, i.jsx)(es.In, {
+                  icon: "streamline:clipboard-check",
+                  height: 24,
+                }),
+                (0, i.jsx)(G.A, {
+                  variant: "h5",
+                  align: "center",
+                  children: "Game Analysis",
+                }),
+              ],
+            }),
+            (0, i.jsxs)(g.A, {
+              container: !0,
+              justifyContent: "center",
+              alignItems: "center",
+              rowGap: 2,
+              columnGap: 12,
+              size: 12,
+              children: [
+                (0, i.jsx)(ey, {}),
+                (0, i.jsx)(ek, {}),
+                (0, i.jsx)(eT, {}),
+                (0, i.jsx)(eQ, { value: e, label: "Analyzing..." }),
+              ],
+            }),
+          ],
+        });
+      }
+      var eD = n(22430),
+        eV = n(70946);
+      function eU() {
+        let e = (0, j.Xr)(r.MA);
+        return (
+          (0, a.useEffect)(() => {
+            let t = (t) => {
+              "f" === t.key && e((e) => !e);
+            };
+            return (
+              window.addEventListener("keydown", t),
+              () => {
+                window.removeEventListener("keydown", t);
+              }
+            );
+          }, [e]),
+          (0, i.jsx)(eD.A, {
+            title: "Flip board",
+            children: (0, i.jsx)(eV.A, {
+              onClick: () => e((e) => !e),
+              sx: { paddingX: 1.2, paddingY: 0.5 },
+              children: (0, i.jsx)(es.In, { icon: "eva:flip-fill" }),
+            }),
+          })
+        );
+      }
+      function eq() {
+        let { playMove: e } = (0, eA.j)(r.Sd),
+          t = (0, j.md)(r._X),
+          n = (0, j.md)(r.Sd),
+          o = t.history(),
+          s = n.history(),
+          l = s.length < o.length && o.slice(0, s.length).join() === s.join(),
+          d = (0, a.useCallback)(() => {
+            var n;
+            if (!l) return;
+            let i = s.length,
+              r = t.history({ verbose: !0 })[i],
+              o =
+                null === (n = t.getComments().find((e) => e.fen === r.after)) ||
+                void 0 === n
+                  ? void 0
+                  : n.comment;
+            r &&
+              e({ from: r.from, to: r.to, promotion: r.promotion, comment: o });
+          }, [l, s, t, e]);
+        return (
+          (0, a.useEffect)(() => {
+            let e = (e) => {
+              "ArrowRight" === e.key && d();
+            };
+            return (
+              window.addEventListener("keydown", e),
+              () => {
+                window.removeEventListener("keydown", e);
+              }
+            );
+          }, [d]),
+          (0, i.jsx)(eD.A, {
+            title: "Go to next move",
+            children: (0, i.jsx)(g.A, {
+              children: (0, i.jsx)(eV.A, {
+                onClick: () => d(),
+                disabled: !l,
+                sx: { paddingX: 1.2, paddingY: 0.5 },
+                children: (0, i.jsx)(es.In, {
+                  icon: "ri:arrow-right-s-line",
+                  height: 30,
+                }),
+              }),
+            }),
+          })
+        );
+      }
+      function eJ() {
+        let { setPgn: e } = (0, eA.j)(r.Sd),
+          t = (0, j.md)(r._X),
+          n = (0, j.md)(r.Sd),
+          o = t.history(),
+          s = n.history() >= o;
+        return (
+          (0, a.useEffect)(() => {
+            let n = (n) => {
+              "ArrowUp" !== n.key || s || e(t.pgn());
+            };
+            return (
+              window.addEventListener("keydown", n),
+              () => {
+                window.removeEventListener("keydown", n);
+              }
+            );
+          }, [s, e, t]),
+          (0, i.jsx)(eD.A, {
+            title: "Go to final position",
+            children: (0, i.jsx)(g.A, {
+              children: (0, i.jsx)(eV.A, {
+                onClick: () => {
+                  s || e(t.pgn());
+                },
+                disabled: s,
+                sx: { paddingX: 1.2, paddingY: 0.5 },
+                children: (0, i.jsx)(es.In, { icon: "ri:skip-forward-line" }),
+              }),
+            }),
+          })
+        );
+      }
+      function eZ() {
+        let e = (0, j.md)(r._X),
+          t = (0, j.md)(r.Sd),
+          n = (0, j.md)(r.Mx),
+          { addGame: o, setGameEval: a, gameFromUrl: s } = (0, ej.R)(),
+          l = (0, eg.useRouter)(),
+          d = !s && (t.history().length || e.history().length),
+          c = async () => {
+            if (!d) return;
+            let i = (0, eC.FA)(e, t),
+              r = await o(i);
+            n && (await a(r, n)),
+              l.replace(
+                { query: { gameId: r }, pathname: l.pathname },
+                void 0,
+                { shallow: !0, scroll: !1 }
+              );
+          };
+        return (0, i.jsx)(i.Fragment, {
+          children: s
+            ? (0, i.jsx)(eD.A, {
+                title: "Game saved in database",
+                children: (0, i.jsx)(g.A, {
+                  children: (0, i.jsx)(eV.A, {
+                    disabled: !0,
+                    sx: { paddingX: 1.2, paddingY: 0.5 },
+                    children: (0, i.jsx)(es.In, {
+                      icon: "ri:folder-check-line",
+                    }),
+                  }),
+                }),
+              })
+            : (0, i.jsx)(eD.A, {
+                title: "Save game",
+                children: (0, i.jsx)(g.A, {
+                  children: (0, i.jsx)(eV.A, {
+                    onClick: c,
+                    disabled: !d,
+                    sx: { paddingX: 1.2, paddingY: 0.5 },
+                    children: (0, i.jsx)(es.In, { icon: "ri:save-3-line" }),
+                  }),
+                }),
+              }),
+        });
+      }
+      function e0() {
+        let e = (0, j.md)(r.Sd),
+          { resetToStartingPosition: t, undoMove: n } = (0, eA.j)(r.Sd),
+          o = e.history(),
+          s = (0, j.md)(r._X);
+        return (
+          (0, a.useEffect)(() => {
+            let e = (e) => {
+              0 !== o.length &&
+                ("ArrowLeft" === e.key ? n() : "ArrowDown" === e.key && t());
+            };
+            return (
+              window.addEventListener("keydown", e),
+              () => {
+                window.removeEventListener("keydown", e);
+              }
+            );
+          }, [n, o, t, e]),
+          (0, i.jsxs)(g.A, {
+            container: !0,
+            justifyContent: "center",
+            alignItems: "center",
+            size: 12,
+            children: [
+              (0, i.jsx)(eU, {}),
+              (0, i.jsx)(eD.A, {
+                title: "Reset board",
+                children: (0, i.jsx)(g.A, {
+                  children: (0, i.jsx)(eV.A, {
+                    onClick: () => t(),
+                    disabled: 0 === o.length,
+                    sx: { paddingX: 1.2, paddingY: 0.5 },
+                    children: (0, i.jsx)(es.In, { icon: "ri:skip-back-line" }),
+                  }),
+                }),
+              }),
+              (0, i.jsx)(eD.A, {
+                title: "Go to previous move",
+                children: (0, i.jsx)(g.A, {
+                  children: (0, i.jsx)(eV.A, {
+                    onClick: () => n(),
+                    disabled: 0 === o.length,
+                    sx: { paddingX: 1.2, paddingY: 0.5 },
+                    children: (0, i.jsx)(es.In, {
+                      icon: "ri:arrow-left-s-line",
+                      height: 30,
+                    }),
+                  }),
+                }),
+              }),
+              (0, i.jsx)(eq, {}),
+              (0, i.jsx)(eJ, {}),
+              (0, i.jsx)(eD.A, {
+                title: "Copy pgn",
+                children: (0, i.jsx)(g.A, {
+                  children: (0, i.jsx)(eV.A, {
+                    disabled: 0 === s.history().length,
+                    onClick: () => {
+                      var e, t;
+                      null === (t = navigator.clipboard) ||
+                        void 0 === t ||
+                        null === (e = t.writeText) ||
+                        void 0 === e ||
+                        e.call(t, s.pgn());
+                    },
+                    sx: { paddingX: 1.2, paddingY: 0.5 },
+                    children: (0, i.jsx)(es.In, { icon: "ri:clipboard-line" }),
+                  }),
+                }),
+              }),
+              (0, i.jsx)(eZ, {}),
+            ],
+          })
+        );
+      }
+      var e1 = n(9227),
+        e2 = n(34428),
+        e5 = n(68327),
+        e4 = n(79534),
+        e7 = n.n(e4);
+      function e3(e) {
+        let {
+            san: t,
+            color: n,
+            additionalText: r,
+            typographyProps: s,
+            boxProps: l,
+          } = e,
+          d = "dark" === (0, o.A)().palette.mode,
+          { icon: c, text: h } = (0, a.useMemo)(() => {
+            let e = t.charAt(0);
+            if (!["K", "Q", "R", "B", "N"].includes(e)) return { text: t };
+            let i = d ? n : "w" === n ? "b" : "w";
+            return { icon: e9[e][i], text: t.slice(1) };
+          }, [t, n, d]);
+        return (0, i.jsxs)(p.A, {
+          component: "span",
+          ...l,
+          children: [
+            c &&
+              (0, i.jsx)(G.A, {
+                component: "span",
+                fontFamily: e7().style.fontFamily,
+                ...s,
+                children: c,
+              }),
+            (0, i.jsxs)(G.A, {
+              component: "span",
+              noWrap: !0,
+              ...s,
+              children: [h, r],
+            }),
+          ],
+        });
+      }
+      let e9 = {
+        K: { w: "♚", b: "♔" },
+        Q: { w: "♛", b: "♕" },
+        R: { w: "♜", b: "♖" },
+        B: { w: "♝", b: "♗" },
+        N: { w: "♞", b: "♘" },
+      };
+      function e8() {
+        var e, t, n, o, s, l, d, c;
+        let h = (0, j.md)(r.eU),
+          u = (0, j.md)(r.Sd),
+          m =
+            null == h
+              ? void 0
+              : null === (e = h.lastEval) || void 0 === e
+                ? void 0
+                : e.bestMove,
+          g = (0, a.useMemo)(() => {
+            var e;
+            if (!m) return;
+            let t =
+              null === (e = u.history({ verbose: !0 }).at(-1)) || void 0 === e
+                ? void 0
+                : e.before;
+            if (t) return (0, eC.AC)(t)(m);
+          }, [m, u]);
+        if (0 === u.history().length) return null;
+        if (!g)
+          return (0, i.jsx)(e1.A, {
+            direction: "row",
+            alignItems: "center",
+            columnGap: 5,
+            marginTop: 0.8,
+            children: (0, i.jsx)(e5.A, {
+              variant: "rounded",
+              animation: "wave",
+              width: "12em",
+              sx: { color: "transparent", maxWidth: "7vw" },
+              children: (0, i.jsx)(G.A, {
+                align: "center",
+                fontSize: "0.9rem",
+                children: "placeholder",
+              }),
+            }),
+          });
+        let p =
+            null === (t = h.eval) || void 0 === t
+              ? void 0
+              : t.moveClassification,
+          x =
+            p !== _.eK.Best &&
+            p !== _.eK.Opening &&
+            p !== _.eK.Forced &&
+            p !== _.eK.Splendid &&
+            p !== _.eK.Perfect;
+        return (0, i.jsxs)(e1.A, {
+          direction: "row",
+          alignItems: "center",
+          justifyContent: "center",
+          columnGap: 4,
+          marginTop: 0.5,
+          flexWrap: "wrap",
+          children: [
+            p &&
+              (0, i.jsxs)(e1.A, {
+                direction: "row",
+                alignItems: "center",
+                spacing: 1,
+                children: [
+                  (0, i.jsx)(ei(), {
+                    src: "/icons/".concat(p, ".png"),
+                    alt: "move-icon",
+                    width: 16,
+                    height: 16,
+                    style: { maxWidth: "3.5vw", maxHeight: "3.5vw" },
+                  }),
+                  (0, i.jsx)(e3, {
+                    typographyProps: { fontSize: "0.9rem" },
+                    san:
+                      null !==
+                        (l =
+                          null === (n = h.lastMove) || void 0 === n
+                            ? void 0
+                            : n.san) && void 0 !== l
+                        ? l
+                        : "",
+                    color:
+                      null !==
+                        (d =
+                          null === (o = h.lastMove) || void 0 === o
+                            ? void 0
+                            : o.color) && void 0 !== d
+                        ? d
+                        : "w",
+                    additionalText: " is " + e6[p],
+                  }),
+                ],
+              }),
+            x &&
+              (0, i.jsxs)(e1.A, {
+                direction: "row",
+                alignItems: "center",
+                spacing: 1,
+                children: [
+                  (0, i.jsx)(ei(), {
+                    src: "/icons/best.png",
+                    alt: "move-icon",
+                    width: 16,
+                    height: 16,
+                    style: { maxWidth: "3.5vw", maxHeight: "3.5vw" },
+                  }),
+                  (0, i.jsx)(e3, {
+                    typographyProps: { fontSize: "0.9rem" },
+                    san: g,
+                    color:
+                      null !==
+                        (c =
+                          null === (s = h.lastMove) || void 0 === s
+                            ? void 0
+                            : s.color) && void 0 !== c
+                        ? c
+                        : "w",
+                    additionalText: " was the best move",
+                  }),
+                ],
+              }),
+          ],
+        });
+      }
+      let e6 = {
+        [_.eK.Opening]: "an opening move",
+        [_.eK.Forced]: "forced",
+        [_.eK.Splendid]: "splendid !!",
+        [_.eK.Perfect]: "the only good move !",
+        [_.eK.Best]: "the best move",
+        [_.eK.Excellent]: "excellent",
+        [_.eK.Okay]: "an okay move",
+        [_.eK.Inaccuracy]: "an inaccuracy",
+        [_.eK.Mistake]: "a mistake",
+        [_.eK.Blunder]: "a blunder",
+      };
+      function te() {
+        var e;
+        let t = (0, j.md)(r.eU);
+        if (!(null == t ? void 0 : t.lastMove)) return null;
+        let n =
+          (null == t
+            ? void 0
+            : null === (e = t.eval) || void 0 === e
+              ? void 0
+              : e.opening) || t.opening;
+        return n
+          ? (0, i.jsx)(g.A, {
+              children: (0, i.jsx)(G.A, {
+                align: "center",
+                fontSize: "0.9rem",
+                maxWidth: "20rem",
+                children: n,
+              }),
+            })
+          : (0, i.jsx)(g.A, {
+              justifyItems: "center",
+              alignContent: "center",
+              children: (0, i.jsx)(e5.A, {
+                variant: "rounded",
+                animation: "wave",
+                width: "12em",
+                sx: {
+                  color: "transparent",
+                  maxWidth: "7vw",
+                  maxHeight: "3.5vw",
+                },
+                children: (0, i.jsx)(G.A, {
+                  align: "center",
+                  fontSize: "0.9rem",
+                  children: "placeholder",
+                }),
+              }),
+            });
+      }
+      var tt = n(63009),
+        tn = n(12572);
+      function ti(e) {
+        let { line: t } = e,
+          n = (0, j.md)(r.Sd),
+          { addMoves: o } = (0, eA.j)(r.Sd),
+          a = (0, eC.l3)(t),
+          s =
+            (void 0 !== t.cp && t.cp < 0) || (void 0 !== t.mate && t.mate < 0),
+          l = t.depth < 6,
+          d = (0, eC.AC)(n.fen()),
+          c = n.turn(),
+          h = (e) => (e % 2 == 0 ? c : "w" === c ? "b" : "w");
+        return (0, i.jsxs)(tn.Ay, {
+          disablePadding: !0,
+          children: [
+            (0, i.jsx)(G.A, {
+              marginRight: 1.5,
+              marginY: 0.3,
+              paddingY: 0.2,
+              noWrap: !0,
+              overflow: "visible",
+              width: "3.5em",
+              minWidth: "3.5em",
+              textAlign: "center",
+              fontSize: "0.8rem",
+              sx: {
+                backgroundColor: s ? "black" : "white",
+                color: s ? "white" : "black",
+              },
+              borderRadius: "5px",
+              border: "1px solid #424242",
+              fontWeight: "500",
+              children: l
+                ? (0, i.jsx)(e5.A, {
+                    variant: "rounded",
+                    animation: "wave",
+                    sx: { color: "transparent" },
+                    children: "placeholder",
+                  })
+                : a,
+            }),
+            (0, i.jsx)(G.A, {
+              noWrap: !0,
+              fontSize: "0.9rem",
+              children: l
+                ? (0, i.jsx)(e5.A, {
+                    variant: "rounded",
+                    animation: "wave",
+                    width: "20em",
+                  })
+                : t.pv.map((e, n) => {
+                    let r = d(e),
+                      a = h(n);
+                    return (0, i.jsx)(
+                      e3,
+                      {
+                        san: r,
+                        color: a,
+                        additionalText: n < t.pv.length - 1 ? "," : "",
+                        boxProps: {
+                          onClick: () => {
+                            o(t.pv.slice(0, n + 1));
+                          },
+                          sx: {
+                            cursor: "pointer",
+                            ml: 0.5 * !!n,
+                            transition: "opacity 0.2s ease-in-out",
+                            "&:hover": { opacity: 0.5 },
+                          },
+                        },
+                      },
+                      n
+                    );
+                  }),
+            }),
+          ],
+        });
+      }
+      function tr(e) {
+        var t, n;
+        let o = (0, j.md)(r.Sd),
+          a = (0, j.md)(r.FR),
+          s = (0, j.md)(r.eU),
+          l = Array.from({ length: a }).map((e, t) => ({
+            pv: ["".concat(t)],
+            depth: 0,
+            multiPv: t + 1,
+          })),
+          d = (
+            null == s
+              ? void 0
+              : null === (n = s.eval) || void 0 === n
+                ? void 0
+                : null === (t = n.lines) || void 0 === t
+                  ? void 0
+                  : t.length
+          )
+            ? s.eval.lines
+            : l;
+        return o.isCheckmate()
+          ? null
+          : (0, i.jsx)(g.A, {
+              container: !0,
+              justifyContent: "center",
+              alignItems: "center",
+              ...e,
+              children: (0, i.jsx)(tt.A, {
+                sx: { width: "95%", padding: 0 },
+                children: d.map((e) => (0, i.jsx)(ti, { line: e }, e.multiPv)),
+              }),
+            });
+      }
+      function to(e) {
+        let t = (0, j.md)(r.Mx),
+          n = (0, j.md)(r._X),
+          o = (0, j.md)(r.Sd),
+          a = o.history(),
+          s = n.history(),
+          l =
+            a.length > 0 &&
+            (o.isCheckmate() || o.isDraw() || a.join() === s.join());
+        return (0, i.jsxs)(g.A, {
+          container: !0,
+          size: 12,
+          justifyContent: { xs: "center", lg: t ? "start" : "center" },
+          alignItems: "center",
+          flexWrap: { lg: t ? "nowrap" : void 0 },
+          gap: 2,
+          marginY: { lg: t ? 1 : void 0 },
+          paddingX: { xs: 0, lg: "calc(4% - 2rem)" },
+          ...e,
+          sx: e.hidden ? { display: "none" } : e.sx,
+          children: [
+            (0, i.jsxs)(e1.A, {
+              justifyContent: "center",
+              alignItems: "center",
+              rowGap: 1,
+              minWidth: t ? "min(25rem, 95vw)" : void 0,
+              children: [
+                t &&
+                  (0, i.jsx)(e2.A, {
+                    title: "Accuracy",
+                    whiteValue: "".concat(t.accuracy.white.toFixed(1), " %"),
+                    blackValue: "".concat(t.accuracy.black.toFixed(1), " %"),
+                  }),
+                (null == t ? void 0 : t.estimatedElo) &&
+                  (0, i.jsx)(e2.A, {
+                    title: "Game Rating",
+                    whiteValue: Math.round(t.estimatedElo.white),
+                    blackValue: Math.round(t.estimatedElo.black),
+                  }),
+                (0, i.jsx)(e8, {}),
+                (0, i.jsx)(te, {}),
+                l &&
+                  (0, i.jsx)(G.A, {
+                    align: "center",
+                    fontSize: "0.9rem",
+                    noWrap: !0,
+                    children: "Game is over",
+                  }),
+              ],
+            }),
+            (0, i.jsx)(tr, { size: { lg: t ? void 0 : 12 } }),
+          ],
+        });
+      }
+      var ta = n(45175);
+      function ts() {
+        let { white: e, black: t } = (0, ev.K)(r._X),
+          n = (0, j.md)(r.Mx);
+        return (null == n ? void 0 : n.positions.length)
+          ? (0, i.jsxs)(g.A, {
+              container: !0,
+              justifyContent: "center",
+              alignItems: "center",
+              rowGap: 0.7,
+              sx: { scrollbarWidth: "thin", overflowY: "auto" },
+              height: "100%",
+              maxHeight: "22rem",
+              size: 12,
+              children: [
+                (0, i.jsxs)(g.A, {
+                  container: !0,
+                  alignItems: "center",
+                  justifyContent: "space-evenly",
+                  wrap: "nowrap",
+                  size: 12,
+                  children: [
+                    (0, i.jsx)(G.A, {
+                      width: "12rem",
+                      align: "center",
+                      noWrap: !0,
+                      fontSize: "0.9rem",
+                      children: e.name,
+                    }),
+                    (0, i.jsx)(G.A, { width: "10rem" }),
+                    (0, i.jsx)(G.A, {
+                      width: "12rem",
+                      align: "center",
+                      noWrap: !0,
+                      fontSize: "0.9rem",
+                      children: t.name,
+                    }),
+                  ],
+                }),
+                tl.map((e) => (0, i.jsx)(ta.A, { classification: e }, e)),
+              ],
+            })
+          : null;
+      }
+      let tl = [
+        _.eK.Splendid,
+        _.eK.Perfect,
+        _.eK.Best,
+        _.eK.Excellent,
+        _.eK.Okay,
+        _.eK.Opening,
+        _.eK.Inaccuracy,
+        _.eK.Mistake,
+        _.eK.Blunder,
+      ];
+      function td(e) {
+        return (0, i.jsx)(g.A, {
+          container: !0,
+          justifyContent: "center",
+          alignItems: "center",
+          size: 12,
+          flexGrow: 1,
+          ...e,
+          sx: {
+            ...(e.hidden
+              ? { display: "none" }
+              : { overflow: "hidden", ...e.sx }),
+            flexDirection: "column",
+          },
+          children: (0, i.jsx)(ts, {}),
+        });
+      }
+      function tc() {
+        let e = m((0, o.A)().breakpoints.up("lg")),
+          { chessComUsername: t } = (0, eg.useRouter)().query,
+          n = (0, j.md)(r.Mx),
+          s = (0, j.md)(r._X),
+          l = (0, j.md)(r.Sd),
+          d = (0, j.Xr)(r._X),
+          c = s.history().length > 0 || l.history().length > 0,
+          [h, u] = (0, a.useState)(null),
+          [y, w] = (0, a.useState)(null),
+          [A, b] = (0, a.useState)(!1);
+        return (
+          (0, a.useEffect)(() => {
+            if (y) {
+              let e = new em.d$();
+              e.loadPgn(y.pgn), d(e), b(!0);
+            }
+          }, [y, d]),
+          (0, a.useEffect)(() => {
+            n &&
+              A &&
+              (new Notification("Game Analysis Complete", {
+                body: "Your new game has been automatically analyzed.",
+              }),
+              b(!1));
+          }, [n, A]),
+          (0, a.useEffect)(() => {
+            if ("string" == typeof t && t) {
+              let e = () => {
+                let e = new eu(t);
+                e.startWatching((e) => {
+                  w(e);
+                }),
+                  u(e);
+              };
+              "granted" !== Notification.permission
+                ? Notification.requestPermission().then((t) => {
+                    "granted" === t && e();
+                  })
+                : e();
+            }
+            return () => {
+              null == h || h.stopWatching();
+            };
+          }, [t, h]),
+          (0, i.jsxs)(g.A, {
+            container: !0,
+            gap: 4,
+            justifyContent: "space-evenly",
+            alignItems: "start",
+            children: [
+              (0, i.jsx)(ec.s, { title: "MrAnalyse Game Analysis" }),
+              (0, i.jsx)(ef, {}),
+              (0, i.jsxs)(g.A, {
+                container: !0,
+                justifyContent: "start",
+                alignItems: "center",
+                borderRadius: 2,
+                border: 1,
+                borderColor: "secondary.main",
+                sx: {
+                  backgroundColor: "secondary.main",
+                  borderColor: "primary.main",
+                  borderWidth: 2,
+                  boxShadow: "0 2px 10px rgba(0, 0, 0, 0.5)",
+                },
+                padding: 2,
+                style: { maxWidth: "1200px" },
+                rowGap: 2,
+                height: { xs: "auto", lg: "calc(95vh - 60px)" },
+                display: "flex",
+                flexDirection: "column",
+                flexWrap: "nowrap",
+                size: { xs: 12, lg: "grow" },
+                children: [
+                  e
+                    ? (0, i.jsxs)(p.A, {
+                        width: "100%",
+                        children: [
+                          (0, i.jsx)(eY, {}, "analysis-panel-header"),
+                          (0, i.jsx)(x.A, {
+                            sx: { marginX: "5%", marginTop: 2.5 },
+                          }),
+                        ],
+                      })
+                    : (0, i.jsx)(e0, {}, "review-panel-toolbar"),
+                  !e && !n && (0, i.jsx)(x.A, { sx: { marginX: "5%" } }),
+                  !e && !n && (0, i.jsx)(eY, {}, "analysis-panel-header"),
+                  e
+                    ? (0, i.jsxs)(i.Fragment, {
+                        children: [
+                          (0, i.jsx)(ed.A, { id: "tabContent2" }),
+                          (0, i.jsx)(to, { id: "tabContent0" }),
+                          (0, i.jsx)(td, { id: "tabContent1" }),
+                        ],
+                      })
+                    : (0, i.jsxs)(p.A, {
+                        width: "100%",
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "center",
+                        children: [
+                          (0, i.jsx)(to, { id: "tabContent0" }),
+                          n && (0, i.jsx)(x.A, { sx: { width: "90%", my: 2 } }),
+                          n && (0, i.jsx)(ed.A, { id: "tabContent2" }),
+                          c && (0, i.jsx)(x.A, { sx: { width: "90%", my: 2 } }),
+                          c && (0, i.jsx)(td, { id: "tabContent1" }),
+                        ],
+                      }),
+                  e &&
+                    (0, i.jsxs)(p.A, {
+                      width: "100%",
+                      children: [
+                        (0, i.jsx)(x.A, {
+                          sx: { marginX: "5%", marginBottom: 1.5 },
+                        }),
+                        (0, i.jsx)(e0, {}, "review-panel-toolbar"),
+                      ],
+                    }),
+                  !e &&
+                    n &&
+                    (0, i.jsxs)(p.A, {
+                      width: "100%",
+                      children: [
+                        (0, i.jsx)(x.A, {
+                          sx: { marginX: "5%", marginBottom: 2.5 },
+                        }),
+                        (0, i.jsx)(eY, {}, "analysis-panel-header"),
+                      ],
+                    }),
+                ],
+              }),
+              (0, i.jsx)(el, {}),
+              (0, i.jsx)(v.A, {
+                open: !!y,
+                autoHideDuration: 6e3,
+                onClose: () => w(null),
+                anchorOrigin: { vertical: "bottom", horizontal: "right" },
+                children: (0, i.jsxs)(f.A, {
+                  onClose: () => w(null),
+                  severity: "success",
+                  sx: { width: "100%" },
+                  children: [
+                    "New game found: ",
+                    null == y ? void 0 : y.white.name,
+                    " vs ",
+                    null == y ? void 0 : y.black.name,
+                  ],
+                }),
+              }),
+            ],
+          })
+        );
+      }
+    },
+    89243: (e, t, n) => {
+      "use strict";
+      n.d(t, { A: () => A });
+      var i = n(37876),
+        r = n(14232),
+        o = n(31084),
+        a = n(11494),
+        s = n(85278),
+        l = n(80252),
+        d = n(57377),
+        c = n(22333),
+        h = n(24354),
+        u = n(1874),
+        m = n(56321),
+        g = n(75271),
+        p = n(52547),
+        x = n(24307);
+      function v(e) {
+        let { active: t, payload: n } = e;
+        if (!t || !(null == n ? void 0 : n.length)) return null;
+        let r = n[0].payload;
+        return (0, i.jsx)("div", {
+          style: {
+            backgroundColor: "#f0f0f0",
+            padding: 5,
+            color: "black",
+            opacity: 0.9,
+            border: "1px solid black",
+            borderRadius: 3,
+          },
+          children: (0, x.l3)(r),
+        });
+      }
+      var f = n(92094);
+      function j(e) {
+        let { cx: t, cy: n, r, payload: o } = e,
+          a = (null == o ? void 0 : o.moveClassification)
+            ? f.k_[o.moveClassification]
+            : "grey";
+        return (0, i.jsx)("circle", {
+          cx: t,
+          cy: n,
+          r: r,
+          stroke: a,
+          strokeWidth: 5,
+          fill: a,
+          fillOpacity: 1,
+        });
+      }
+      var y = n(19271),
+        w = n(65897);
+      function A(e) {
+        var t;
+        let n = (0, s.md)(p.Mx),
+          x = (0, s.md)(p.eU),
+          { goToMove: A } = (0, w.j)(p.Sd),
+          k = (0, s.md)(p._X),
+          C = (0, r.useMemo)(() => {
+            var e;
+            return null !== (e = null == n ? void 0 : n.positions.map(b)) &&
+              void 0 !== e
+              ? e
+              : [];
+          }, [n]),
+          I = (0, r.useMemo)(() => {
+            let e = C.filter((e) => e.moveClassification === y.eK.Best),
+              t = Math.ceil(0.15 * e.length),
+              n = e.map((e) => e.moveNb);
+            for (let e = n.length - 1; e > 0; e--) {
+              let t = Math.floor(Math.random() * (e + 1));
+              [n[e], n[t]] = [n[t], n[e]];
+            }
+            return new Set(n.slice(0, t));
+          }, [C]),
+          S = (
+            null === (t = x.eval) || void 0 === t
+              ? void 0
+              : t.moveClassification
+          )
+            ? f.k_[x.eval.moveClassification]
+            : "grey",
+          z = (0, r.useCallback)(
+            (e) => {
+              let t = e.payload,
+                n = null == t ? void 0 : t.moveClassification;
+              return n &&
+                ([
+                  y.eK.Splendid,
+                  y.eK.Perfect,
+                  y.eK.Blunder,
+                  y.eK.Mistake,
+                ].includes(n) ||
+                  (n === y.eK.Best && I.has(t.moveNb)))
+                ? (0, r.createElement)(j, { ...e, key: e.key, payload: t })
+                : (0, i.jsx)("svg", {}, e.key);
+            },
+            [I]
+          );
+        return n
+          ? (0, i.jsx)(o.A, {
+              container: !0,
+              justifyContent: "center",
+              alignItems: "center",
+              minHeight: "min(10rem, 8vh)",
+              height: { xs: "8rem", lg: "none" },
+              maxHeight: "10rem",
+              ...e,
+              sx: e.hidden ? { display: "none" } : e.sx,
+              size: 12,
+              children: (0, i.jsx)(a.A, {
+                height: "100%",
+                width: { xs: "100%", lg: "90%" },
+                sx: {
+                  backgroundColor: "#2e2e2e",
+                  borderRadius: "15px",
+                  overflow: "hidden",
+                },
+                children: (0, i.jsx)(l.u, {
+                  width: "100%",
+                  height: "100%",
+                  children: (0, i.jsxs)(d.Q, {
+                    width: 500,
+                    height: 400,
+                    data: C,
+                    margin: { top: 0, left: 0, right: 0, bottom: 0 },
+                    onClick: (e) => {
+                      var t, n;
+                      let i =
+                        null == e
+                          ? void 0
+                          : null === (n = e.activePayload) || void 0 === n
+                            ? void 0
+                            : null === (t = n[0]) || void 0 === t
+                              ? void 0
+                              : t.payload;
+                      i && A(i.moveNb, k);
+                    },
+                    style: { cursor: "pointer" },
+                    children: [
+                      (0, i.jsx)(c.W, {
+                        dataKey: "moveNb",
+                        hide: !0,
+                        stroke: "red",
+                      }),
+                      (0, i.jsx)(h.h, { domain: [0, 20], hide: !0 }),
+                      (0, i.jsx)(u.m, {
+                        content: (0, i.jsx)(v, {}),
+                        isAnimationActive: !1,
+                        cursor: {
+                          stroke: "grey",
+                          strokeWidth: 2,
+                          strokeOpacity: 0.3,
+                        },
+                      }),
+                      (0, i.jsx)(m.G, {
+                        type: "monotone",
+                        dataKey: "value",
+                        stroke: "none",
+                        fill: "#ffffff",
+                        fillOpacity: 1,
+                        dot: z,
+                        activeDot: (0, i.jsx)(j, {}),
+                        isAnimationActive: !1,
+                      }),
+                      (0, i.jsx)(g.e, {
+                        y: 10,
+                        stroke: "grey",
+                        strokeWidth: 2,
+                        strokeOpacity: 0.4,
+                      }),
+                      (0, i.jsx)(g.e, {
+                        x: x.currentMoveIdx,
+                        stroke: S,
+                        strokeWidth: 4,
+                        strokeOpacity: 0.6,
+                      }),
+                    ],
+                  }),
+                }),
+              }),
+            })
+          : null;
+      }
+      let b = (e, t) => {
+        let n = e.lines[0],
+          i = {
+            moveNb: t,
+            value: 10,
+            cp: n.cp,
+            mate: n.mate,
+            moveClassification: e.moveClassification,
+          };
+        return n.mate
+          ? { ...i, value: 20 * (n.mate > 0) }
+          : n.cp
+            ? { ...i, value: Math.max(Math.min(n.cp / 100, 10), -10) + 10 }
+            : i;
+      };
+    },
+  },
+  (e) => {
+    var t = (t) => e((e.s = t));
+    e.O(0, [774, 453, 696, 927, 358, 986, 703, 947, 546, 636, 593, 792], () =>
+      t(16760)
+    ),
+      (_N_E = e.O());
+  },
+]);

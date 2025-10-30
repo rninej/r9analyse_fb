@@ -1,1 +1,2026 @@
-{"version":"tree-0.1","tree":{"id":"App","path":"","children":{"FreechessWebapp":{"id":"FreechessWebapp","path":"FreechessWebapp","children":{"Bucket":{"id":"Bucket","path":"FreechessWebapp/Bucket","children":{"Resource":{"id":"Resource","path":"FreechessWebapp/Bucket/Resource","attributes":{"aws:cdk:cloudformation:type":"AWS::S3::Bucket","aws:cdk:cloudformation:props":{"accessControl":"Private","tags":[{"key":"aws-cdk:auto-delete-objects","value":"true"},{"key":"aws-cdk:cr-owned:54842f12","value":"true"},{"key":"aws-cdk:cr-owned:b72a15bc","value":"true"}]}},"constructInfo":{"fqn":"aws-cdk-lib.aws_s3.CfnBucket","version":"2.189.1"}},"Policy":{"id":"Policy","path":"FreechessWebapp/Bucket/Policy","children":{"Resource":{"id":"Resource","path":"FreechessWebapp/Bucket/Policy/Resource","attributes":{"aws:cdk:cloudformation:type":"AWS::S3::BucketPolicy","aws:cdk:cloudformation:props":{"bucket":{"Ref":"Bucket83908E77"},"policyDocument":{"Statement":[{"Action":["s3:DeleteObject*","s3:GetBucket*","s3:List*","s3:PutBucketPolicy"],"Effect":"Allow","Principal":{"AWS":{"Fn::GetAtt":["CustomS3AutoDeleteObjectsCustomResourceProviderRole3B1BD092","Arn"]}},"Resource":[{"Fn::GetAtt":["Bucket83908E77","Arn"]},{"Fn::Join":["",[{"Fn::GetAtt":["Bucket83908E77","Arn"]},"/*"]]}]},{"Action":"s3:GetObject","Condition":{"StringEquals":{"AWS:SourceArn":{"Fn::Join":["",["arn:",{"Ref":"AWS::Partition"},":cloudfront::",{"Ref":"AWS::AccountId"},":distribution/",{"Ref":"Distribution830FAC52"}]]}}},"Effect":"Allow","Principal":{"Service":"cloudfront.amazonaws.com"},"Resource":{"Fn::Join":["",[{"Fn::GetAtt":["Bucket83908E77","Arn"]},"/*"]]}}],"Version":"2012-10-17"}}},"constructInfo":{"fqn":"aws-cdk-lib.aws_s3.CfnBucketPolicy","version":"2.189.1"}}},"constructInfo":{"fqn":"aws-cdk-lib.aws_s3.BucketPolicy","version":"2.189.1","metadata":[{"bucket":"*"}]}},"AutoDeleteObjectsCustomResource":{"id":"AutoDeleteObjectsCustomResource","path":"FreechessWebapp/Bucket/AutoDeleteObjectsCustomResource","children":{"Default":{"id":"Default","path":"FreechessWebapp/Bucket/AutoDeleteObjectsCustomResource/Default","constructInfo":{"fqn":"aws-cdk-lib.CfnResource","version":"2.189.1"}}},"constructInfo":{"fqn":"aws-cdk-lib.CustomResource","version":"2.189.1","metadata":["*"]}}},"constructInfo":{"fqn":"aws-cdk-lib.aws_s3.Bucket","version":"2.189.1","metadata":[{"accessControl":"Private","removalPolicy":"destroy","autoDeleteObjects":true,"publicReadAccess":false}]}},"Custom::S3AutoDeleteObjectsCustomResourceProvider":{"id":"Custom::S3AutoDeleteObjectsCustomResourceProvider","path":"FreechessWebapp/Custom::S3AutoDeleteObjectsCustomResourceProvider","children":{"Staging":{"id":"Staging","path":"FreechessWebapp/Custom::S3AutoDeleteObjectsCustomResourceProvider/Staging","constructInfo":{"fqn":"aws-cdk-lib.AssetStaging","version":"2.189.1"}},"Role":{"id":"Role","path":"FreechessWebapp/Custom::S3AutoDeleteObjectsCustomResourceProvider/Role","constructInfo":{"fqn":"aws-cdk-lib.CfnResource","version":"2.189.1"}},"Handler":{"id":"Handler","path":"FreechessWebapp/Custom::S3AutoDeleteObjectsCustomResourceProvider/Handler","constructInfo":{"fqn":"aws-cdk-lib.CfnResource","version":"2.189.1"}}},"constructInfo":{"fqn":"aws-cdk-lib.CustomResourceProviderBase","version":"2.189.1"}},"EnginesBucket":{"id":"EnginesBucket","path":"FreechessWebapp/EnginesBucket","children":{"Resource":{"id":"Resource","path":"FreechessWebapp/EnginesBucket/Resource","attributes":{"aws:cdk:cloudformation:type":"AWS::S3::Bucket","aws:cdk:cloudformation:props":{"accessControl":"Private","tags":[{"key":"aws-cdk:auto-delete-objects","value":"true"},{"key":"aws-cdk:cr-owned:engines:68b76092","value":"true"}]}},"constructInfo":{"fqn":"aws-cdk-lib.aws_s3.CfnBucket","version":"2.189.1"}},"Policy":{"id":"Policy","path":"FreechessWebapp/EnginesBucket/Policy","children":{"Resource":{"id":"Resource","path":"FreechessWebapp/EnginesBucket/Policy/Resource","attributes":{"aws:cdk:cloudformation:type":"AWS::S3::BucketPolicy","aws:cdk:cloudformation:props":{"bucket":{"Ref":"EnginesBucket57185CB5"},"policyDocument":{"Statement":[{"Action":["s3:DeleteObject*","s3:GetBucket*","s3:List*","s3:PutBucketPolicy"],"Effect":"Allow","Principal":{"AWS":{"Fn::GetAtt":["CustomS3AutoDeleteObjectsCustomResourceProviderRole3B1BD092","Arn"]}},"Resource":[{"Fn::GetAtt":["EnginesBucket57185CB5","Arn"]},{"Fn::Join":["",[{"Fn::GetAtt":["EnginesBucket57185CB5","Arn"]},"/*"]]}]},{"Action":"s3:GetObject","Condition":{"StringEquals":{"AWS:SourceArn":{"Fn::Join":["",["arn:",{"Ref":"AWS::Partition"},":cloudfront::",{"Ref":"AWS::AccountId"},":distribution/",{"Ref":"Distribution830FAC52"}]]}}},"Effect":"Allow","Principal":{"Service":"cloudfront.amazonaws.com"},"Resource":{"Fn::Join":["",[{"Fn::GetAtt":["EnginesBucket57185CB5","Arn"]},"/*"]]}}],"Version":"2012-10-17"}}},"constructInfo":{"fqn":"aws-cdk-lib.aws_s3.CfnBucketPolicy","version":"2.189.1"}}},"constructInfo":{"fqn":"aws-cdk-lib.aws_s3.BucketPolicy","version":"2.189.1","metadata":[{"bucket":"*"}]}},"AutoDeleteObjectsCustomResource":{"id":"AutoDeleteObjectsCustomResource","path":"FreechessWebapp/EnginesBucket/AutoDeleteObjectsCustomResource","children":{"Default":{"id":"Default","path":"FreechessWebapp/EnginesBucket/AutoDeleteObjectsCustomResource/Default","constructInfo":{"fqn":"aws-cdk-lib.CfnResource","version":"2.189.1"}}},"constructInfo":{"fqn":"aws-cdk-lib.CustomResource","version":"2.189.1","metadata":["*"]}}},"constructInfo":{"fqn":"aws-cdk-lib.aws_s3.Bucket","version":"2.189.1","metadata":[{"accessControl":"Private","removalPolicy":"destroy","autoDeleteObjects":true,"publicReadAccess":false}]}},"BucketDeployment":{"id":"BucketDeployment","path":"FreechessWebapp/BucketDeployment","children":{"AwsCliLayer":{"id":"AwsCliLayer","path":"FreechessWebapp/BucketDeployment/AwsCliLayer","children":{"Code":{"id":"Code","path":"FreechessWebapp/BucketDeployment/AwsCliLayer/Code","children":{"Stage":{"id":"Stage","path":"FreechessWebapp/BucketDeployment/AwsCliLayer/Code/Stage","constructInfo":{"fqn":"aws-cdk-lib.AssetStaging","version":"2.189.1"}},"AssetBucket":{"id":"AssetBucket","path":"FreechessWebapp/BucketDeployment/AwsCliLayer/Code/AssetBucket","constructInfo":{"fqn":"aws-cdk-lib.aws_s3.BucketBase","version":"2.189.1","metadata":[]}}},"constructInfo":{"fqn":"aws-cdk-lib.aws_s3_assets.Asset","version":"2.189.1"}},"Resource":{"id":"Resource","path":"FreechessWebapp/BucketDeployment/AwsCliLayer/Resource","attributes":{"aws:cdk:cloudformation:type":"AWS::Lambda::LayerVersion","aws:cdk:cloudformation:props":{"content":{"s3Bucket":"cdk-hnb659fds-assets-123456789012-eu-west-3","s3Key":"8341cb239e4e1842be4d85a62c1b0a519b37f6f3b0e6acc9758db8a98f518fa3.zip"},"description":"/opt/awscli/aws"}},"constructInfo":{"fqn":"aws-cdk-lib.aws_lambda.CfnLayerVersion","version":"2.189.1"}}},"constructInfo":{"fqn":"aws-cdk-lib.lambda_layer_awscli.AwsCliLayer","version":"2.189.1","metadata":[{}]}},"CustomResourceHandler":{"id":"CustomResourceHandler","path":"FreechessWebapp/BucketDeployment/CustomResourceHandler","constructInfo":{"fqn":"aws-cdk-lib.aws_lambda.SingletonFunction","version":"2.189.1","metadata":[{"uuid":"*","layers":["*"],"environment":"*","lambdaPurpose":"*","timeout":"*","role":"*","memorySize":"*","ephemeralStorageSize":"*","vpc":"*","vpcSubnets":"*","filesystem":"*","logGroup":"*","code":"*","handler":"*","runtime":"*"},{"addMetadata":["*",true]},{"addMetadata":["*","*"]}]}},"Asset1":{"id":"Asset1","path":"FreechessWebapp/BucketDeployment/Asset1","children":{"Stage":{"id":"Stage","path":"FreechessWebapp/BucketDeployment/Asset1/Stage","constructInfo":{"fqn":"aws-cdk-lib.AssetStaging","version":"2.189.1"}},"AssetBucket":{"id":"AssetBucket","path":"FreechessWebapp/BucketDeployment/Asset1/AssetBucket","constructInfo":{"fqn":"aws-cdk-lib.aws_s3.BucketBase","version":"2.189.1","metadata":[]}}},"constructInfo":{"fqn":"aws-cdk-lib.aws_s3_assets.Asset","version":"2.189.1"}},"CustomResource-512MiB":{"id":"CustomResource-512MiB","path":"FreechessWebapp/BucketDeployment/CustomResource-512MiB","children":{"Default":{"id":"Default","path":"FreechessWebapp/BucketDeployment/CustomResource-512MiB/Default","constructInfo":{"fqn":"aws-cdk-lib.CfnResource","version":"2.189.1"}}},"constructInfo":{"fqn":"aws-cdk-lib.CustomResource","version":"2.189.1","metadata":["*"]}}},"constructInfo":{"fqn":"aws-cdk-lib.aws_s3_deployment.BucketDeployment","version":"2.189.1"}},"Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB":{"id":"Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB","path":"FreechessWebapp/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB","children":{"ServiceRole":{"id":"ServiceRole","path":"FreechessWebapp/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB/ServiceRole","children":{"ImportServiceRole":{"id":"ImportServiceRole","path":"FreechessWebapp/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB/ServiceRole/ImportServiceRole","constructInfo":{"fqn":"aws-cdk-lib.Resource","version":"2.189.1","metadata":["*"]}},"Resource":{"id":"Resource","path":"FreechessWebapp/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB/ServiceRole/Resource","attributes":{"aws:cdk:cloudformation:type":"AWS::IAM::Role","aws:cdk:cloudformation:props":{"assumeRolePolicyDocument":{"Statement":[{"Action":"sts:AssumeRole","Effect":"Allow","Principal":{"Service":"lambda.amazonaws.com"}}],"Version":"2012-10-17"},"managedPolicyArns":[{"Fn::Join":["",["arn:",{"Ref":"AWS::Partition"},":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"]]}]}},"constructInfo":{"fqn":"aws-cdk-lib.aws_iam.CfnRole","version":"2.189.1"}},"DefaultPolicy":{"id":"DefaultPolicy","path":"FreechessWebapp/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB/ServiceRole/DefaultPolicy","children":{"Resource":{"id":"Resource","path":"FreechessWebapp/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB/ServiceRole/DefaultPolicy/Resource","attributes":{"aws:cdk:cloudformation:type":"AWS::IAM::Policy","aws:cdk:cloudformation:props":{"policyDocument":{"Statement":[{"Action":["s3:GetBucket*","s3:GetObject*","s3:List*"],"Effect":"Allow","Resource":["arn:aws:s3:::cdk-hnb659fds-assets-123456789012-eu-west-3","arn:aws:s3:::cdk-hnb659fds-assets-123456789012-eu-west-3/*"]},{"Action":["s3:Abort*","s3:DeleteObject*","s3:GetBucket*","s3:GetObject*","s3:List*","s3:PutObject","s3:PutObjectLegalHold","s3:PutObjectRetention","s3:PutObjectTagging","s3:PutObjectVersionTagging"],"Effect":"Allow","Resource":[{"Fn::GetAtt":["Bucket83908E77","Arn"]},{"Fn::Join":["",[{"Fn::GetAtt":["Bucket83908E77","Arn"]},"/*"]]}]}],"Version":"2012-10-17"},"policyName":"CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiBServiceRoleDefaultPolicy96C3E726","roles":[{"Ref":"CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiBServiceRoleBA21DBC1"}]}},"constructInfo":{"fqn":"aws-cdk-lib.aws_iam.CfnPolicy","version":"2.189.1"}}},"constructInfo":{"fqn":"aws-cdk-lib.aws_iam.Policy","version":"2.189.1","metadata":["*",{"attachToRole":["*"]},{"attachToRole":["*"]},{"addStatements":[{}]},{"addStatements":[{}]},{"addStatements":[{}]},{"addStatements":[{}]}]}}},"constructInfo":{"fqn":"aws-cdk-lib.aws_iam.Role","version":"2.189.1","metadata":[{"assumedBy":{"principalAccount":"*","assumeRoleAction":"*"},"managedPolicies":[{"managedPolicyArn":"*"}]},{"addToPrincipalPolicy":[{}]},{"attachInlinePolicy":["*"]},{"attachInlinePolicy":["*"]},{"addToPrincipalPolicy":[{}]},{"addToPrincipalPolicy":[{}]},{"addToPrincipalPolicy":[{}]}]}},"Code":{"id":"Code","path":"FreechessWebapp/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB/Code","children":{"Stage":{"id":"Stage","path":"FreechessWebapp/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB/Code/Stage","constructInfo":{"fqn":"aws-cdk-lib.AssetStaging","version":"2.189.1"}},"AssetBucket":{"id":"AssetBucket","path":"FreechessWebapp/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB/Code/AssetBucket","constructInfo":{"fqn":"aws-cdk-lib.aws_s3.BucketBase","version":"2.189.1","metadata":[]}}},"constructInfo":{"fqn":"aws-cdk-lib.aws_s3_assets.Asset","version":"2.189.1"}},"Resource":{"id":"Resource","path":"FreechessWebapp/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB/Resource","attributes":{"aws:cdk:cloudformation:type":"AWS::Lambda::Function","aws:cdk:cloudformation:props":{"code":{"s3Bucket":"cdk-hnb659fds-assets-123456789012-eu-west-3","s3Key":"4fe0aba5e672b596d0f72505a9eec502f98d46906bb30fae2511fbdc1df4956f.zip"},"environment":{"variables":{"AWS_CA_BUNDLE":"/etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem"}},"handler":"index.handler","layers":[{"Ref":"BucketDeploymentAwsCliLayerB018DCE1"}],"memorySize":512,"role":{"Fn::GetAtt":["CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiBServiceRoleBA21DBC1","Arn"]},"runtime":"python3.11","timeout":900}},"constructInfo":{"fqn":"aws-cdk-lib.aws_lambda.CfnFunction","version":"2.189.1"}}},"constructInfo":{"fqn":"aws-cdk-lib.aws_lambda.Function","version":"2.189.1","metadata":[{"layers":["*"],"environment":"*","timeout":"*","role":"*","memorySize":"*","ephemeralStorageSize":"*","vpc":"*","vpcSubnets":"*","filesystem":"*","logGroup":"*","code":"*","handler":"*","runtime":"*"},{"addEnvironment":["*","*"]},{"addLayers":["*"]}]}},"BucketPagesDeployment":{"id":"BucketPagesDeployment","path":"FreechessWebapp/BucketPagesDeployment","children":{"AwsCliLayer":{"id":"AwsCliLayer","path":"FreechessWebapp/BucketPagesDeployment/AwsCliLayer","children":{"Code":{"id":"Code","path":"FreechessWebapp/BucketPagesDeployment/AwsCliLayer/Code","children":{"Stage":{"id":"Stage","path":"FreechessWebapp/BucketPagesDeployment/AwsCliLayer/Code/Stage","constructInfo":{"fqn":"aws-cdk-lib.AssetStaging","version":"2.189.1"}},"AssetBucket":{"id":"AssetBucket","path":"FreechessWebapp/BucketPagesDeployment/AwsCliLayer/Code/AssetBucket","constructInfo":{"fqn":"aws-cdk-lib.aws_s3.BucketBase","version":"2.189.1","metadata":[]}}},"constructInfo":{"fqn":"aws-cdk-lib.aws_s3_assets.Asset","version":"2.189.1"}},"Resource":{"id":"Resource","path":"FreechessWebapp/BucketPagesDeployment/AwsCliLayer/Resource","attributes":{"aws:cdk:cloudformation:type":"AWS::Lambda::LayerVersion","aws:cdk:cloudformation:props":{"content":{"s3Bucket":"cdk-hnb659fds-assets-123456789012-eu-west-3","s3Key":"8341cb239e4e1842be4d85a62c1b0a519b37f6f3b0e6acc9758db8a98f518fa3.zip"},"description":"/opt/awscli/aws"}},"constructInfo":{"fqn":"aws-cdk-lib.aws_lambda.CfnLayerVersion","version":"2.189.1"}}},"constructInfo":{"fqn":"aws-cdk-lib.lambda_layer_awscli.AwsCliLayer","version":"2.189.1","metadata":[{}]}},"CustomResourceHandler":{"id":"CustomResourceHandler","path":"FreechessWebapp/BucketPagesDeployment/CustomResourceHandler","constructInfo":{"fqn":"aws-cdk-lib.aws_lambda.SingletonFunction","version":"2.189.1","metadata":[{"uuid":"*","layers":["*"],"environment":"*","lambdaPurpose":"*","timeout":"*","role":"*","memorySize":"*","ephemeralStorageSize":"*","vpc":"*","vpcSubnets":"*","filesystem":"*","logGroup":"*","code":"*","handler":"*","runtime":"*"},{"addMetadata":["*",true]},{"addMetadata":["*","*"]}]}},"Asset1":{"id":"Asset1","path":"FreechessWebapp/BucketPagesDeployment/Asset1","children":{"Stage":{"id":"Stage","path":"FreechessWebapp/BucketPagesDeployment/Asset1/Stage","constructInfo":{"fqn":"aws-cdk-lib.AssetStaging","version":"2.189.1"}},"AssetBucket":{"id":"AssetBucket","path":"FreechessWebapp/BucketPagesDeployment/Asset1/AssetBucket","constructInfo":{"fqn":"aws-cdk-lib.aws_s3.BucketBase","version":"2.189.1","metadata":[]}}},"constructInfo":{"fqn":"aws-cdk-lib.aws_s3_assets.Asset","version":"2.189.1"}},"CustomResource-512MiB":{"id":"CustomResource-512MiB","path":"FreechessWebapp/BucketPagesDeployment/CustomResource-512MiB","children":{"Default":{"id":"Default","path":"FreechessWebapp/BucketPagesDeployment/CustomResource-512MiB/Default","constructInfo":{"fqn":"aws-cdk-lib.CfnResource","version":"2.189.1"}}},"constructInfo":{"fqn":"aws-cdk-lib.CustomResource","version":"2.189.1","metadata":["*"]}}},"constructInfo":{"fqn":"aws-cdk-lib.aws_s3_deployment.BucketDeployment","version":"2.189.1"}},"BucketEnginesDeployment":{"id":"BucketEnginesDeployment","path":"FreechessWebapp/BucketEnginesDeployment","children":{"AwsCliLayer":{"id":"AwsCliLayer","path":"FreechessWebapp/BucketEnginesDeployment/AwsCliLayer","children":{"Code":{"id":"Code","path":"FreechessWebapp/BucketEnginesDeployment/AwsCliLayer/Code","children":{"Stage":{"id":"Stage","path":"FreechessWebapp/BucketEnginesDeployment/AwsCliLayer/Code/Stage","constructInfo":{"fqn":"aws-cdk-lib.AssetStaging","version":"2.189.1"}},"AssetBucket":{"id":"AssetBucket","path":"FreechessWebapp/BucketEnginesDeployment/AwsCliLayer/Code/AssetBucket","constructInfo":{"fqn":"aws-cdk-lib.aws_s3.BucketBase","version":"2.189.1","metadata":[]}}},"constructInfo":{"fqn":"aws-cdk-lib.aws_s3_assets.Asset","version":"2.189.1"}},"Resource":{"id":"Resource","path":"FreechessWebapp/BucketEnginesDeployment/AwsCliLayer/Resource","attributes":{"aws:cdk:cloudformation:type":"AWS::Lambda::LayerVersion","aws:cdk:cloudformation:props":{"content":{"s3Bucket":"cdk-hnb659fds-assets-123456789012-eu-west-3","s3Key":"8341cb239e4e1842be4d85a62c1b0a519b37f6f3b0e6acc9758db8a98f518fa3.zip"},"description":"/opt/awscli/aws"}},"constructInfo":{"fqn":"aws-cdk-lib.aws_lambda.CfnLayerVersion","version":"2.189.1"}}},"constructInfo":{"fqn":"aws-cdk-lib.lambda_layer_awscli.AwsCliLayer","version":"2.189.1","metadata":[{}]}},"CustomResourceHandler":{"id":"CustomResourceHandler","path":"FreechessWebapp/BucketEnginesDeployment/CustomResourceHandler","constructInfo":{"fqn":"aws-cdk-lib.aws_lambda.SingletonFunction","version":"2.189.1","metadata":[{"uuid":"*","layers":["*"],"environment":"*","lambdaPurpose":"*","timeout":"*","role":"*","memorySize":"*","ephemeralStorageSize":"*","vpc":"*","vpcSubnets":"*","filesystem":"*","logGroup":"*","code":"*","handler":"*","runtime":"*"},{"addMetadata":["*",true]},{"addMetadata":["*","*"]}]}},"Asset1":{"id":"Asset1","path":"FreechessWebapp/BucketEnginesDeployment/Asset1","children":{"Stage":{"id":"Stage","path":"FreechessWebapp/BucketEnginesDeployment/Asset1/Stage","constructInfo":{"fqn":"aws-cdk-lib.AssetStaging","version":"2.189.1"}},"AssetBucket":{"id":"AssetBucket","path":"FreechessWebapp/BucketEnginesDeployment/Asset1/AssetBucket","constructInfo":{"fqn":"aws-cdk-lib.aws_s3.BucketBase","version":"2.189.1","metadata":[]}}},"constructInfo":{"fqn":"aws-cdk-lib.aws_s3_assets.Asset","version":"2.189.1"}},"CustomResource-512MiB-1024MiB":{"id":"CustomResource-512MiB-1024MiB","path":"FreechessWebapp/BucketEnginesDeployment/CustomResource-512MiB-1024MiB","children":{"Default":{"id":"Default","path":"FreechessWebapp/BucketEnginesDeployment/CustomResource-512MiB-1024MiB/Default","constructInfo":{"fqn":"aws-cdk-lib.CfnResource","version":"2.189.1"}}},"constructInfo":{"fqn":"aws-cdk-lib.CustomResource","version":"2.189.1","metadata":["*"]}}},"constructInfo":{"fqn":"aws-cdk-lib.aws_s3_deployment.BucketDeployment","version":"2.189.1"}},"Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB1024MiB":{"id":"Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB1024MiB","path":"FreechessWebapp/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB1024MiB","children":{"ServiceRole":{"id":"ServiceRole","path":"FreechessWebapp/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB1024MiB/ServiceRole","children":{"ImportServiceRole":{"id":"ImportServiceRole","path":"FreechessWebapp/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB1024MiB/ServiceRole/ImportServiceRole","constructInfo":{"fqn":"aws-cdk-lib.Resource","version":"2.189.1","metadata":["*"]}},"Resource":{"id":"Resource","path":"FreechessWebapp/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB1024MiB/ServiceRole/Resource","attributes":{"aws:cdk:cloudformation:type":"AWS::IAM::Role","aws:cdk:cloudformation:props":{"assumeRolePolicyDocument":{"Statement":[{"Action":"sts:AssumeRole","Effect":"Allow","Principal":{"Service":"lambda.amazonaws.com"}}],"Version":"2012-10-17"},"managedPolicyArns":[{"Fn::Join":["",["arn:",{"Ref":"AWS::Partition"},":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"]]}]}},"constructInfo":{"fqn":"aws-cdk-lib.aws_iam.CfnRole","version":"2.189.1"}},"DefaultPolicy":{"id":"DefaultPolicy","path":"FreechessWebapp/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB1024MiB/ServiceRole/DefaultPolicy","children":{"Resource":{"id":"Resource","path":"FreechessWebapp/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB1024MiB/ServiceRole/DefaultPolicy/Resource","attributes":{"aws:cdk:cloudformation:type":"AWS::IAM::Policy","aws:cdk:cloudformation:props":{"policyDocument":{"Statement":[{"Action":["s3:GetBucket*","s3:GetObject*","s3:List*"],"Effect":"Allow","Resource":["arn:aws:s3:::cdk-hnb659fds-assets-123456789012-eu-west-3","arn:aws:s3:::cdk-hnb659fds-assets-123456789012-eu-west-3/*"]},{"Action":["s3:Abort*","s3:DeleteObject*","s3:GetBucket*","s3:GetObject*","s3:List*","s3:PutObject","s3:PutObjectLegalHold","s3:PutObjectRetention","s3:PutObjectTagging","s3:PutObjectVersionTagging"],"Effect":"Allow","Resource":[{"Fn::GetAtt":["EnginesBucket57185CB5","Arn"]},{"Fn::Join":["",[{"Fn::GetAtt":["EnginesBucket57185CB5","Arn"]},"/*"]]}]}],"Version":"2012-10-17"},"policyName":"CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB1024MiBServiceRoleDefaultPolicy5878A191","roles":[{"Ref":"CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB1024MiBServiceRole5F7A526E"}]}},"constructInfo":{"fqn":"aws-cdk-lib.aws_iam.CfnPolicy","version":"2.189.1"}}},"constructInfo":{"fqn":"aws-cdk-lib.aws_iam.Policy","version":"2.189.1","metadata":["*",{"attachToRole":["*"]},{"attachToRole":["*"]},{"addStatements":[{}]},{"addStatements":[{}]}]}}},"constructInfo":{"fqn":"aws-cdk-lib.aws_iam.Role","version":"2.189.1","metadata":[{"assumedBy":{"principalAccount":"*","assumeRoleAction":"*"},"managedPolicies":[{"managedPolicyArn":"*"}]},{"addToPrincipalPolicy":[{}]},{"attachInlinePolicy":["*"]},{"attachInlinePolicy":["*"]},{"addToPrincipalPolicy":[{}]}]}},"Code":{"id":"Code","path":"FreechessWebapp/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB1024MiB/Code","children":{"Stage":{"id":"Stage","path":"FreechessWebapp/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB1024MiB/Code/Stage","constructInfo":{"fqn":"aws-cdk-lib.AssetStaging","version":"2.189.1"}},"AssetBucket":{"id":"AssetBucket","path":"FreechessWebapp/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB1024MiB/Code/AssetBucket","constructInfo":{"fqn":"aws-cdk-lib.aws_s3.BucketBase","version":"2.189.1","metadata":[]}}},"constructInfo":{"fqn":"aws-cdk-lib.aws_s3_assets.Asset","version":"2.189.1"}},"Resource":{"id":"Resource","path":"FreechessWebapp/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB1024MiB/Resource","attributes":{"aws:cdk:cloudformation:type":"AWS::Lambda::Function","aws:cdk:cloudformation:props":{"code":{"s3Bucket":"cdk-hnb659fds-assets-123456789012-eu-west-3","s3Key":"4fe0aba5e672b596d0f72505a9eec502f98d46906bb30fae2511fbdc1df4956f.zip"},"environment":{"variables":{"AWS_CA_BUNDLE":"/etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem"}},"ephemeralStorage":{"size":1024},"handler":"index.handler","layers":[{"Ref":"BucketEnginesDeploymentAwsCliLayer270A1C18"}],"memorySize":512,"role":{"Fn::GetAtt":["CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB1024MiBServiceRole5F7A526E","Arn"]},"runtime":"python3.11","timeout":900}},"constructInfo":{"fqn":"aws-cdk-lib.aws_lambda.CfnFunction","version":"2.189.1"}}},"constructInfo":{"fqn":"aws-cdk-lib.aws_lambda.Function","version":"2.189.1","metadata":[{"layers":["*"],"environment":"*","timeout":"*","role":"*","memorySize":"*","ephemeralStorageSize":"*","vpc":"*","vpcSubnets":"*","filesystem":"*","logGroup":"*","code":"*","handler":"*","runtime":"*"},{"addEnvironment":["*","*"]},{"addLayers":["*"]}]}},"ResponseHeadersPolicy":{"id":"ResponseHeadersPolicy","path":"FreechessWebapp/ResponseHeadersPolicy","children":{"Resource":{"id":"Resource","path":"FreechessWebapp/ResponseHeadersPolicy/Resource","attributes":{"aws:cdk:cloudformation:type":"AWS::CloudFront::ResponseHeadersPolicy","aws:cdk:cloudformation:props":{"responseHeadersPolicyConfig":{"name":"FreechessWebappResponseHeadersPolicyEACB51F1","customHeadersConfig":{"items":[{"header":"Cross-Origin-Embedder-Policy","value":"require-corp","override":true},{"header":"Cross-Origin-Opener-Policy","value":"same-origin","override":true}]}}}},"constructInfo":{"fqn":"aws-cdk-lib.aws_cloudfront.CfnResponseHeadersPolicy","version":"2.189.1"}}},"constructInfo":{"fqn":"aws-cdk-lib.aws_cloudfront.ResponseHeadersPolicy","version":"2.189.1","metadata":[{"customHeadersBehavior":{"customHeaders":[{"header":"*","value":"*","override":true},{"header":"*","value":"*","override":true}]}}]}},"RewriteFunction":{"id":"RewriteFunction","path":"FreechessWebapp/RewriteFunction","children":{"Resource":{"id":"Resource","path":"FreechessWebapp/RewriteFunction/Resource","attributes":{"aws:cdk:cloudformation:type":"AWS::CloudFront::Function","aws:cdk:cloudformation:props":{"autoPublish":true,"functionCode":"\n          function handler(event) {\n            var request = event.request;\n            var uri = request.uri;\n\n            if (uri.endsWith('/')) {\n                request.uri += 'index.html';\n            } else if (!uri.split('/').pop().includes('.')) {\n                request.uri += '.html';\n            }\n\n            return request;\n        }","functionConfig":{"comment":"eu-west-3FreechessWebappRewriteFunction884993EF","runtime":"cloudfront-js-1.0"},"name":"eu-west-3FreechessWebappRewriteFunction884993EF"}},"constructInfo":{"fqn":"aws-cdk-lib.aws_cloudfront.CfnFunction","version":"2.189.1"}}},"constructInfo":{"fqn":"aws-cdk-lib.aws_cloudfront.Function","version":"2.189.1","metadata":[{"code":"*"}]}},"HostedZone":{"id":"HostedZone","path":"FreechessWebapp/HostedZone","constructInfo":{"fqn":"aws-cdk-lib.Resource","version":"2.189.1","metadata":[]}},"Certificate":{"id":"Certificate","path":"FreechessWebapp/Certificate","children":{"CertificateRequestorFunction":{"id":"CertificateRequestorFunction","path":"FreechessWebapp/Certificate/CertificateRequestorFunction","children":{"ServiceRole":{"id":"ServiceRole","path":"FreechessWebapp/Certificate/CertificateRequestorFunction/ServiceRole","children":{"ImportServiceRole":{"id":"ImportServiceRole","path":"FreechessWebapp/Certificate/CertificateRequestorFunction/ServiceRole/ImportServiceRole","constructInfo":{"fqn":"aws-cdk-lib.Resource","version":"2.189.1","metadata":["*"]}},"Resource":{"id":"Resource","path":"FreechessWebapp/Certificate/CertificateRequestorFunction/ServiceRole/Resource","attributes":{"aws:cdk:cloudformation:type":"AWS::IAM::Role","aws:cdk:cloudformation:props":{"assumeRolePolicyDocument":{"Statement":[{"Action":"sts:AssumeRole","Effect":"Allow","Principal":{"Service":"lambda.amazonaws.com"}}],"Version":"2012-10-17"},"managedPolicyArns":[{"Fn::Join":["",["arn:",{"Ref":"AWS::Partition"},":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"]]}]}},"constructInfo":{"fqn":"aws-cdk-lib.aws_iam.CfnRole","version":"2.189.1"}}},"constructInfo":{"fqn":"aws-cdk-lib.aws_iam.Role","version":"2.189.1","metadata":[{"assumedBy":{"principalAccount":"*","assumeRoleAction":"*"},"managedPolicies":[{"managedPolicyArn":"*"}]},{"attachInlinePolicy":["*"]},{"attachInlinePolicy":["*"]},{"attachInlinePolicy":["*"]},{"attachInlinePolicy":["*"]},{"attachInlinePolicy":["*"]},{"attachInlinePolicy":["*"]}]}},"Code":{"id":"Code","path":"FreechessWebapp/Certificate/CertificateRequestorFunction/Code","children":{"Stage":{"id":"Stage","path":"FreechessWebapp/Certificate/CertificateRequestorFunction/Code/Stage","constructInfo":{"fqn":"aws-cdk-lib.AssetStaging","version":"2.189.1"}},"AssetBucket":{"id":"AssetBucket","path":"FreechessWebapp/Certificate/CertificateRequestorFunction/Code/AssetBucket","constructInfo":{"fqn":"aws-cdk-lib.aws_s3.BucketBase","version":"2.189.1","metadata":[]}}},"constructInfo":{"fqn":"aws-cdk-lib.aws_s3_assets.Asset","version":"2.189.1"}},"Resource":{"id":"Resource","path":"FreechessWebapp/Certificate/CertificateRequestorFunction/Resource","attributes":{"aws:cdk:cloudformation:type":"AWS::Lambda::Function","aws:cdk:cloudformation:props":{"code":{"s3Bucket":"cdk-hnb659fds-assets-123456789012-eu-west-3","s3Key":"b073cebcf4d61fb152a30f5a5e57a94df7f980a549fdf1a79a0b18c5750522d8.zip"},"handler":"index.certificateRequestHandler","role":{"Fn::GetAtt":["CertificateCertificateRequestorFunctionServiceRoleC04C13DA","Arn"]},"runtime":"nodejs20.x","timeout":900}},"constructInfo":{"fqn":"aws-cdk-lib.aws_lambda.CfnFunction","version":"2.189.1"}},"inlinePolicyAddedToExecutionRole-0":{"id":"inlinePolicyAddedToExecutionRole-0","path":"FreechessWebapp/Certificate/CertificateRequestorFunction/inlinePolicyAddedToExecutionRole-0","children":{"Resource":{"id":"Resource","path":"FreechessWebapp/Certificate/CertificateRequestorFunction/inlinePolicyAddedToExecutionRole-0/Resource","attributes":{"aws:cdk:cloudformation:type":"AWS::IAM::Policy","aws:cdk:cloudformation:props":{"policyDocument":{"Statement":[{"Action":["acm:AddTagsToCertificate","acm:DeleteCertificate","acm:DescribeCertificate","acm:RequestCertificate"],"Effect":"Allow","Resource":"*"}],"Version":"2012-10-17"},"policyName":"CertificateCertificateRequestorFunctioninlinePolicyAddedToExecutionRole02D5DA9E2","roles":[{"Ref":"CertificateCertificateRequestorFunctionServiceRoleC04C13DA"}]}},"constructInfo":{"fqn":"aws-cdk-lib.aws_iam.CfnPolicy","version":"2.189.1"}}},"constructInfo":{"fqn":"aws-cdk-lib.aws_iam.Policy","version":"2.189.1","metadata":[{"statements":"*"},{"addStatements":[{}]},{"attachToRole":["*"]},{"attachToRole":["*"]}]}},"inlinePolicyAddedToExecutionRole-1":{"id":"inlinePolicyAddedToExecutionRole-1","path":"FreechessWebapp/Certificate/CertificateRequestorFunction/inlinePolicyAddedToExecutionRole-1","children":{"Resource":{"id":"Resource","path":"FreechessWebapp/Certificate/CertificateRequestorFunction/inlinePolicyAddedToExecutionRole-1/Resource","attributes":{"aws:cdk:cloudformation:type":"AWS::IAM::Policy","aws:cdk:cloudformation:props":{"policyDocument":{"Statement":[{"Action":"route53:GetChange","Effect":"Allow","Resource":"*"}],"Version":"2012-10-17"},"policyName":"CertificateCertificateRequestorFunctioninlinePolicyAddedToExecutionRole18173669F","roles":[{"Ref":"CertificateCertificateRequestorFunctionServiceRoleC04C13DA"}]}},"constructInfo":{"fqn":"aws-cdk-lib.aws_iam.CfnPolicy","version":"2.189.1"}}},"constructInfo":{"fqn":"aws-cdk-lib.aws_iam.Policy","version":"2.189.1","metadata":[{"statements":"*"},{"addStatements":[{}]},{"attachToRole":["*"]},{"attachToRole":["*"]}]}},"inlinePolicyAddedToExecutionRole-2":{"id":"inlinePolicyAddedToExecutionRole-2","path":"FreechessWebapp/Certificate/CertificateRequestorFunction/inlinePolicyAddedToExecutionRole-2","children":{"Resource":{"id":"Resource","path":"FreechessWebapp/Certificate/CertificateRequestorFunction/inlinePolicyAddedToExecutionRole-2/Resource","attributes":{"aws:cdk:cloudformation:type":"AWS::IAM::Policy","aws:cdk:cloudformation:props":{"policyDocument":{"Statement":[{"Action":"route53:changeResourceRecordSets","Condition":{"ForAllValues:StringEquals":{"route53:ChangeResourceRecordSetsRecordTypes":["CNAME"],"route53:ChangeResourceRecordSetsActions":["UPSERT"]},"ForAllValues:StringLike":{"route53:ChangeResourceRecordSetsNormalizedRecordNames":["*.chesskit.org"]}},"Effect":"Allow","Resource":"arn:aws:route53:::hostedzone/DUMMY"}],"Version":"2012-10-17"},"policyName":"CertificateCertificateRequestorFunctioninlinePolicyAddedToExecutionRole20FBD3CBF","roles":[{"Ref":"CertificateCertificateRequestorFunctionServiceRoleC04C13DA"}]}},"constructInfo":{"fqn":"aws-cdk-lib.aws_iam.CfnPolicy","version":"2.189.1"}}},"constructInfo":{"fqn":"aws-cdk-lib.aws_iam.Policy","version":"2.189.1","metadata":[{"statements":"*"},{"addStatements":[{}]},{"attachToRole":["*"]},{"attachToRole":["*"]}]}}},"constructInfo":{"fqn":"aws-cdk-lib.aws_lambda.Function","version":"2.189.1","metadata":[{"timeout":"*","role":"*","code":"*","handler":"*","runtime":"*"}]}},"CertificateRequestorResource":{"id":"CertificateRequestorResource","path":"FreechessWebapp/Certificate/CertificateRequestorResource","children":{"Default":{"id":"Default","path":"FreechessWebapp/Certificate/CertificateRequestorResource/Default","constructInfo":{"fqn":"aws-cdk-lib.CfnResource","version":"2.189.1"}}},"constructInfo":{"fqn":"aws-cdk-lib.CustomResource","version":"2.189.1","metadata":["*","*"]}}},"constructInfo":{"fqn":"aws-cdk-lib.aws_certificatemanager.DnsValidatedCertificate","version":"2.189.1","metadata":[{"domainName":"*","hostedZone":"*","region":"*"}]}},"Distribution":{"id":"Distribution","path":"FreechessWebapp/Distribution","children":{"Origin1":{"id":"Origin1","path":"FreechessWebapp/Distribution/Origin1","children":{"S3OriginAccessControl":{"id":"S3OriginAccessControl","path":"FreechessWebapp/Distribution/Origin1/S3OriginAccessControl","children":{"Resource":{"id":"Resource","path":"FreechessWebapp/Distribution/Origin1/S3OriginAccessControl/Resource","attributes":{"aws:cdk:cloudformation:type":"AWS::CloudFront::OriginAccessControl","aws:cdk:cloudformation:props":{"originAccessControlConfig":{"name":"FreechessWebappDistributionOrigin1S3OriginAccessControl6DB44497","signingBehavior":"always","signingProtocol":"sigv4","originAccessControlOriginType":"s3"}}},"constructInfo":{"fqn":"aws-cdk-lib.aws_cloudfront.CfnOriginAccessControl","version":"2.189.1"}}},"constructInfo":{"fqn":"aws-cdk-lib.aws_cloudfront.S3OriginAccessControl","version":"2.189.1","metadata":["*"]}}},"constructInfo":{"fqn":"constructs.Construct","version":"10.4.2"}},"Origin2":{"id":"Origin2","path":"FreechessWebapp/Distribution/Origin2","children":{"S3OriginAccessControl":{"id":"S3OriginAccessControl","path":"FreechessWebapp/Distribution/Origin2/S3OriginAccessControl","children":{"Resource":{"id":"Resource","path":"FreechessWebapp/Distribution/Origin2/S3OriginAccessControl/Resource","attributes":{"aws:cdk:cloudformation:type":"AWS::CloudFront::OriginAccessControl","aws:cdk:cloudformation:props":{"originAccessControlConfig":{"name":"FreechessWebappDistributionOrigin2S3OriginAccessControl93E2A10E","signingBehavior":"always","signingProtocol":"sigv4","originAccessControlOriginType":"s3"}}},"constructInfo":{"fqn":"aws-cdk-lib.aws_cloudfront.CfnOriginAccessControl","version":"2.189.1"}}},"constructInfo":{"fqn":"aws-cdk-lib.aws_cloudfront.S3OriginAccessControl","version":"2.189.1","metadata":["*"]}}},"constructInfo":{"fqn":"constructs.Construct","version":"10.4.2"}},"Resource":{"id":"Resource","path":"FreechessWebapp/Distribution/Resource","attributes":{"aws:cdk:cloudformation:type":"AWS::CloudFront::Distribution","aws:cdk:cloudformation:props":{"distributionConfig":{"enabled":true,"origins":[{"domainName":{"Fn::GetAtt":["Bucket83908E77","RegionalDomainName"]},"id":"FreechessWebappDistributionOrigin1CDA8F199","s3OriginConfig":{"originAccessIdentity":""},"originAccessControlId":{"Fn::GetAtt":["DistributionOrigin1S3OriginAccessControlEB606076","Id"]}},{"domainName":{"Fn::GetAtt":["EnginesBucket57185CB5","RegionalDomainName"]},"id":"FreechessWebappDistributionOrigin29D8AE974","s3OriginConfig":{"originAccessIdentity":""},"originAccessControlId":{"Fn::GetAtt":["DistributionOrigin2S3OriginAccessControlDC470594","Id"]}}],"defaultCacheBehavior":{"pathPattern":"*","targetOriginId":"FreechessWebappDistributionOrigin1CDA8F199","cachePolicyId":"658327ea-f89d-4fab-a63d-7e88639e58f6","compress":true,"responseHeadersPolicyId":{"Ref":"ResponseHeadersPolicy13DBF9E0"},"viewerProtocolPolicy":"allow-all","functionAssociations":[{"functionArn":{"Fn::GetAtt":["RewriteFunctionE78585E2","FunctionARN"]},"eventType":"viewer-request"}]},"aliases":["chesskit.org"],"cacheBehaviors":[{"pathPattern":"/engines/*","targetOriginId":"FreechessWebappDistributionOrigin29D8AE974","cachePolicyId":"658327ea-f89d-4fab-a63d-7e88639e58f6","compress":true,"responseHeadersPolicyId":{"Ref":"ResponseHeadersPolicy13DBF9E0"},"viewerProtocolPolicy":"allow-all"}],"customErrorResponses":[{"errorCode":404,"responseCode":404,"responsePagePath":"/404.html"},{"errorCode":403,"responseCode":404,"responsePagePath":"/404.html"}],"defaultRootObject":"index.html","httpVersion":"http2","ipv6Enabled":true,"viewerCertificate":{"acmCertificateArn":{"Fn::GetAtt":["CertificateCertificateRequestorResource2890C6B7","Arn"]},"minimumProtocolVersion":"TLSv1.2_2021","sslSupportMethod":"sni-only"}}}},"constructInfo":{"fqn":"aws-cdk-lib.aws_cloudfront.CfnDistribution","version":"2.189.1"}}},"constructInfo":{"fqn":"aws-cdk-lib.aws_cloudfront.Distribution","version":"2.189.1","metadata":[{"defaultRootObject":"*","errorResponses":[{"httpStatus":"*","responseHttpStatus":"*","responsePagePath":"*"},{"httpStatus":"*","responseHttpStatus":"*","responsePagePath":"*"}],"defaultBehavior":{"origin":"*","responseHeadersPolicy":"*","functionAssociations":[{"function":"*","eventType":"viewer-request"}]},"additionalBehaviors":"*","domainNames":"*","certificate":"*"},{"addBehavior":["*",{},{"responseHeadersPolicy":"*"}]}]}},"AliasRecord":{"id":"AliasRecord","path":"FreechessWebapp/AliasRecord","children":{"Resource":{"id":"Resource","path":"FreechessWebapp/AliasRecord/Resource","attributes":{"aws:cdk:cloudformation:type":"AWS::Route53::RecordSet","aws:cdk:cloudformation:props":{"aliasTarget":{"hostedZoneId":{"Fn::FindInMap":["AWSCloudFrontPartitionHostedZoneIdMap",{"Ref":"AWS::Partition"},"zoneId"]},"dnsName":{"Fn::GetAtt":["Distribution830FAC52","DomainName"]}},"hostedZoneId":"DUMMY","name":"chesskit.org.","type":"A"}},"constructInfo":{"fqn":"aws-cdk-lib.aws_route53.CfnRecordSet","version":"2.189.1"}}},"constructInfo":{"fqn":"aws-cdk-lib.aws_route53.ARecord","version":"2.189.1","metadata":[{"zone":"*","target":"*"},{"zone":"*","target":"*"}]}},"AWSCloudFrontPartitionHostedZoneIdMap":{"id":"AWSCloudFrontPartitionHostedZoneIdMap","path":"FreechessWebapp/AWSCloudFrontPartitionHostedZoneIdMap","constructInfo":{"fqn":"aws-cdk-lib.CfnMapping","version":"2.189.1"}},"SiteUrl":{"id":"SiteUrl","path":"FreechessWebapp/SiteUrl","constructInfo":{"fqn":"aws-cdk-lib.CfnOutput","version":"2.189.1"}},"CDKMetadata":{"id":"CDKMetadata","path":"FreechessWebapp/CDKMetadata","children":{"Default":{"id":"Default","path":"FreechessWebapp/CDKMetadata/Default","constructInfo":{"fqn":"aws-cdk-lib.CfnResource","version":"2.189.1"}}},"constructInfo":{"fqn":"constructs.Construct","version":"10.4.2"}},"BootstrapVersion":{"id":"BootstrapVersion","path":"FreechessWebapp/BootstrapVersion","constructInfo":{"fqn":"aws-cdk-lib.CfnParameter","version":"2.189.1"}},"CheckBootstrapVersion":{"id":"CheckBootstrapVersion","path":"FreechessWebapp/CheckBootstrapVersion","constructInfo":{"fqn":"aws-cdk-lib.CfnRule","version":"2.189.1"}}},"constructInfo":{"fqn":"aws-cdk-lib.Stack","version":"2.189.1"}},"Tree":{"id":"Tree","path":"Tree","constructInfo":{"fqn":"constructs.Construct","version":"10.4.2"}}},"constructInfo":{"fqn":"aws-cdk-lib.App","version":"2.189.1"}}}
+{
+  "version": "tree-0.1",
+  "tree": {
+    "id": "App",
+    "path": "",
+    "children": {
+      "FreechessWebapp": {
+        "id": "FreechessWebapp",
+        "path": "FreechessWebapp",
+        "children": {
+          "Bucket": {
+            "id": "Bucket",
+            "path": "FreechessWebapp/Bucket",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "FreechessWebapp/Bucket/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::S3::Bucket",
+                  "aws:cdk:cloudformation:props": {
+                    "accessControl": "Private",
+                    "tags": [
+                      { "key": "aws-cdk:auto-delete-objects", "value": "true" },
+                      { "key": "aws-cdk:cr-owned:54842f12", "value": "true" },
+                      { "key": "aws-cdk:cr-owned:b72a15bc", "value": "true" }
+                    ]
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_s3.CfnBucket",
+                  "version": "2.189.1"
+                }
+              },
+              "Policy": {
+                "id": "Policy",
+                "path": "FreechessWebapp/Bucket/Policy",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "FreechessWebapp/Bucket/Policy/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::S3::BucketPolicy",
+                      "aws:cdk:cloudformation:props": {
+                        "bucket": { "Ref": "Bucket83908E77" },
+                        "policyDocument": {
+                          "Statement": [
+                            {
+                              "Action": [
+                                "s3:DeleteObject*",
+                                "s3:GetBucket*",
+                                "s3:List*",
+                                "s3:PutBucketPolicy"
+                              ],
+                              "Effect": "Allow",
+                              "Principal": {
+                                "AWS": {
+                                  "Fn::GetAtt": [
+                                    "CustomS3AutoDeleteObjectsCustomResourceProviderRole3B1BD092",
+                                    "Arn"
+                                  ]
+                                }
+                              },
+                              "Resource": [
+                                { "Fn::GetAtt": ["Bucket83908E77", "Arn"] },
+                                {
+                                  "Fn::Join": [
+                                    "",
+                                    [
+                                      {
+                                        "Fn::GetAtt": ["Bucket83908E77", "Arn"]
+                                      },
+                                      "/*"
+                                    ]
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "Action": "s3:GetObject",
+                              "Condition": {
+                                "StringEquals": {
+                                  "AWS:SourceArn": {
+                                    "Fn::Join": [
+                                      "",
+                                      [
+                                        "arn:",
+                                        { "Ref": "AWS::Partition" },
+                                        ":cloudfront::",
+                                        { "Ref": "AWS::AccountId" },
+                                        ":distribution/",
+                                        { "Ref": "Distribution830FAC52" }
+                                      ]
+                                    ]
+                                  }
+                                }
+                              },
+                              "Effect": "Allow",
+                              "Principal": {
+                                "Service": "cloudfront.amazonaws.com"
+                              },
+                              "Resource": {
+                                "Fn::Join": [
+                                  "",
+                                  [
+                                    { "Fn::GetAtt": ["Bucket83908E77", "Arn"] },
+                                    "/*"
+                                  ]
+                                ]
+                              }
+                            }
+                          ],
+                          "Version": "2012-10-17"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_s3.CfnBucketPolicy",
+                      "version": "2.189.1"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_s3.BucketPolicy",
+                  "version": "2.189.1",
+                  "metadata": [{ "bucket": "*" }]
+                }
+              },
+              "AutoDeleteObjectsCustomResource": {
+                "id": "AutoDeleteObjectsCustomResource",
+                "path": "FreechessWebapp/Bucket/AutoDeleteObjectsCustomResource",
+                "children": {
+                  "Default": {
+                    "id": "Default",
+                    "path": "FreechessWebapp/Bucket/AutoDeleteObjectsCustomResource/Default",
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.CfnResource",
+                      "version": "2.189.1"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.CustomResource",
+                  "version": "2.189.1",
+                  "metadata": ["*"]
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.aws_s3.Bucket",
+              "version": "2.189.1",
+              "metadata": [
+                {
+                  "accessControl": "Private",
+                  "removalPolicy": "destroy",
+                  "autoDeleteObjects": true,
+                  "publicReadAccess": false
+                }
+              ]
+            }
+          },
+          "Custom::S3AutoDeleteObjectsCustomResourceProvider": {
+            "id": "Custom::S3AutoDeleteObjectsCustomResourceProvider",
+            "path": "FreechessWebapp/Custom::S3AutoDeleteObjectsCustomResourceProvider",
+            "children": {
+              "Staging": {
+                "id": "Staging",
+                "path": "FreechessWebapp/Custom::S3AutoDeleteObjectsCustomResourceProvider/Staging",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.AssetStaging",
+                  "version": "2.189.1"
+                }
+              },
+              "Role": {
+                "id": "Role",
+                "path": "FreechessWebapp/Custom::S3AutoDeleteObjectsCustomResourceProvider/Role",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.CfnResource",
+                  "version": "2.189.1"
+                }
+              },
+              "Handler": {
+                "id": "Handler",
+                "path": "FreechessWebapp/Custom::S3AutoDeleteObjectsCustomResourceProvider/Handler",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.CfnResource",
+                  "version": "2.189.1"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.CustomResourceProviderBase",
+              "version": "2.189.1"
+            }
+          },
+          "EnginesBucket": {
+            "id": "EnginesBucket",
+            "path": "FreechessWebapp/EnginesBucket",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "FreechessWebapp/EnginesBucket/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::S3::Bucket",
+                  "aws:cdk:cloudformation:props": {
+                    "accessControl": "Private",
+                    "tags": [
+                      { "key": "aws-cdk:auto-delete-objects", "value": "true" },
+                      {
+                        "key": "aws-cdk:cr-owned:engines:68b76092",
+                        "value": "true"
+                      }
+                    ]
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_s3.CfnBucket",
+                  "version": "2.189.1"
+                }
+              },
+              "Policy": {
+                "id": "Policy",
+                "path": "FreechessWebapp/EnginesBucket/Policy",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "FreechessWebapp/EnginesBucket/Policy/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::S3::BucketPolicy",
+                      "aws:cdk:cloudformation:props": {
+                        "bucket": { "Ref": "EnginesBucket57185CB5" },
+                        "policyDocument": {
+                          "Statement": [
+                            {
+                              "Action": [
+                                "s3:DeleteObject*",
+                                "s3:GetBucket*",
+                                "s3:List*",
+                                "s3:PutBucketPolicy"
+                              ],
+                              "Effect": "Allow",
+                              "Principal": {
+                                "AWS": {
+                                  "Fn::GetAtt": [
+                                    "CustomS3AutoDeleteObjectsCustomResourceProviderRole3B1BD092",
+                                    "Arn"
+                                  ]
+                                }
+                              },
+                              "Resource": [
+                                {
+                                  "Fn::GetAtt": ["EnginesBucket57185CB5", "Arn"]
+                                },
+                                {
+                                  "Fn::Join": [
+                                    "",
+                                    [
+                                      {
+                                        "Fn::GetAtt": [
+                                          "EnginesBucket57185CB5",
+                                          "Arn"
+                                        ]
+                                      },
+                                      "/*"
+                                    ]
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "Action": "s3:GetObject",
+                              "Condition": {
+                                "StringEquals": {
+                                  "AWS:SourceArn": {
+                                    "Fn::Join": [
+                                      "",
+                                      [
+                                        "arn:",
+                                        { "Ref": "AWS::Partition" },
+                                        ":cloudfront::",
+                                        { "Ref": "AWS::AccountId" },
+                                        ":distribution/",
+                                        { "Ref": "Distribution830FAC52" }
+                                      ]
+                                    ]
+                                  }
+                                }
+                              },
+                              "Effect": "Allow",
+                              "Principal": {
+                                "Service": "cloudfront.amazonaws.com"
+                              },
+                              "Resource": {
+                                "Fn::Join": [
+                                  "",
+                                  [
+                                    {
+                                      "Fn::GetAtt": [
+                                        "EnginesBucket57185CB5",
+                                        "Arn"
+                                      ]
+                                    },
+                                    "/*"
+                                  ]
+                                ]
+                              }
+                            }
+                          ],
+                          "Version": "2012-10-17"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_s3.CfnBucketPolicy",
+                      "version": "2.189.1"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_s3.BucketPolicy",
+                  "version": "2.189.1",
+                  "metadata": [{ "bucket": "*" }]
+                }
+              },
+              "AutoDeleteObjectsCustomResource": {
+                "id": "AutoDeleteObjectsCustomResource",
+                "path": "FreechessWebapp/EnginesBucket/AutoDeleteObjectsCustomResource",
+                "children": {
+                  "Default": {
+                    "id": "Default",
+                    "path": "FreechessWebapp/EnginesBucket/AutoDeleteObjectsCustomResource/Default",
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.CfnResource",
+                      "version": "2.189.1"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.CustomResource",
+                  "version": "2.189.1",
+                  "metadata": ["*"]
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.aws_s3.Bucket",
+              "version": "2.189.1",
+              "metadata": [
+                {
+                  "accessControl": "Private",
+                  "removalPolicy": "destroy",
+                  "autoDeleteObjects": true,
+                  "publicReadAccess": false
+                }
+              ]
+            }
+          },
+          "BucketDeployment": {
+            "id": "BucketDeployment",
+            "path": "FreechessWebapp/BucketDeployment",
+            "children": {
+              "AwsCliLayer": {
+                "id": "AwsCliLayer",
+                "path": "FreechessWebapp/BucketDeployment/AwsCliLayer",
+                "children": {
+                  "Code": {
+                    "id": "Code",
+                    "path": "FreechessWebapp/BucketDeployment/AwsCliLayer/Code",
+                    "children": {
+                      "Stage": {
+                        "id": "Stage",
+                        "path": "FreechessWebapp/BucketDeployment/AwsCliLayer/Code/Stage",
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.AssetStaging",
+                          "version": "2.189.1"
+                        }
+                      },
+                      "AssetBucket": {
+                        "id": "AssetBucket",
+                        "path": "FreechessWebapp/BucketDeployment/AwsCliLayer/Code/AssetBucket",
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.aws_s3.BucketBase",
+                          "version": "2.189.1",
+                          "metadata": []
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_s3_assets.Asset",
+                      "version": "2.189.1"
+                    }
+                  },
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "FreechessWebapp/BucketDeployment/AwsCliLayer/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::Lambda::LayerVersion",
+                      "aws:cdk:cloudformation:props": {
+                        "content": {
+                          "s3Bucket": "cdk-hnb659fds-assets-123456789012-eu-west-3",
+                          "s3Key": "8341cb239e4e1842be4d85a62c1b0a519b37f6f3b0e6acc9758db8a98f518fa3.zip"
+                        },
+                        "description": "/opt/awscli/aws"
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_lambda.CfnLayerVersion",
+                      "version": "2.189.1"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.lambda_layer_awscli.AwsCliLayer",
+                  "version": "2.189.1",
+                  "metadata": [{}]
+                }
+              },
+              "CustomResourceHandler": {
+                "id": "CustomResourceHandler",
+                "path": "FreechessWebapp/BucketDeployment/CustomResourceHandler",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_lambda.SingletonFunction",
+                  "version": "2.189.1",
+                  "metadata": [
+                    {
+                      "uuid": "*",
+                      "layers": ["*"],
+                      "environment": "*",
+                      "lambdaPurpose": "*",
+                      "timeout": "*",
+                      "role": "*",
+                      "memorySize": "*",
+                      "ephemeralStorageSize": "*",
+                      "vpc": "*",
+                      "vpcSubnets": "*",
+                      "filesystem": "*",
+                      "logGroup": "*",
+                      "code": "*",
+                      "handler": "*",
+                      "runtime": "*"
+                    },
+                    { "addMetadata": ["*", true] },
+                    { "addMetadata": ["*", "*"] }
+                  ]
+                }
+              },
+              "Asset1": {
+                "id": "Asset1",
+                "path": "FreechessWebapp/BucketDeployment/Asset1",
+                "children": {
+                  "Stage": {
+                    "id": "Stage",
+                    "path": "FreechessWebapp/BucketDeployment/Asset1/Stage",
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.AssetStaging",
+                      "version": "2.189.1"
+                    }
+                  },
+                  "AssetBucket": {
+                    "id": "AssetBucket",
+                    "path": "FreechessWebapp/BucketDeployment/Asset1/AssetBucket",
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_s3.BucketBase",
+                      "version": "2.189.1",
+                      "metadata": []
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_s3_assets.Asset",
+                  "version": "2.189.1"
+                }
+              },
+              "CustomResource-512MiB": {
+                "id": "CustomResource-512MiB",
+                "path": "FreechessWebapp/BucketDeployment/CustomResource-512MiB",
+                "children": {
+                  "Default": {
+                    "id": "Default",
+                    "path": "FreechessWebapp/BucketDeployment/CustomResource-512MiB/Default",
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.CfnResource",
+                      "version": "2.189.1"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.CustomResource",
+                  "version": "2.189.1",
+                  "metadata": ["*"]
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.aws_s3_deployment.BucketDeployment",
+              "version": "2.189.1"
+            }
+          },
+          "Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB": {
+            "id": "Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB",
+            "path": "FreechessWebapp/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB",
+            "children": {
+              "ServiceRole": {
+                "id": "ServiceRole",
+                "path": "FreechessWebapp/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB/ServiceRole",
+                "children": {
+                  "ImportServiceRole": {
+                    "id": "ImportServiceRole",
+                    "path": "FreechessWebapp/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB/ServiceRole/ImportServiceRole",
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.Resource",
+                      "version": "2.189.1",
+                      "metadata": ["*"]
+                    }
+                  },
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "FreechessWebapp/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB/ServiceRole/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                      "aws:cdk:cloudformation:props": {
+                        "assumeRolePolicyDocument": {
+                          "Statement": [
+                            {
+                              "Action": "sts:AssumeRole",
+                              "Effect": "Allow",
+                              "Principal": { "Service": "lambda.amazonaws.com" }
+                            }
+                          ],
+                          "Version": "2012-10-17"
+                        },
+                        "managedPolicyArns": [
+                          {
+                            "Fn::Join": [
+                              "",
+                              [
+                                "arn:",
+                                { "Ref": "AWS::Partition" },
+                                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+                              ]
+                            ]
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_iam.CfnRole",
+                      "version": "2.189.1"
+                    }
+                  },
+                  "DefaultPolicy": {
+                    "id": "DefaultPolicy",
+                    "path": "FreechessWebapp/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB/ServiceRole/DefaultPolicy",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "FreechessWebapp/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB/ServiceRole/DefaultPolicy/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                          "aws:cdk:cloudformation:props": {
+                            "policyDocument": {
+                              "Statement": [
+                                {
+                                  "Action": [
+                                    "s3:GetBucket*",
+                                    "s3:GetObject*",
+                                    "s3:List*"
+                                  ],
+                                  "Effect": "Allow",
+                                  "Resource": [
+                                    "arn:aws:s3:::cdk-hnb659fds-assets-123456789012-eu-west-3",
+                                    "arn:aws:s3:::cdk-hnb659fds-assets-123456789012-eu-west-3/*"
+                                  ]
+                                },
+                                {
+                                  "Action": [
+                                    "s3:Abort*",
+                                    "s3:DeleteObject*",
+                                    "s3:GetBucket*",
+                                    "s3:GetObject*",
+                                    "s3:List*",
+                                    "s3:PutObject",
+                                    "s3:PutObjectLegalHold",
+                                    "s3:PutObjectRetention",
+                                    "s3:PutObjectTagging",
+                                    "s3:PutObjectVersionTagging"
+                                  ],
+                                  "Effect": "Allow",
+                                  "Resource": [
+                                    { "Fn::GetAtt": ["Bucket83908E77", "Arn"] },
+                                    {
+                                      "Fn::Join": [
+                                        "",
+                                        [
+                                          {
+                                            "Fn::GetAtt": [
+                                              "Bucket83908E77",
+                                              "Arn"
+                                            ]
+                                          },
+                                          "/*"
+                                        ]
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ],
+                              "Version": "2012-10-17"
+                            },
+                            "policyName": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiBServiceRoleDefaultPolicy96C3E726",
+                            "roles": [
+                              {
+                                "Ref": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiBServiceRoleBA21DBC1"
+                              }
+                            ]
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.aws_iam.CfnPolicy",
+                          "version": "2.189.1"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_iam.Policy",
+                      "version": "2.189.1",
+                      "metadata": [
+                        "*",
+                        { "attachToRole": ["*"] },
+                        { "attachToRole": ["*"] },
+                        { "addStatements": [{}] },
+                        { "addStatements": [{}] },
+                        { "addStatements": [{}] },
+                        { "addStatements": [{}] }
+                      ]
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_iam.Role",
+                  "version": "2.189.1",
+                  "metadata": [
+                    {
+                      "assumedBy": {
+                        "principalAccount": "*",
+                        "assumeRoleAction": "*"
+                      },
+                      "managedPolicies": [{ "managedPolicyArn": "*" }]
+                    },
+                    { "addToPrincipalPolicy": [{}] },
+                    { "attachInlinePolicy": ["*"] },
+                    { "attachInlinePolicy": ["*"] },
+                    { "addToPrincipalPolicy": [{}] },
+                    { "addToPrincipalPolicy": [{}] },
+                    { "addToPrincipalPolicy": [{}] }
+                  ]
+                }
+              },
+              "Code": {
+                "id": "Code",
+                "path": "FreechessWebapp/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB/Code",
+                "children": {
+                  "Stage": {
+                    "id": "Stage",
+                    "path": "FreechessWebapp/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB/Code/Stage",
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.AssetStaging",
+                      "version": "2.189.1"
+                    }
+                  },
+                  "AssetBucket": {
+                    "id": "AssetBucket",
+                    "path": "FreechessWebapp/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB/Code/AssetBucket",
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_s3.BucketBase",
+                      "version": "2.189.1",
+                      "metadata": []
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_s3_assets.Asset",
+                  "version": "2.189.1"
+                }
+              },
+              "Resource": {
+                "id": "Resource",
+                "path": "FreechessWebapp/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
+                  "aws:cdk:cloudformation:props": {
+                    "code": {
+                      "s3Bucket": "cdk-hnb659fds-assets-123456789012-eu-west-3",
+                      "s3Key": "4fe0aba5e672b596d0f72505a9eec502f98d46906bb30fae2511fbdc1df4956f.zip"
+                    },
+                    "environment": {
+                      "variables": {
+                        "AWS_CA_BUNDLE": "/etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem"
+                      }
+                    },
+                    "handler": "index.handler",
+                    "layers": [
+                      { "Ref": "BucketDeploymentAwsCliLayerB018DCE1" }
+                    ],
+                    "memorySize": 512,
+                    "role": {
+                      "Fn::GetAtt": [
+                        "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiBServiceRoleBA21DBC1",
+                        "Arn"
+                      ]
+                    },
+                    "runtime": "python3.11",
+                    "timeout": 900
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_lambda.CfnFunction",
+                  "version": "2.189.1"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.aws_lambda.Function",
+              "version": "2.189.1",
+              "metadata": [
+                {
+                  "layers": ["*"],
+                  "environment": "*",
+                  "timeout": "*",
+                  "role": "*",
+                  "memorySize": "*",
+                  "ephemeralStorageSize": "*",
+                  "vpc": "*",
+                  "vpcSubnets": "*",
+                  "filesystem": "*",
+                  "logGroup": "*",
+                  "code": "*",
+                  "handler": "*",
+                  "runtime": "*"
+                },
+                { "addEnvironment": ["*", "*"] },
+                { "addLayers": ["*"] }
+              ]
+            }
+          },
+          "BucketPagesDeployment": {
+            "id": "BucketPagesDeployment",
+            "path": "FreechessWebapp/BucketPagesDeployment",
+            "children": {
+              "AwsCliLayer": {
+                "id": "AwsCliLayer",
+                "path": "FreechessWebapp/BucketPagesDeployment/AwsCliLayer",
+                "children": {
+                  "Code": {
+                    "id": "Code",
+                    "path": "FreechessWebapp/BucketPagesDeployment/AwsCliLayer/Code",
+                    "children": {
+                      "Stage": {
+                        "id": "Stage",
+                        "path": "FreechessWebapp/BucketPagesDeployment/AwsCliLayer/Code/Stage",
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.AssetStaging",
+                          "version": "2.189.1"
+                        }
+                      },
+                      "AssetBucket": {
+                        "id": "AssetBucket",
+                        "path": "FreechessWebapp/BucketPagesDeployment/AwsCliLayer/Code/AssetBucket",
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.aws_s3.BucketBase",
+                          "version": "2.189.1",
+                          "metadata": []
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_s3_assets.Asset",
+                      "version": "2.189.1"
+                    }
+                  },
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "FreechessWebapp/BucketPagesDeployment/AwsCliLayer/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::Lambda::LayerVersion",
+                      "aws:cdk:cloudformation:props": {
+                        "content": {
+                          "s3Bucket": "cdk-hnb659fds-assets-123456789012-eu-west-3",
+                          "s3Key": "8341cb239e4e1842be4d85a62c1b0a519b37f6f3b0e6acc9758db8a98f518fa3.zip"
+                        },
+                        "description": "/opt/awscli/aws"
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_lambda.CfnLayerVersion",
+                      "version": "2.189.1"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.lambda_layer_awscli.AwsCliLayer",
+                  "version": "2.189.1",
+                  "metadata": [{}]
+                }
+              },
+              "CustomResourceHandler": {
+                "id": "CustomResourceHandler",
+                "path": "FreechessWebapp/BucketPagesDeployment/CustomResourceHandler",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_lambda.SingletonFunction",
+                  "version": "2.189.1",
+                  "metadata": [
+                    {
+                      "uuid": "*",
+                      "layers": ["*"],
+                      "environment": "*",
+                      "lambdaPurpose": "*",
+                      "timeout": "*",
+                      "role": "*",
+                      "memorySize": "*",
+                      "ephemeralStorageSize": "*",
+                      "vpc": "*",
+                      "vpcSubnets": "*",
+                      "filesystem": "*",
+                      "logGroup": "*",
+                      "code": "*",
+                      "handler": "*",
+                      "runtime": "*"
+                    },
+                    { "addMetadata": ["*", true] },
+                    { "addMetadata": ["*", "*"] }
+                  ]
+                }
+              },
+              "Asset1": {
+                "id": "Asset1",
+                "path": "FreechessWebapp/BucketPagesDeployment/Asset1",
+                "children": {
+                  "Stage": {
+                    "id": "Stage",
+                    "path": "FreechessWebapp/BucketPagesDeployment/Asset1/Stage",
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.AssetStaging",
+                      "version": "2.189.1"
+                    }
+                  },
+                  "AssetBucket": {
+                    "id": "AssetBucket",
+                    "path": "FreechessWebapp/BucketPagesDeployment/Asset1/AssetBucket",
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_s3.BucketBase",
+                      "version": "2.189.1",
+                      "metadata": []
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_s3_assets.Asset",
+                  "version": "2.189.1"
+                }
+              },
+              "CustomResource-512MiB": {
+                "id": "CustomResource-512MiB",
+                "path": "FreechessWebapp/BucketPagesDeployment/CustomResource-512MiB",
+                "children": {
+                  "Default": {
+                    "id": "Default",
+                    "path": "FreechessWebapp/BucketPagesDeployment/CustomResource-512MiB/Default",
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.CfnResource",
+                      "version": "2.189.1"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.CustomResource",
+                  "version": "2.189.1",
+                  "metadata": ["*"]
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.aws_s3_deployment.BucketDeployment",
+              "version": "2.189.1"
+            }
+          },
+          "BucketEnginesDeployment": {
+            "id": "BucketEnginesDeployment",
+            "path": "FreechessWebapp/BucketEnginesDeployment",
+            "children": {
+              "AwsCliLayer": {
+                "id": "AwsCliLayer",
+                "path": "FreechessWebapp/BucketEnginesDeployment/AwsCliLayer",
+                "children": {
+                  "Code": {
+                    "id": "Code",
+                    "path": "FreechessWebapp/BucketEnginesDeployment/AwsCliLayer/Code",
+                    "children": {
+                      "Stage": {
+                        "id": "Stage",
+                        "path": "FreechessWebapp/BucketEnginesDeployment/AwsCliLayer/Code/Stage",
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.AssetStaging",
+                          "version": "2.189.1"
+                        }
+                      },
+                      "AssetBucket": {
+                        "id": "AssetBucket",
+                        "path": "FreechessWebapp/BucketEnginesDeployment/AwsCliLayer/Code/AssetBucket",
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.aws_s3.BucketBase",
+                          "version": "2.189.1",
+                          "metadata": []
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_s3_assets.Asset",
+                      "version": "2.189.1"
+                    }
+                  },
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "FreechessWebapp/BucketEnginesDeployment/AwsCliLayer/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::Lambda::LayerVersion",
+                      "aws:cdk:cloudformation:props": {
+                        "content": {
+                          "s3Bucket": "cdk-hnb659fds-assets-123456789012-eu-west-3",
+                          "s3Key": "8341cb239e4e1842be4d85a62c1b0a519b37f6f3b0e6acc9758db8a98f518fa3.zip"
+                        },
+                        "description": "/opt/awscli/aws"
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_lambda.CfnLayerVersion",
+                      "version": "2.189.1"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.lambda_layer_awscli.AwsCliLayer",
+                  "version": "2.189.1",
+                  "metadata": [{}]
+                }
+              },
+              "CustomResourceHandler": {
+                "id": "CustomResourceHandler",
+                "path": "FreechessWebapp/BucketEnginesDeployment/CustomResourceHandler",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_lambda.SingletonFunction",
+                  "version": "2.189.1",
+                  "metadata": [
+                    {
+                      "uuid": "*",
+                      "layers": ["*"],
+                      "environment": "*",
+                      "lambdaPurpose": "*",
+                      "timeout": "*",
+                      "role": "*",
+                      "memorySize": "*",
+                      "ephemeralStorageSize": "*",
+                      "vpc": "*",
+                      "vpcSubnets": "*",
+                      "filesystem": "*",
+                      "logGroup": "*",
+                      "code": "*",
+                      "handler": "*",
+                      "runtime": "*"
+                    },
+                    { "addMetadata": ["*", true] },
+                    { "addMetadata": ["*", "*"] }
+                  ]
+                }
+              },
+              "Asset1": {
+                "id": "Asset1",
+                "path": "FreechessWebapp/BucketEnginesDeployment/Asset1",
+                "children": {
+                  "Stage": {
+                    "id": "Stage",
+                    "path": "FreechessWebapp/BucketEnginesDeployment/Asset1/Stage",
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.AssetStaging",
+                      "version": "2.189.1"
+                    }
+                  },
+                  "AssetBucket": {
+                    "id": "AssetBucket",
+                    "path": "FreechessWebapp/BucketEnginesDeployment/Asset1/AssetBucket",
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_s3.BucketBase",
+                      "version": "2.189.1",
+                      "metadata": []
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_s3_assets.Asset",
+                  "version": "2.189.1"
+                }
+              },
+              "CustomResource-512MiB-1024MiB": {
+                "id": "CustomResource-512MiB-1024MiB",
+                "path": "FreechessWebapp/BucketEnginesDeployment/CustomResource-512MiB-1024MiB",
+                "children": {
+                  "Default": {
+                    "id": "Default",
+                    "path": "FreechessWebapp/BucketEnginesDeployment/CustomResource-512MiB-1024MiB/Default",
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.CfnResource",
+                      "version": "2.189.1"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.CustomResource",
+                  "version": "2.189.1",
+                  "metadata": ["*"]
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.aws_s3_deployment.BucketDeployment",
+              "version": "2.189.1"
+            }
+          },
+          "Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB1024MiB": {
+            "id": "Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB1024MiB",
+            "path": "FreechessWebapp/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB1024MiB",
+            "children": {
+              "ServiceRole": {
+                "id": "ServiceRole",
+                "path": "FreechessWebapp/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB1024MiB/ServiceRole",
+                "children": {
+                  "ImportServiceRole": {
+                    "id": "ImportServiceRole",
+                    "path": "FreechessWebapp/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB1024MiB/ServiceRole/ImportServiceRole",
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.Resource",
+                      "version": "2.189.1",
+                      "metadata": ["*"]
+                    }
+                  },
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "FreechessWebapp/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB1024MiB/ServiceRole/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                      "aws:cdk:cloudformation:props": {
+                        "assumeRolePolicyDocument": {
+                          "Statement": [
+                            {
+                              "Action": "sts:AssumeRole",
+                              "Effect": "Allow",
+                              "Principal": { "Service": "lambda.amazonaws.com" }
+                            }
+                          ],
+                          "Version": "2012-10-17"
+                        },
+                        "managedPolicyArns": [
+                          {
+                            "Fn::Join": [
+                              "",
+                              [
+                                "arn:",
+                                { "Ref": "AWS::Partition" },
+                                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+                              ]
+                            ]
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_iam.CfnRole",
+                      "version": "2.189.1"
+                    }
+                  },
+                  "DefaultPolicy": {
+                    "id": "DefaultPolicy",
+                    "path": "FreechessWebapp/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB1024MiB/ServiceRole/DefaultPolicy",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "FreechessWebapp/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB1024MiB/ServiceRole/DefaultPolicy/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                          "aws:cdk:cloudformation:props": {
+                            "policyDocument": {
+                              "Statement": [
+                                {
+                                  "Action": [
+                                    "s3:GetBucket*",
+                                    "s3:GetObject*",
+                                    "s3:List*"
+                                  ],
+                                  "Effect": "Allow",
+                                  "Resource": [
+                                    "arn:aws:s3:::cdk-hnb659fds-assets-123456789012-eu-west-3",
+                                    "arn:aws:s3:::cdk-hnb659fds-assets-123456789012-eu-west-3/*"
+                                  ]
+                                },
+                                {
+                                  "Action": [
+                                    "s3:Abort*",
+                                    "s3:DeleteObject*",
+                                    "s3:GetBucket*",
+                                    "s3:GetObject*",
+                                    "s3:List*",
+                                    "s3:PutObject",
+                                    "s3:PutObjectLegalHold",
+                                    "s3:PutObjectRetention",
+                                    "s3:PutObjectTagging",
+                                    "s3:PutObjectVersionTagging"
+                                  ],
+                                  "Effect": "Allow",
+                                  "Resource": [
+                                    {
+                                      "Fn::GetAtt": [
+                                        "EnginesBucket57185CB5",
+                                        "Arn"
+                                      ]
+                                    },
+                                    {
+                                      "Fn::Join": [
+                                        "",
+                                        [
+                                          {
+                                            "Fn::GetAtt": [
+                                              "EnginesBucket57185CB5",
+                                              "Arn"
+                                            ]
+                                          },
+                                          "/*"
+                                        ]
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ],
+                              "Version": "2012-10-17"
+                            },
+                            "policyName": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB1024MiBServiceRoleDefaultPolicy5878A191",
+                            "roles": [
+                              {
+                                "Ref": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB1024MiBServiceRole5F7A526E"
+                              }
+                            ]
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.aws_iam.CfnPolicy",
+                          "version": "2.189.1"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_iam.Policy",
+                      "version": "2.189.1",
+                      "metadata": [
+                        "*",
+                        { "attachToRole": ["*"] },
+                        { "attachToRole": ["*"] },
+                        { "addStatements": [{}] },
+                        { "addStatements": [{}] }
+                      ]
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_iam.Role",
+                  "version": "2.189.1",
+                  "metadata": [
+                    {
+                      "assumedBy": {
+                        "principalAccount": "*",
+                        "assumeRoleAction": "*"
+                      },
+                      "managedPolicies": [{ "managedPolicyArn": "*" }]
+                    },
+                    { "addToPrincipalPolicy": [{}] },
+                    { "attachInlinePolicy": ["*"] },
+                    { "attachInlinePolicy": ["*"] },
+                    { "addToPrincipalPolicy": [{}] }
+                  ]
+                }
+              },
+              "Code": {
+                "id": "Code",
+                "path": "FreechessWebapp/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB1024MiB/Code",
+                "children": {
+                  "Stage": {
+                    "id": "Stage",
+                    "path": "FreechessWebapp/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB1024MiB/Code/Stage",
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.AssetStaging",
+                      "version": "2.189.1"
+                    }
+                  },
+                  "AssetBucket": {
+                    "id": "AssetBucket",
+                    "path": "FreechessWebapp/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB1024MiB/Code/AssetBucket",
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_s3.BucketBase",
+                      "version": "2.189.1",
+                      "metadata": []
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_s3_assets.Asset",
+                  "version": "2.189.1"
+                }
+              },
+              "Resource": {
+                "id": "Resource",
+                "path": "FreechessWebapp/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB1024MiB/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
+                  "aws:cdk:cloudformation:props": {
+                    "code": {
+                      "s3Bucket": "cdk-hnb659fds-assets-123456789012-eu-west-3",
+                      "s3Key": "4fe0aba5e672b596d0f72505a9eec502f98d46906bb30fae2511fbdc1df4956f.zip"
+                    },
+                    "environment": {
+                      "variables": {
+                        "AWS_CA_BUNDLE": "/etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem"
+                      }
+                    },
+                    "ephemeralStorage": { "size": 1024 },
+                    "handler": "index.handler",
+                    "layers": [
+                      { "Ref": "BucketEnginesDeploymentAwsCliLayer270A1C18" }
+                    ],
+                    "memorySize": 512,
+                    "role": {
+                      "Fn::GetAtt": [
+                        "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C512MiB1024MiBServiceRole5F7A526E",
+                        "Arn"
+                      ]
+                    },
+                    "runtime": "python3.11",
+                    "timeout": 900
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_lambda.CfnFunction",
+                  "version": "2.189.1"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.aws_lambda.Function",
+              "version": "2.189.1",
+              "metadata": [
+                {
+                  "layers": ["*"],
+                  "environment": "*",
+                  "timeout": "*",
+                  "role": "*",
+                  "memorySize": "*",
+                  "ephemeralStorageSize": "*",
+                  "vpc": "*",
+                  "vpcSubnets": "*",
+                  "filesystem": "*",
+                  "logGroup": "*",
+                  "code": "*",
+                  "handler": "*",
+                  "runtime": "*"
+                },
+                { "addEnvironment": ["*", "*"] },
+                { "addLayers": ["*"] }
+              ]
+            }
+          },
+          "ResponseHeadersPolicy": {
+            "id": "ResponseHeadersPolicy",
+            "path": "FreechessWebapp/ResponseHeadersPolicy",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "FreechessWebapp/ResponseHeadersPolicy/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::CloudFront::ResponseHeadersPolicy",
+                  "aws:cdk:cloudformation:props": {
+                    "responseHeadersPolicyConfig": {
+                      "name": "FreechessWebappResponseHeadersPolicyEACB51F1",
+                      "customHeadersConfig": {
+                        "items": [
+                          {
+                            "header": "Cross-Origin-Embedder-Policy",
+                            "value": "require-corp",
+                            "override": true
+                          },
+                          {
+                            "header": "Cross-Origin-Opener-Policy",
+                            "value": "same-origin",
+                            "override": true
+                          }
+                        ]
+                      }
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_cloudfront.CfnResponseHeadersPolicy",
+                  "version": "2.189.1"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.aws_cloudfront.ResponseHeadersPolicy",
+              "version": "2.189.1",
+              "metadata": [
+                {
+                  "customHeadersBehavior": {
+                    "customHeaders": [
+                      { "header": "*", "value": "*", "override": true },
+                      { "header": "*", "value": "*", "override": true }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "RewriteFunction": {
+            "id": "RewriteFunction",
+            "path": "FreechessWebapp/RewriteFunction",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "FreechessWebapp/RewriteFunction/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::CloudFront::Function",
+                  "aws:cdk:cloudformation:props": {
+                    "autoPublish": true,
+                    "functionCode": "\n          function handler(event) {\n            var request = event.request;\n            var uri = request.uri;\n\n            if (uri.endsWith('/')) {\n                request.uri += 'index.html';\n            } else if (!uri.split('/').pop().includes('.')) {\n                request.uri += '.html';\n            }\n\n            return request;\n        }",
+                    "functionConfig": {
+                      "comment": "eu-west-3FreechessWebappRewriteFunction884993EF",
+                      "runtime": "cloudfront-js-1.0"
+                    },
+                    "name": "eu-west-3FreechessWebappRewriteFunction884993EF"
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_cloudfront.CfnFunction",
+                  "version": "2.189.1"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.aws_cloudfront.Function",
+              "version": "2.189.1",
+              "metadata": [{ "code": "*" }]
+            }
+          },
+          "HostedZone": {
+            "id": "HostedZone",
+            "path": "FreechessWebapp/HostedZone",
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.Resource",
+              "version": "2.189.1",
+              "metadata": []
+            }
+          },
+          "Certificate": {
+            "id": "Certificate",
+            "path": "FreechessWebapp/Certificate",
+            "children": {
+              "CertificateRequestorFunction": {
+                "id": "CertificateRequestorFunction",
+                "path": "FreechessWebapp/Certificate/CertificateRequestorFunction",
+                "children": {
+                  "ServiceRole": {
+                    "id": "ServiceRole",
+                    "path": "FreechessWebapp/Certificate/CertificateRequestorFunction/ServiceRole",
+                    "children": {
+                      "ImportServiceRole": {
+                        "id": "ImportServiceRole",
+                        "path": "FreechessWebapp/Certificate/CertificateRequestorFunction/ServiceRole/ImportServiceRole",
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.Resource",
+                          "version": "2.189.1",
+                          "metadata": ["*"]
+                        }
+                      },
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "FreechessWebapp/Certificate/CertificateRequestorFunction/ServiceRole/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                          "aws:cdk:cloudformation:props": {
+                            "assumeRolePolicyDocument": {
+                              "Statement": [
+                                {
+                                  "Action": "sts:AssumeRole",
+                                  "Effect": "Allow",
+                                  "Principal": {
+                                    "Service": "lambda.amazonaws.com"
+                                  }
+                                }
+                              ],
+                              "Version": "2012-10-17"
+                            },
+                            "managedPolicyArns": [
+                              {
+                                "Fn::Join": [
+                                  "",
+                                  [
+                                    "arn:",
+                                    { "Ref": "AWS::Partition" },
+                                    ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+                                  ]
+                                ]
+                              }
+                            ]
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.aws_iam.CfnRole",
+                          "version": "2.189.1"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_iam.Role",
+                      "version": "2.189.1",
+                      "metadata": [
+                        {
+                          "assumedBy": {
+                            "principalAccount": "*",
+                            "assumeRoleAction": "*"
+                          },
+                          "managedPolicies": [{ "managedPolicyArn": "*" }]
+                        },
+                        { "attachInlinePolicy": ["*"] },
+                        { "attachInlinePolicy": ["*"] },
+                        { "attachInlinePolicy": ["*"] },
+                        { "attachInlinePolicy": ["*"] },
+                        { "attachInlinePolicy": ["*"] },
+                        { "attachInlinePolicy": ["*"] }
+                      ]
+                    }
+                  },
+                  "Code": {
+                    "id": "Code",
+                    "path": "FreechessWebapp/Certificate/CertificateRequestorFunction/Code",
+                    "children": {
+                      "Stage": {
+                        "id": "Stage",
+                        "path": "FreechessWebapp/Certificate/CertificateRequestorFunction/Code/Stage",
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.AssetStaging",
+                          "version": "2.189.1"
+                        }
+                      },
+                      "AssetBucket": {
+                        "id": "AssetBucket",
+                        "path": "FreechessWebapp/Certificate/CertificateRequestorFunction/Code/AssetBucket",
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.aws_s3.BucketBase",
+                          "version": "2.189.1",
+                          "metadata": []
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_s3_assets.Asset",
+                      "version": "2.189.1"
+                    }
+                  },
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "FreechessWebapp/Certificate/CertificateRequestorFunction/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
+                      "aws:cdk:cloudformation:props": {
+                        "code": {
+                          "s3Bucket": "cdk-hnb659fds-assets-123456789012-eu-west-3",
+                          "s3Key": "b073cebcf4d61fb152a30f5a5e57a94df7f980a549fdf1a79a0b18c5750522d8.zip"
+                        },
+                        "handler": "index.certificateRequestHandler",
+                        "role": {
+                          "Fn::GetAtt": [
+                            "CertificateCertificateRequestorFunctionServiceRoleC04C13DA",
+                            "Arn"
+                          ]
+                        },
+                        "runtime": "nodejs20.x",
+                        "timeout": 900
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_lambda.CfnFunction",
+                      "version": "2.189.1"
+                    }
+                  },
+                  "inlinePolicyAddedToExecutionRole-0": {
+                    "id": "inlinePolicyAddedToExecutionRole-0",
+                    "path": "FreechessWebapp/Certificate/CertificateRequestorFunction/inlinePolicyAddedToExecutionRole-0",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "FreechessWebapp/Certificate/CertificateRequestorFunction/inlinePolicyAddedToExecutionRole-0/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                          "aws:cdk:cloudformation:props": {
+                            "policyDocument": {
+                              "Statement": [
+                                {
+                                  "Action": [
+                                    "acm:AddTagsToCertificate",
+                                    "acm:DeleteCertificate",
+                                    "acm:DescribeCertificate",
+                                    "acm:RequestCertificate"
+                                  ],
+                                  "Effect": "Allow",
+                                  "Resource": "*"
+                                }
+                              ],
+                              "Version": "2012-10-17"
+                            },
+                            "policyName": "CertificateCertificateRequestorFunctioninlinePolicyAddedToExecutionRole02D5DA9E2",
+                            "roles": [
+                              {
+                                "Ref": "CertificateCertificateRequestorFunctionServiceRoleC04C13DA"
+                              }
+                            ]
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.aws_iam.CfnPolicy",
+                          "version": "2.189.1"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_iam.Policy",
+                      "version": "2.189.1",
+                      "metadata": [
+                        { "statements": "*" },
+                        { "addStatements": [{}] },
+                        { "attachToRole": ["*"] },
+                        { "attachToRole": ["*"] }
+                      ]
+                    }
+                  },
+                  "inlinePolicyAddedToExecutionRole-1": {
+                    "id": "inlinePolicyAddedToExecutionRole-1",
+                    "path": "FreechessWebapp/Certificate/CertificateRequestorFunction/inlinePolicyAddedToExecutionRole-1",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "FreechessWebapp/Certificate/CertificateRequestorFunction/inlinePolicyAddedToExecutionRole-1/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                          "aws:cdk:cloudformation:props": {
+                            "policyDocument": {
+                              "Statement": [
+                                {
+                                  "Action": "route53:GetChange",
+                                  "Effect": "Allow",
+                                  "Resource": "*"
+                                }
+                              ],
+                              "Version": "2012-10-17"
+                            },
+                            "policyName": "CertificateCertificateRequestorFunctioninlinePolicyAddedToExecutionRole18173669F",
+                            "roles": [
+                              {
+                                "Ref": "CertificateCertificateRequestorFunctionServiceRoleC04C13DA"
+                              }
+                            ]
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.aws_iam.CfnPolicy",
+                          "version": "2.189.1"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_iam.Policy",
+                      "version": "2.189.1",
+                      "metadata": [
+                        { "statements": "*" },
+                        { "addStatements": [{}] },
+                        { "attachToRole": ["*"] },
+                        { "attachToRole": ["*"] }
+                      ]
+                    }
+                  },
+                  "inlinePolicyAddedToExecutionRole-2": {
+                    "id": "inlinePolicyAddedToExecutionRole-2",
+                    "path": "FreechessWebapp/Certificate/CertificateRequestorFunction/inlinePolicyAddedToExecutionRole-2",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "FreechessWebapp/Certificate/CertificateRequestorFunction/inlinePolicyAddedToExecutionRole-2/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                          "aws:cdk:cloudformation:props": {
+                            "policyDocument": {
+                              "Statement": [
+                                {
+                                  "Action": "route53:changeResourceRecordSets",
+                                  "Condition": {
+                                    "ForAllValues:StringEquals": {
+                                      "route53:ChangeResourceRecordSetsRecordTypes": [
+                                        "CNAME"
+                                      ],
+                                      "route53:ChangeResourceRecordSetsActions": [
+                                        "UPSERT"
+                                      ]
+                                    },
+                                    "ForAllValues:StringLike": {
+                                      "route53:ChangeResourceRecordSetsNormalizedRecordNames": [
+                                        "*.chesskit.org"
+                                      ]
+                                    }
+                                  },
+                                  "Effect": "Allow",
+                                  "Resource": "arn:aws:route53:::hostedzone/DUMMY"
+                                }
+                              ],
+                              "Version": "2012-10-17"
+                            },
+                            "policyName": "CertificateCertificateRequestorFunctioninlinePolicyAddedToExecutionRole20FBD3CBF",
+                            "roles": [
+                              {
+                                "Ref": "CertificateCertificateRequestorFunctionServiceRoleC04C13DA"
+                              }
+                            ]
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.aws_iam.CfnPolicy",
+                          "version": "2.189.1"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_iam.Policy",
+                      "version": "2.189.1",
+                      "metadata": [
+                        { "statements": "*" },
+                        { "addStatements": [{}] },
+                        { "attachToRole": ["*"] },
+                        { "attachToRole": ["*"] }
+                      ]
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_lambda.Function",
+                  "version": "2.189.1",
+                  "metadata": [
+                    {
+                      "timeout": "*",
+                      "role": "*",
+                      "code": "*",
+                      "handler": "*",
+                      "runtime": "*"
+                    }
+                  ]
+                }
+              },
+              "CertificateRequestorResource": {
+                "id": "CertificateRequestorResource",
+                "path": "FreechessWebapp/Certificate/CertificateRequestorResource",
+                "children": {
+                  "Default": {
+                    "id": "Default",
+                    "path": "FreechessWebapp/Certificate/CertificateRequestorResource/Default",
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.CfnResource",
+                      "version": "2.189.1"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.CustomResource",
+                  "version": "2.189.1",
+                  "metadata": ["*", "*"]
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.aws_certificatemanager.DnsValidatedCertificate",
+              "version": "2.189.1",
+              "metadata": [
+                { "domainName": "*", "hostedZone": "*", "region": "*" }
+              ]
+            }
+          },
+          "Distribution": {
+            "id": "Distribution",
+            "path": "FreechessWebapp/Distribution",
+            "children": {
+              "Origin1": {
+                "id": "Origin1",
+                "path": "FreechessWebapp/Distribution/Origin1",
+                "children": {
+                  "S3OriginAccessControl": {
+                    "id": "S3OriginAccessControl",
+                    "path": "FreechessWebapp/Distribution/Origin1/S3OriginAccessControl",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "FreechessWebapp/Distribution/Origin1/S3OriginAccessControl/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::CloudFront::OriginAccessControl",
+                          "aws:cdk:cloudformation:props": {
+                            "originAccessControlConfig": {
+                              "name": "FreechessWebappDistributionOrigin1S3OriginAccessControl6DB44497",
+                              "signingBehavior": "always",
+                              "signingProtocol": "sigv4",
+                              "originAccessControlOriginType": "s3"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.aws_cloudfront.CfnOriginAccessControl",
+                          "version": "2.189.1"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_cloudfront.S3OriginAccessControl",
+                      "version": "2.189.1",
+                      "metadata": ["*"]
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "constructs.Construct",
+                  "version": "10.4.2"
+                }
+              },
+              "Origin2": {
+                "id": "Origin2",
+                "path": "FreechessWebapp/Distribution/Origin2",
+                "children": {
+                  "S3OriginAccessControl": {
+                    "id": "S3OriginAccessControl",
+                    "path": "FreechessWebapp/Distribution/Origin2/S3OriginAccessControl",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "FreechessWebapp/Distribution/Origin2/S3OriginAccessControl/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::CloudFront::OriginAccessControl",
+                          "aws:cdk:cloudformation:props": {
+                            "originAccessControlConfig": {
+                              "name": "FreechessWebappDistributionOrigin2S3OriginAccessControl93E2A10E",
+                              "signingBehavior": "always",
+                              "signingProtocol": "sigv4",
+                              "originAccessControlOriginType": "s3"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.aws_cloudfront.CfnOriginAccessControl",
+                          "version": "2.189.1"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_cloudfront.S3OriginAccessControl",
+                      "version": "2.189.1",
+                      "metadata": ["*"]
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "constructs.Construct",
+                  "version": "10.4.2"
+                }
+              },
+              "Resource": {
+                "id": "Resource",
+                "path": "FreechessWebapp/Distribution/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::CloudFront::Distribution",
+                  "aws:cdk:cloudformation:props": {
+                    "distributionConfig": {
+                      "enabled": true,
+                      "origins": [
+                        {
+                          "domainName": {
+                            "Fn::GetAtt": [
+                              "Bucket83908E77",
+                              "RegionalDomainName"
+                            ]
+                          },
+                          "id": "FreechessWebappDistributionOrigin1CDA8F199",
+                          "s3OriginConfig": { "originAccessIdentity": "" },
+                          "originAccessControlId": {
+                            "Fn::GetAtt": [
+                              "DistributionOrigin1S3OriginAccessControlEB606076",
+                              "Id"
+                            ]
+                          }
+                        },
+                        {
+                          "domainName": {
+                            "Fn::GetAtt": [
+                              "EnginesBucket57185CB5",
+                              "RegionalDomainName"
+                            ]
+                          },
+                          "id": "FreechessWebappDistributionOrigin29D8AE974",
+                          "s3OriginConfig": { "originAccessIdentity": "" },
+                          "originAccessControlId": {
+                            "Fn::GetAtt": [
+                              "DistributionOrigin2S3OriginAccessControlDC470594",
+                              "Id"
+                            ]
+                          }
+                        }
+                      ],
+                      "defaultCacheBehavior": {
+                        "pathPattern": "*",
+                        "targetOriginId": "FreechessWebappDistributionOrigin1CDA8F199",
+                        "cachePolicyId": "658327ea-f89d-4fab-a63d-7e88639e58f6",
+                        "compress": true,
+                        "responseHeadersPolicyId": {
+                          "Ref": "ResponseHeadersPolicy13DBF9E0"
+                        },
+                        "viewerProtocolPolicy": "allow-all",
+                        "functionAssociations": [
+                          {
+                            "functionArn": {
+                              "Fn::GetAtt": [
+                                "RewriteFunctionE78585E2",
+                                "FunctionARN"
+                              ]
+                            },
+                            "eventType": "viewer-request"
+                          }
+                        ]
+                      },
+                      "aliases": ["chesskit.org"],
+                      "cacheBehaviors": [
+                        {
+                          "pathPattern": "/engines/*",
+                          "targetOriginId": "FreechessWebappDistributionOrigin29D8AE974",
+                          "cachePolicyId": "658327ea-f89d-4fab-a63d-7e88639e58f6",
+                          "compress": true,
+                          "responseHeadersPolicyId": {
+                            "Ref": "ResponseHeadersPolicy13DBF9E0"
+                          },
+                          "viewerProtocolPolicy": "allow-all"
+                        }
+                      ],
+                      "customErrorResponses": [
+                        {
+                          "errorCode": 404,
+                          "responseCode": 404,
+                          "responsePagePath": "/404.html"
+                        },
+                        {
+                          "errorCode": 403,
+                          "responseCode": 404,
+                          "responsePagePath": "/404.html"
+                        }
+                      ],
+                      "defaultRootObject": "index.html",
+                      "httpVersion": "http2",
+                      "ipv6Enabled": true,
+                      "viewerCertificate": {
+                        "acmCertificateArn": {
+                          "Fn::GetAtt": [
+                            "CertificateCertificateRequestorResource2890C6B7",
+                            "Arn"
+                          ]
+                        },
+                        "minimumProtocolVersion": "TLSv1.2_2021",
+                        "sslSupportMethod": "sni-only"
+                      }
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_cloudfront.CfnDistribution",
+                  "version": "2.189.1"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.aws_cloudfront.Distribution",
+              "version": "2.189.1",
+              "metadata": [
+                {
+                  "defaultRootObject": "*",
+                  "errorResponses": [
+                    {
+                      "httpStatus": "*",
+                      "responseHttpStatus": "*",
+                      "responsePagePath": "*"
+                    },
+                    {
+                      "httpStatus": "*",
+                      "responseHttpStatus": "*",
+                      "responsePagePath": "*"
+                    }
+                  ],
+                  "defaultBehavior": {
+                    "origin": "*",
+                    "responseHeadersPolicy": "*",
+                    "functionAssociations": [
+                      { "function": "*", "eventType": "viewer-request" }
+                    ]
+                  },
+                  "additionalBehaviors": "*",
+                  "domainNames": "*",
+                  "certificate": "*"
+                },
+                { "addBehavior": ["*", {}, { "responseHeadersPolicy": "*" }] }
+              ]
+            }
+          },
+          "AliasRecord": {
+            "id": "AliasRecord",
+            "path": "FreechessWebapp/AliasRecord",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "FreechessWebapp/AliasRecord/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::Route53::RecordSet",
+                  "aws:cdk:cloudformation:props": {
+                    "aliasTarget": {
+                      "hostedZoneId": {
+                        "Fn::FindInMap": [
+                          "AWSCloudFrontPartitionHostedZoneIdMap",
+                          { "Ref": "AWS::Partition" },
+                          "zoneId"
+                        ]
+                      },
+                      "dnsName": {
+                        "Fn::GetAtt": ["Distribution830FAC52", "DomainName"]
+                      }
+                    },
+                    "hostedZoneId": "DUMMY",
+                    "name": "chesskit.org.",
+                    "type": "A"
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_route53.CfnRecordSet",
+                  "version": "2.189.1"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.aws_route53.ARecord",
+              "version": "2.189.1",
+              "metadata": [
+                { "zone": "*", "target": "*" },
+                { "zone": "*", "target": "*" }
+              ]
+            }
+          },
+          "AWSCloudFrontPartitionHostedZoneIdMap": {
+            "id": "AWSCloudFrontPartitionHostedZoneIdMap",
+            "path": "FreechessWebapp/AWSCloudFrontPartitionHostedZoneIdMap",
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.CfnMapping",
+              "version": "2.189.1"
+            }
+          },
+          "SiteUrl": {
+            "id": "SiteUrl",
+            "path": "FreechessWebapp/SiteUrl",
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.CfnOutput",
+              "version": "2.189.1"
+            }
+          },
+          "CDKMetadata": {
+            "id": "CDKMetadata",
+            "path": "FreechessWebapp/CDKMetadata",
+            "children": {
+              "Default": {
+                "id": "Default",
+                "path": "FreechessWebapp/CDKMetadata/Default",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.CfnResource",
+                  "version": "2.189.1"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "constructs.Construct",
+              "version": "10.4.2"
+            }
+          },
+          "BootstrapVersion": {
+            "id": "BootstrapVersion",
+            "path": "FreechessWebapp/BootstrapVersion",
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.CfnParameter",
+              "version": "2.189.1"
+            }
+          },
+          "CheckBootstrapVersion": {
+            "id": "CheckBootstrapVersion",
+            "path": "FreechessWebapp/CheckBootstrapVersion",
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.CfnRule",
+              "version": "2.189.1"
+            }
+          }
+        },
+        "constructInfo": { "fqn": "aws-cdk-lib.Stack", "version": "2.189.1" }
+      },
+      "Tree": {
+        "id": "Tree",
+        "path": "Tree",
+        "constructInfo": { "fqn": "constructs.Construct", "version": "10.4.2" }
+      }
+    },
+    "constructInfo": { "fqn": "aws-cdk-lib.App", "version": "2.189.1" }
+  }
+}

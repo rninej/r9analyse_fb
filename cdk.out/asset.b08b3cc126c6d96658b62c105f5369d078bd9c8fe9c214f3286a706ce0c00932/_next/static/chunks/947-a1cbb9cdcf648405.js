@@ -1,1 +1,1131 @@
-"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[947],{9320:(e,t,n)=>{n.d(t,{$:()=>s});var r=n(16042),i=n(69114),o=n(65364);let a=o.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID?{apiKey:o.env.NEXT_PUBLIC_FIREBASE_API_KEY,authDomain:o.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,projectId:o.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,storageBucket:o.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,messagingSenderId:o.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,appId:o.env.NEXT_PUBLIC_FIREBASE_APP_ID,measurementId:o.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID}:void 0,l=a?(0,r.Wp)(a):void 0;(0,i.TT)().then(e=>{e&&l&&(0,i.P5)(l)});let s=async(e,t)=>{if("localhost"===window.location.hostname||!await (0,i.TT)()||!l)return;let n=(0,i.P5)(l);(0,i.$s)(n,e,t)}},18259:(e,t,n)=>{n.d(t,{A:()=>m});var r=n(37876),i=n(98594),o=n(31084),a=n(9227),l=n(77018),s=n(58862),c=n(70946),d=n(15027),u=n(54773),h=n(18978),v=n(14232);function m(e){let{min:t,max:n,label:u,value:h,setValue:m,size:f,marksFilter:p,step:w=1,infoContent:b}=e,[x,k]=(0,v.useState)(null),A=e=>{k(e.currentTarget)},C=()=>{k(null)};return(0,r.jsxs)(o.A,{container:!0,justifyContent:"center",alignItems:"center",size:null!=f?f:11,children:[(0,r.jsxs)(a.A,{direction:"row",width:"100%",children:[(0,r.jsx)(l.A,{id:"input-".concat(u),variant:"body2",children:1===w&&p?u:"".concat(u,": ").concat(h)}),!!b&&(0,r.jsxs)(r.Fragment,{children:[(0,r.jsx)(s.x,{onClickAway:C,children:(0,r.jsx)(c.A,{size:"medium","aria-owns":x?"mouse-over-popover":void 0,"aria-haspopup":"true",onClick:A,onMouseEnter:A,onMouseLeave:C,sx:{ml:1,padding:0},"aria-label":"Help about number of threads",children:(0,r.jsx)(i.In,{icon:"mdi:info-outline",width:"1.1rem"})})}),(0,r.jsx)(d.Ay,{id:"mouse-over-popover",open:!!x,anchorEl:x,onClose:C,anchorOrigin:{vertical:"bottom",horizontal:"center"},transformOrigin:{vertical:"top",horizontal:"center"},sx:{pointerEvents:"none"},disableRestoreFocus:!0,children:(0,r.jsx)(l.A,{variant:"body2",sx:{padding:2,maxWidth:500},children:b})})]})]}),(0,r.jsx)(g,{min:t,max:n,marks:p?Array.from({length:n-t+1},(e,n)=>({value:n+t,label:"".concat(n+t)})).filter((e,t)=>t%p==0):void 0,step:w,valueLabelDisplay:"off",value:h,onChange:(e,t)=>m(t),"aria-labelledby":"input-".concat(u)})]})}let g=(0,u.Ay)(h.Ay)(()=>({".MuiSlider-markLabel":{fontSize:"0.8rem",lineHeight:"0.8rem"},".MuiSlider-thumb":{width:"18px",height:"18px"},marginBottom:"1rem"}))},19410:(e,t,n)=>{n.d(t,{h:()=>_});var r=n(37876),i=n(11494),o=n(31084),a=n(57065),l=n(99542),s=n(85278),c=n(65897),d=n(14232),u=n(19271),h=n(54587),v=n.n(h),m=n(92094),g=n(99509);let f={position:"absolute",width:"100%",height:"100%",backgroundColor:"#eb6150",opacity:"0.8"},p={position:"absolute",width:"100%",height:"100%",backgroundColor:"rgba(0,0,0,.14)",padding:"35%",backgroundClip:"content-box",borderRadius:"50%",boxSizing:"border-box"},w=e=>({position:"absolute",width:"100%",height:"100%",backgroundColor:e?m.k_[e]:"#fad541",opacity:.5});var b=n(77018),x=n(24307);function k(e){let{height:t,boardOrientation:n,currentPositionAtom:a=(0,l.eU)({})}=e,[c,h]=(0,d.useState)({whiteBarPercentage:50,label:"0.0"}),v=(0,s.md)(a);return(0,d.useEffect)(()=>{var e;let t=null==v?void 0:null===(e=v.eval)||void 0===e?void 0:e.lines[0];v.eval&&t&&!(t.depth<6)&&h((0,x.nY)(v.eval))},[v]),(0,r.jsxs)(o.A,{container:!0,justifyContent:"center",alignItems:"center",width:"2rem",height:t,border:"1px solid black",borderRadius:"5px",children:[(0,r.jsx)(i.A,{sx:{backgroundColor:n===u.Q1.White?"#424242":"white",transition:"height 1s"},height:"".concat(n===u.Q1.White?100-c.whiteBarPercentage:c.whiteBarPercentage,"%"),width:"100%",borderRadius:100===c.whiteBarPercentage?"5px":"5px 5px 0 0",children:(0,r.jsx)(b.A,{color:n===u.Q1.White?"white":"black",textAlign:"center",width:"100%",children:c.whiteBarPercentage<50&&n===u.Q1.White||c.whiteBarPercentage>=50&&n===u.Q1.Black?c.label:""})}),(0,r.jsx)(i.A,{sx:{backgroundColor:n===u.Q1.White?"white":"#424242",transition:"height 1s"},height:"".concat(n===u.Q1.White?c.whiteBarPercentage:100-c.whiteBarPercentage,"%"),width:"100%",display:"flex",alignItems:"flex-end",borderRadius:100===c.whiteBarPercentage?"5px":"0 0 5px 5px",children:(0,r.jsx)(b.A,{color:n===u.Q1.White?"black":"white",textAlign:"center",width:"100%",children:c.whiteBarPercentage>=50&&n===u.Q1.White||c.whiteBarPercentage<50&&n===u.Q1.Black?c.label:""})})]})}var A=n(9227),C=n(24422);function S(e){let{fen:t,color:n}=e,i=(0,d.useMemo)(()=>(0,x.Kz)(t,n).map(e=>{let{piece:t,count:n}=e;return E(t,n)}),[t,n]),a=(0,d.useMemo)(()=>{let e=(0,x.LR)(t);return n===u.Q1.White?e:-e},[t,n]);return(0,r.jsxs)(o.A,{container:!0,alignItems:"end",spacing:.7,size:"auto",marginLeft:"-".concat(.165,"rem"),children:[(0,r.jsx)(A.A,{direction:"row",spacing:.1,children:i}),a>0&&(0,r.jsxs)(b.A,{lineHeight:"".concat(.8250000000000001,"rem"),fontSize:"".concat(.8250000000000001,"rem"),marginLeft:.3,children:["+",a]})]})}let E=(e,t)=>t?(0,r.jsx)(A.A,{direction:"row",spacing:"-".concat(.66,"rem"),children:Array(t).fill(0).map((t,n)=>(0,r.jsx)(i.A,{width:"".concat(1.1,"rem"),height:"".concat(1.1,"rem"),sx:{backgroundImage:"url(/piece/cardinal/".concat(e,".svg)"),backgroundRepeat:"no-repeat"}},"".concat(e,"-").concat(n)))},e):null;var j=n(658);function B(e){let{color:t,player:n,gameAtom:i}=e,a=(0,s.md)(i),l=a.fen(),c=(0,d.useMemo)(()=>{if(a.turn()===t){var e,n;let t=null===(e=a.history({verbose:!0}).at(-1))||void 0===e?void 0:e.before;return I(null===(n=a.getComments().find(e=>{let{fen:n}=e;return n===t}))||void 0===n?void 0:n.comment)}return I(a.getComment())},[a,t]);return(0,r.jsxs)(o.A,{container:!0,justifyContent:"space-between",alignItems:"center",size:12,children:[(0,r.jsxs)(A.A,{direction:"row",children:[(0,r.jsx)(C.A,{src:n.avatarUrl,alt:n.name,variant:"circular",sx:{width:40,height:40,backgroundColor:t===u.Q1.White?"white":"black",color:t===u.Q1.White?"black":"white",border:"1px solid black"},children:n.name[0].toUpperCase()}),(0,r.jsxs)(A.A,{marginLeft:1,children:[(0,r.jsxs)(A.A,{direction:"row",children:[(0,r.jsx)(b.A,{fontSize:"0.9rem",children:n.name}),n.rating&&(0,r.jsxs)(b.A,{marginLeft:.5,fontSize:"0.9rem",fontWeight:"200",children:["(",n.rating,")"]})]}),(0,r.jsx)(S,{fen:l,color:t})]})]}),c&&(0,r.jsxs)(b.A,{align:"center",sx:{backgroundColor:t===u.Q1.White?"white":"black",color:t===u.Q1.White?"black":"white"},borderRadius:"5px",padding:.8,border:"1px solid #424242",width:"5rem",textAlign:"right",children:[c.hours?"".concat(c.hours,":"):"",(0,j.Yn)(c.minutes),":",(0,j.Yn)(c.seconds),c.hours||c.minutes||c.seconds>20?"":".".concat(c.tenths)]})]})}let I=e=>{if(!e)return;let t=e.match(/\[%clk (\d+):(\d+):(\d+)(?:\.(\d*))?\]/);if(t)return{hours:parseInt(t[1]),minutes:parseInt(t[2]),seconds:parseInt(t[3]),tenths:t[4]?parseInt(t[4]):0}};var P=n(62465);function _(e){var t;let{id:n,canPlay:h,gameAtom:b,boardSize:x,whitePlayer:A,blackPlayer:C,boardOrientation:S=u.Q1.White,currentPositionAtom:E=(0,l.eU)({}),showBestMoveArrow:j=!1,showPlayerMoveIconAtom:I,showEvaluationBar:_=!1}=e,Q=(0,d.useRef)(null),W=(0,s.md)(b),{playMove:R}=(0,c.j)(b),M=(0,d.useMemo)(()=>(0,l.eU)([]),[]),z=(0,s.Xr)(M),T=(0,d.useMemo)(()=>(0,l.eU)([]),[]),L=(0,s.Xr)(T),N=(0,s.md)(E),[U,D]=(0,d.useState)(!1),[K,H]=(0,d.useState)(null),[O,F]=(0,d.useState)(null),q=(0,s.md)(g._),G=(0,s.md)(g.U),X=W.fen();(0,d.useEffect)(()=>{z([])},[X,z]);let $=(0,d.useCallback)(e=>{let{piece:t}=e;return!W.isGameOver()&&!!h&&(!0===h||h===t[0])},[h,W]),J=(0,d.useCallback)((e,t,n)=>{var r,i;return!!$({piece:n})&&!!R({from:e,to:t,promotion:null!==(i=null===(r=n[1])||void 0===r?void 0:r.toLowerCase())&&void 0!==i?i:"q"})},[$,R]),Y=(0,d.useCallback)(e=>{H(null!=e?e:null),F(null),D(!1),e?L(W.moves({square:e,verbose:!0}).map(e=>e.to)):L([])},[H,F,L,W]),V=(0,d.useCallback)((e,t)=>{if(z([]),!K){if(t&&!$({piece:t}))return;Y(e);return}let n=W.moves({square:K,verbose:!0}).find(t=>t.to===e);if(!n){Y(e);return}if(F(e),"p"===n.piece&&("w"===n.color&&"8"===e[1]||"b"===n.color&&"1"===e[1])){D(!0);return}Y(R({from:K,to:e})?void 0:e)},[W,$,K,R,Y,z]),Z=(0,d.useCallback)(e=>{z(t=>t.includes(e)?t.filter(t=>t!==e):[...t,e])},[z]),ee=(0,d.useCallback)((e,t)=>{Y(t)},[Y]),et=(0,d.useCallback)(()=>{Y()},[Y]),en=(0,d.useCallback)((e,t,n)=>{var r,i;if(!e)return!1;let o=null!==(i=null===(r=e[1])||void 0===r?void 0:r.toLowerCase())&&void 0!==i?i:"q";if(K&&O){let e=R({from:K,to:O,promotion:o});return Y(),!!e}if(t&&n){let e=R({from:t,to:n,promotion:o});return Y(),!!e}return Y(K),!1},[K,O,R,Y]),er=(0,d.useMemo)(()=>{var e,t;let n=null==N?void 0:null===(e=N.lastEval)||void 0===e?void 0:e.bestMove,r=null==N?void 0:null===(t=N.eval)||void 0===t?void 0:t.moveClassification;return n&&j&&r!==u.eK.Best&&r!==u.eK.Opening&&r!==u.eK.Forced&&r!==u.eK.Perfect?[[n.slice(0,2),n.slice(2,4),(0,P.A)(m.k_[u.eK.Best]).spin(-G).toHexString()]]:[]},[N,j,G]),ei=(0,d.useMemo)(()=>(function(e){let{currentPositionAtom:t,clickedSquaresAtom:n,playableSquaresAtom:i,showPlayerMoveIconAtom:o=(0,l.eU)(!1)}=e,a=(0,d.forwardRef)((e,a)=>{var l,c,u;let{children:h,square:m,style:b}=e,x=(0,s.md)(o),k=(0,s.md)(t),A=(0,s.md)(n),C=(0,s.md)(i),S=(0,s.md)(g.U),E=null===(l=k.lastMove)||void 0===l?void 0:l.from,j=null===(c=k.lastMove)||void 0===c?void 0:c.to,B=null==k?void 0:null===(u=k.eval)||void 0===u?void 0:u.moveClassification,I=(0,d.useMemo)(()=>A.includes(m)?f:E===m||j===m?w(B):void 0,[A,m,E,j,B]),P=(0,d.useMemo)(()=>C.includes(m)?p:void 0,[C,m]);return(0,r.jsxs)("div",{ref:a,style:{...b,position:"relative",filter:S?"hue-rotate(-".concat(S,"deg)"):void 0},children:[h,I&&(0,r.jsx)("div",{style:I}),P&&(0,r.jsx)("div",{style:P}),B&&x&&m===j&&(0,r.jsx)(v(),{src:"/icons/".concat(B,".png"),alt:"move-icon",width:35,height:35,style:{position:"absolute",top:"max(-12px, -1.8vw)",right:"max(-12px, -1.8vw)",maxWidth:"3.6vw",maxHeight:"3.6vw",zIndex:100}})]})});return a.displayName="SquareRenderer",a})({currentPositionAtom:E,clickedSquaresAtom:M,playableSquaresAtom:T,showPlayerMoveIconAtom:I}),[E,M,T,I]),eo=(0,d.useMemo)(()=>y.reduce((e,t)=>(e[t]=e=>{let{squareWidth:n}=e;return(0,r.jsx)(i.A,{width:n,height:n,sx:{backgroundImage:"url(/piece/".concat(q,"/").concat(t,".svg)"),backgroundSize:"contain"}})},e),{}),[q]),ea=(0,d.useMemo)(()=>{let e={borderRadius:"5px",boxShadow:"0 2px 10px rgba(0, 0, 0, 0.5)"};return G?{...e,filter:"hue-rotate(".concat(G,"deg)")}:e},[G]);return(0,r.jsxs)(o.A,{container:!0,justifyContent:"center",alignItems:"center",wrap:"nowrap",width:x,children:[_&&(0,r.jsx)(k,{height:(null==Q?void 0:null===(t=Q.current)||void 0===t?void 0:t.offsetHeight)||x||400,boardOrientation:S,currentPositionAtom:E}),(0,r.jsxs)(o.A,{container:!0,rowGap:1.5,justifyContent:"center",alignItems:"center",paddingLeft:2*!!_,size:"grow",children:[(0,r.jsx)(B,{color:S===u.Q1.White?u.Q1.Black:u.Q1.White,gameAtom:b,player:S===u.Q1.White?C:A}),(0,r.jsx)(o.A,{container:!0,justifyContent:"center",alignItems:"center",ref:Q,size:12,children:(0,r.jsx)(a.Ve,{id:"".concat(n,"-").concat(h),position:X,onPieceDrop:J,boardOrientation:S===u.Q1.White?"white":"black",customBoardStyle:ea,customArrows:er,isDraggablePiece:$,customSquare:ei,onSquareClick:V,onSquareRightClick:Z,onPieceDragBegin:ee,onPieceDragEnd:et,onPromotionPieceSelect:en,showPromotionDialog:U,promotionToSquare:O,animationDuration:200,customPieces:eo})}),(0,r.jsx)(B,{color:S,gameAtom:b,player:S===u.Q1.White?A:C})]})]})}let y=["wP","wB","wN","wR","wQ","wK","bP","bB","bN","bR","bQ","bK"]},32253:(e,t,n)=>{n.d(t,{K:()=>d});var r=n(47713),i=n(24026),o=n(14679),a=n(43699),l=n(39228),s=n(19271),c=n(14232);let d=e=>{let[t,n]=(0,c.useState)(null);return(0,c.useEffect)(()=>{e&&(e===s.Qz.Stockfish11||(0,r.TH)())&&u(e).then(e=>{n(t=>(null==t||t.shutdown(),e))})},[e]),t},u=e=>{switch(e){case s.Qz.Stockfish17:return l.f.create(!1);case s.Qz.Stockfish17Lite:return l.f.create(!0);case s.Qz.Stockfish16_1:return a.m.create(!1);case s.Qz.Stockfish16_1Lite:return a.m.create(!0);case s.Qz.Stockfish16:return o.K.create(!1);case s.Qz.Stockfish16NNUE:return o.K.create(!0);case s.Qz.Stockfish11:return i.T.create()}}},37242:(e,t,n)=>{n.d(t,{v:()=>o});var r=n(85278),i=n(14232);function o(e,t){let[n,o]=(0,i.useState)(""),[a,l]=(0,r.fp)(t);return(0,i.useEffect)(()=>{var t;o(e);let n=window.localStorage.getItem(e);if(!n)return;let r="undefined"===(t=n)?void 0:JSON.parse(t);r&&l(r)},[e,l]),(0,i.useEffect)(()=>{n===e&&window.localStorage.setItem(e,JSON.stringify(a))},[e,n,a]),[a,l]}},65897:(e,t,n)=>{n.d(t,{j:()=>f});var r=n(24307);let i=null,o=null,a=new Map,l={move:"/sounds/move.mp3",capture:"/sounds/capture.mp3",illegalMove:"/sounds/error.mp3"},s=async e=>{o&&clearTimeout(o),o=setTimeout(async()=>{i||(i=new AudioContext),"suspended"===i.state&&await i.resume();let t=a.get(l[e]);if(!t){let n=await fetch(l[e]),r=await i.decodeAudioData(await n.arrayBuffer());t=r,a.set(l[e],r)}let n=i.createBufferSource();n.buffer=t;let r=i.createGain();r.gain.value=.3,n.connect(r),r.connect(i.destination),n.start()},1)},c=()=>s("capture"),d=()=>s("illegalMove"),u=()=>s("move"),h=e=>e?e.captured?c():u():d();var v=n(22277),m=n(85278),g=n(14232);let f=e=>{let[t,n]=(0,m.fp)(e),i=(0,g.useCallback)(e=>{let t=new v.d$;t.loadPgn(e),n(t)},[n]),o=(0,g.useCallback)(e=>{let t=new v.d$(null==e?void 0:e.fen);(null==e?void 0:e.noHeaders)||(0,r.nt)(t,e),n(t)},[n]),a=(0,g.useCallback)(()=>{let e=new v.d$;if(0===t.history().length){var n,r;let i=t.pgn().split("]");if(["1-0","0-1","1/2-1/2","*"].includes(null!==(r=null===(n=i.at(-1))||void 0===n?void 0:n.trim())&&void 0!==r?r:""))return e.loadPgn(i.slice(0,-1).join("]")+"]"),e}return e.loadPgn(t.pgn()),e},[t]),l=(0,g.useCallback)(e=>{let t=e?(0,r.w0)(e):a();t.load(t.getHeaders().FEN||v.OS,{preserveHeaders:!0}),n(t)},[a,n]),s=(0,g.useCallback)(e=>{let t=a();try{let{comment:r,...i}=e,o=t.move(i);return r&&t.setComment(r),n(t),h(o),o}catch(e){return d(),null}},[a,n]),c=(0,g.useCallback)(e=>{let t=a(),r=null;for(let n of e)r=t.move(n);n(t),r&&h(r)},[a,n]);return{setPgn:i,reset:o,playMove:s,undoMove:(0,g.useCallback)(()=>{let e=a(),t=e.undo();t&&h(t),n(e)},[a,n]),goToMove:(0,g.useCallback)((e,t)=>{if(e<0)return;let r=new v.d$;r.loadPgn(t.pgn());let i=t.history().length;if(e>i)return;let o={};for(let t=i;t>e;t--)o=r.undo();n(r),h(o)},[n]),resetToStartingPosition:l,addMoves:c}}},69846:(e,t,n)=>{n.d(t,{l:()=>i});var r=n(14232);let i=()=>{var e,t,n;let[i,o]=(0,r.useState)({width:null!==(n=null===(t=document)||void 0===t?void 0:null===(e=t.querySelector(".MuiGrid2-root"))||void 0===e?void 0:e.clientWidth)&&void 0!==n?n:500,height:window?window.innerHeight-120:500});return(0,r.useEffect)(()=>{var e;let t=null===(e=document)||void 0===e?void 0:e.querySelector(".MuiGrid2-root");if(!t)return;let n=new ResizeObserver(()=>o(e=>({...e,width:t.clientWidth})));return n.observe(t),()=>{n.disconnect()}},[]),(0,r.useEffect)(()=>{let e=()=>{o(e=>({...e,height:window.innerHeight-100}))};return window.addEventListener("resize",e),()=>{window.removeEventListener("resize",e)}},[]),i}},82831:(e,t,n)=>{n.d(t,{K:()=>l});var r=n(85278),i=n(27064),o=n(41615),a=n(3816);let l=e=>{var t,n,o,a;let l=(0,r.md)(e),{gameFromUrl:c}=(0,i.R)(),d=l.getHeaders(),u=d.White&&"?"!==d.White?d.White:void 0,h=d.Black&&"?"!==d.Black?d.Black:void 0,v=(null==c?void 0:null===(t=c.white)||void 0===t?void 0:t.name)||u||"White",m=(null==c?void 0:null===(n=c.black)||void 0===n?void 0:n.name)||h||"Black",g=(null==c?void 0:null===(o=c.white)||void 0===o?void 0:o.rating)||Number(d.WhiteElo)||void 0,f=(null==c?void 0:null===(a=c.black)||void 0===a?void 0:a.rating)||Number(d.BlackElo)||void 0,p=((null==c?void 0:c.site)||d.Site||"unknown").toLowerCase().includes("chess.com"),w=s(v,p&&!!v&&"White"!==v),b=s(m,p&&!!m&&"Black"!==m);return{white:{name:v,rating:g,avatarUrl:null!=w?w:void 0},black:{name:m,rating:f,avatarUrl:null!=b?b:void 0}}},s=(e,t)=>{let{data:n}=(0,o.I)({queryKey:["CCAvatar",e],enabled:t,queryFn:()=>(0,a.e)(e),staleTime:36e5,gcTime:864e5});return n}},99509:(e,t,n)=>{n.d(t,{U:()=>o,_:()=>i});var r=n(42200);let i=(0,r.tG)("pieceSet","maestro"),o=(0,r.tG)("boardHue",0)}}]);
+"use strict";
+(self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
+  [947],
+  {
+    9320: (e, t, n) => {
+      n.d(t, { $: () => s });
+      var r = n(16042),
+        i = n(69114),
+        o = n(65364);
+      let a = o.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID
+          ? {
+              apiKey: o.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+              authDomain: o.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+              projectId: o.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+              storageBucket: o.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+              messagingSenderId: o.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+              appId: o.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+              measurementId: o.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
+            }
+          : void 0,
+        l = a ? (0, r.Wp)(a) : void 0;
+      (0, i.TT)().then((e) => {
+        e && l && (0, i.P5)(l);
+      });
+      let s = async (e, t) => {
+        if (
+          "localhost" === window.location.hostname ||
+          !(await (0, i.TT)()) ||
+          !l
+        )
+          return;
+        let n = (0, i.P5)(l);
+        (0, i.$s)(n, e, t);
+      };
+    },
+    18259: (e, t, n) => {
+      n.d(t, { A: () => m });
+      var r = n(37876),
+        i = n(98594),
+        o = n(31084),
+        a = n(9227),
+        l = n(77018),
+        s = n(58862),
+        c = n(70946),
+        d = n(15027),
+        u = n(54773),
+        h = n(18978),
+        v = n(14232);
+      function m(e) {
+        let {
+            min: t,
+            max: n,
+            label: u,
+            value: h,
+            setValue: m,
+            size: f,
+            marksFilter: p,
+            step: w = 1,
+            infoContent: b,
+          } = e,
+          [x, k] = (0, v.useState)(null),
+          A = (e) => {
+            k(e.currentTarget);
+          },
+          C = () => {
+            k(null);
+          };
+        return (0, r.jsxs)(o.A, {
+          container: !0,
+          justifyContent: "center",
+          alignItems: "center",
+          size: null != f ? f : 11,
+          children: [
+            (0, r.jsxs)(a.A, {
+              direction: "row",
+              width: "100%",
+              children: [
+                (0, r.jsx)(l.A, {
+                  id: "input-".concat(u),
+                  variant: "body2",
+                  children: 1 === w && p ? u : "".concat(u, ": ").concat(h),
+                }),
+                !!b &&
+                  (0, r.jsxs)(r.Fragment, {
+                    children: [
+                      (0, r.jsx)(s.x, {
+                        onClickAway: C,
+                        children: (0, r.jsx)(c.A, {
+                          size: "medium",
+                          "aria-owns": x ? "mouse-over-popover" : void 0,
+                          "aria-haspopup": "true",
+                          onClick: A,
+                          onMouseEnter: A,
+                          onMouseLeave: C,
+                          sx: { ml: 1, padding: 0 },
+                          "aria-label": "Help about number of threads",
+                          children: (0, r.jsx)(i.In, {
+                            icon: "mdi:info-outline",
+                            width: "1.1rem",
+                          }),
+                        }),
+                      }),
+                      (0, r.jsx)(d.Ay, {
+                        id: "mouse-over-popover",
+                        open: !!x,
+                        anchorEl: x,
+                        onClose: C,
+                        anchorOrigin: {
+                          vertical: "bottom",
+                          horizontal: "center",
+                        },
+                        transformOrigin: {
+                          vertical: "top",
+                          horizontal: "center",
+                        },
+                        sx: { pointerEvents: "none" },
+                        disableRestoreFocus: !0,
+                        children: (0, r.jsx)(l.A, {
+                          variant: "body2",
+                          sx: { padding: 2, maxWidth: 500 },
+                          children: b,
+                        }),
+                      }),
+                    ],
+                  }),
+              ],
+            }),
+            (0, r.jsx)(g, {
+              min: t,
+              max: n,
+              marks: p
+                ? Array.from({ length: n - t + 1 }, (e, n) => ({
+                    value: n + t,
+                    label: "".concat(n + t),
+                  })).filter((e, t) => t % p == 0)
+                : void 0,
+              step: w,
+              valueLabelDisplay: "off",
+              value: h,
+              onChange: (e, t) => m(t),
+              "aria-labelledby": "input-".concat(u),
+            }),
+          ],
+        });
+      }
+      let g = (0, u.Ay)(h.Ay)(() => ({
+        ".MuiSlider-markLabel": { fontSize: "0.8rem", lineHeight: "0.8rem" },
+        ".MuiSlider-thumb": { width: "18px", height: "18px" },
+        marginBottom: "1rem",
+      }));
+    },
+    19410: (e, t, n) => {
+      n.d(t, { h: () => _ });
+      var r = n(37876),
+        i = n(11494),
+        o = n(31084),
+        a = n(57065),
+        l = n(99542),
+        s = n(85278),
+        c = n(65897),
+        d = n(14232),
+        u = n(19271),
+        h = n(54587),
+        v = n.n(h),
+        m = n(92094),
+        g = n(99509);
+      let f = {
+          position: "absolute",
+          width: "100%",
+          height: "100%",
+          backgroundColor: "#eb6150",
+          opacity: "0.8",
+        },
+        p = {
+          position: "absolute",
+          width: "100%",
+          height: "100%",
+          backgroundColor: "rgba(0,0,0,.14)",
+          padding: "35%",
+          backgroundClip: "content-box",
+          borderRadius: "50%",
+          boxSizing: "border-box",
+        },
+        w = (e) => ({
+          position: "absolute",
+          width: "100%",
+          height: "100%",
+          backgroundColor: e ? m.k_[e] : "#fad541",
+          opacity: 0.5,
+        });
+      var b = n(77018),
+        x = n(24307);
+      function k(e) {
+        let {
+            height: t,
+            boardOrientation: n,
+            currentPositionAtom: a = (0, l.eU)({}),
+          } = e,
+          [c, h] = (0, d.useState)({ whiteBarPercentage: 50, label: "0.0" }),
+          v = (0, s.md)(a);
+        return (
+          (0, d.useEffect)(() => {
+            var e;
+            let t =
+              null == v
+                ? void 0
+                : null === (e = v.eval) || void 0 === e
+                  ? void 0
+                  : e.lines[0];
+            v.eval && t && !(t.depth < 6) && h((0, x.nY)(v.eval));
+          }, [v]),
+          (0, r.jsxs)(o.A, {
+            container: !0,
+            justifyContent: "center",
+            alignItems: "center",
+            width: "2rem",
+            height: t,
+            border: "1px solid black",
+            borderRadius: "5px",
+            children: [
+              (0, r.jsx)(i.A, {
+                sx: {
+                  backgroundColor: n === u.Q1.White ? "#424242" : "white",
+                  transition: "height 1s",
+                },
+                height: "".concat(
+                  n === u.Q1.White
+                    ? 100 - c.whiteBarPercentage
+                    : c.whiteBarPercentage,
+                  "%"
+                ),
+                width: "100%",
+                borderRadius:
+                  100 === c.whiteBarPercentage ? "5px" : "5px 5px 0 0",
+                children: (0, r.jsx)(b.A, {
+                  color: n === u.Q1.White ? "white" : "black",
+                  textAlign: "center",
+                  width: "100%",
+                  children:
+                    (c.whiteBarPercentage < 50 && n === u.Q1.White) ||
+                    (c.whiteBarPercentage >= 50 && n === u.Q1.Black)
+                      ? c.label
+                      : "",
+                }),
+              }),
+              (0, r.jsx)(i.A, {
+                sx: {
+                  backgroundColor: n === u.Q1.White ? "white" : "#424242",
+                  transition: "height 1s",
+                },
+                height: "".concat(
+                  n === u.Q1.White
+                    ? c.whiteBarPercentage
+                    : 100 - c.whiteBarPercentage,
+                  "%"
+                ),
+                width: "100%",
+                display: "flex",
+                alignItems: "flex-end",
+                borderRadius:
+                  100 === c.whiteBarPercentage ? "5px" : "0 0 5px 5px",
+                children: (0, r.jsx)(b.A, {
+                  color: n === u.Q1.White ? "black" : "white",
+                  textAlign: "center",
+                  width: "100%",
+                  children:
+                    (c.whiteBarPercentage >= 50 && n === u.Q1.White) ||
+                    (c.whiteBarPercentage < 50 && n === u.Q1.Black)
+                      ? c.label
+                      : "",
+                }),
+              }),
+            ],
+          })
+        );
+      }
+      var A = n(9227),
+        C = n(24422);
+      function S(e) {
+        let { fen: t, color: n } = e,
+          i = (0, d.useMemo)(
+            () =>
+              (0, x.Kz)(t, n).map((e) => {
+                let { piece: t, count: n } = e;
+                return E(t, n);
+              }),
+            [t, n]
+          ),
+          a = (0, d.useMemo)(() => {
+            let e = (0, x.LR)(t);
+            return n === u.Q1.White ? e : -e;
+          }, [t, n]);
+        return (0, r.jsxs)(o.A, {
+          container: !0,
+          alignItems: "end",
+          spacing: 0.7,
+          size: "auto",
+          marginLeft: "-".concat(0.165, "rem"),
+          children: [
+            (0, r.jsx)(A.A, { direction: "row", spacing: 0.1, children: i }),
+            a > 0 &&
+              (0, r.jsxs)(b.A, {
+                lineHeight: "".concat(0.8250000000000001, "rem"),
+                fontSize: "".concat(0.8250000000000001, "rem"),
+                marginLeft: 0.3,
+                children: ["+", a],
+              }),
+          ],
+        });
+      }
+      let E = (e, t) =>
+        t
+          ? (0, r.jsx)(
+              A.A,
+              {
+                direction: "row",
+                spacing: "-".concat(0.66, "rem"),
+                children: Array(t)
+                  .fill(0)
+                  .map((t, n) =>
+                    (0, r.jsx)(
+                      i.A,
+                      {
+                        width: "".concat(1.1, "rem"),
+                        height: "".concat(1.1, "rem"),
+                        sx: {
+                          backgroundImage: "url(/piece/cardinal/".concat(
+                            e,
+                            ".svg)"
+                          ),
+                          backgroundRepeat: "no-repeat",
+                        },
+                      },
+                      "".concat(e, "-").concat(n)
+                    )
+                  ),
+              },
+              e
+            )
+          : null;
+      var j = n(658);
+      function B(e) {
+        let { color: t, player: n, gameAtom: i } = e,
+          a = (0, s.md)(i),
+          l = a.fen(),
+          c = (0, d.useMemo)(() => {
+            if (a.turn() === t) {
+              var e, n;
+              let t =
+                null === (e = a.history({ verbose: !0 }).at(-1)) || void 0 === e
+                  ? void 0
+                  : e.before;
+              return I(
+                null ===
+                  (n = a.getComments().find((e) => {
+                    let { fen: n } = e;
+                    return n === t;
+                  })) || void 0 === n
+                  ? void 0
+                  : n.comment
+              );
+            }
+            return I(a.getComment());
+          }, [a, t]);
+        return (0, r.jsxs)(o.A, {
+          container: !0,
+          justifyContent: "space-between",
+          alignItems: "center",
+          size: 12,
+          children: [
+            (0, r.jsxs)(A.A, {
+              direction: "row",
+              children: [
+                (0, r.jsx)(C.A, {
+                  src: n.avatarUrl,
+                  alt: n.name,
+                  variant: "circular",
+                  sx: {
+                    width: 40,
+                    height: 40,
+                    backgroundColor: t === u.Q1.White ? "white" : "black",
+                    color: t === u.Q1.White ? "black" : "white",
+                    border: "1px solid black",
+                  },
+                  children: n.name[0].toUpperCase(),
+                }),
+                (0, r.jsxs)(A.A, {
+                  marginLeft: 1,
+                  children: [
+                    (0, r.jsxs)(A.A, {
+                      direction: "row",
+                      children: [
+                        (0, r.jsx)(b.A, {
+                          fontSize: "0.9rem",
+                          children: n.name,
+                        }),
+                        n.rating &&
+                          (0, r.jsxs)(b.A, {
+                            marginLeft: 0.5,
+                            fontSize: "0.9rem",
+                            fontWeight: "200",
+                            children: ["(", n.rating, ")"],
+                          }),
+                      ],
+                    }),
+                    (0, r.jsx)(S, { fen: l, color: t }),
+                  ],
+                }),
+              ],
+            }),
+            c &&
+              (0, r.jsxs)(b.A, {
+                align: "center",
+                sx: {
+                  backgroundColor: t === u.Q1.White ? "white" : "black",
+                  color: t === u.Q1.White ? "black" : "white",
+                },
+                borderRadius: "5px",
+                padding: 0.8,
+                border: "1px solid #424242",
+                width: "5rem",
+                textAlign: "right",
+                children: [
+                  c.hours ? "".concat(c.hours, ":") : "",
+                  (0, j.Yn)(c.minutes),
+                  ":",
+                  (0, j.Yn)(c.seconds),
+                  c.hours || c.minutes || c.seconds > 20
+                    ? ""
+                    : ".".concat(c.tenths),
+                ],
+              }),
+          ],
+        });
+      }
+      let I = (e) => {
+        if (!e) return;
+        let t = e.match(/\[%clk (\d+):(\d+):(\d+)(?:\.(\d*))?\]/);
+        if (t)
+          return {
+            hours: parseInt(t[1]),
+            minutes: parseInt(t[2]),
+            seconds: parseInt(t[3]),
+            tenths: t[4] ? parseInt(t[4]) : 0,
+          };
+      };
+      var P = n(62465);
+      function _(e) {
+        var t;
+        let {
+            id: n,
+            canPlay: h,
+            gameAtom: b,
+            boardSize: x,
+            whitePlayer: A,
+            blackPlayer: C,
+            boardOrientation: S = u.Q1.White,
+            currentPositionAtom: E = (0, l.eU)({}),
+            showBestMoveArrow: j = !1,
+            showPlayerMoveIconAtom: I,
+            showEvaluationBar: _ = !1,
+          } = e,
+          Q = (0, d.useRef)(null),
+          W = (0, s.md)(b),
+          { playMove: R } = (0, c.j)(b),
+          M = (0, d.useMemo)(() => (0, l.eU)([]), []),
+          z = (0, s.Xr)(M),
+          T = (0, d.useMemo)(() => (0, l.eU)([]), []),
+          L = (0, s.Xr)(T),
+          N = (0, s.md)(E),
+          [U, D] = (0, d.useState)(!1),
+          [K, H] = (0, d.useState)(null),
+          [O, F] = (0, d.useState)(null),
+          q = (0, s.md)(g._),
+          G = (0, s.md)(g.U),
+          X = W.fen();
+        (0, d.useEffect)(() => {
+          z([]);
+        }, [X, z]);
+        let $ = (0, d.useCallback)(
+            (e) => {
+              let { piece: t } = e;
+              return !W.isGameOver() && !!h && (!0 === h || h === t[0]);
+            },
+            [h, W]
+          ),
+          J = (0, d.useCallback)(
+            (e, t, n) => {
+              var r, i;
+              return (
+                !!$({ piece: n }) &&
+                !!R({
+                  from: e,
+                  to: t,
+                  promotion:
+                    null !==
+                      (i =
+                        null === (r = n[1]) || void 0 === r
+                          ? void 0
+                          : r.toLowerCase()) && void 0 !== i
+                      ? i
+                      : "q",
+                })
+              );
+            },
+            [$, R]
+          ),
+          Y = (0, d.useCallback)(
+            (e) => {
+              H(null != e ? e : null),
+                F(null),
+                D(!1),
+                e
+                  ? L(W.moves({ square: e, verbose: !0 }).map((e) => e.to))
+                  : L([]);
+            },
+            [H, F, L, W]
+          ),
+          V = (0, d.useCallback)(
+            (e, t) => {
+              if ((z([]), !K)) {
+                if (t && !$({ piece: t })) return;
+                Y(e);
+                return;
+              }
+              let n = W.moves({ square: K, verbose: !0 }).find(
+                (t) => t.to === e
+              );
+              if (!n) {
+                Y(e);
+                return;
+              }
+              if (
+                (F(e),
+                "p" === n.piece &&
+                  (("w" === n.color && "8" === e[1]) ||
+                    ("b" === n.color && "1" === e[1])))
+              ) {
+                D(!0);
+                return;
+              }
+              Y(R({ from: K, to: e }) ? void 0 : e);
+            },
+            [W, $, K, R, Y, z]
+          ),
+          Z = (0, d.useCallback)(
+            (e) => {
+              z((t) => (t.includes(e) ? t.filter((t) => t !== e) : [...t, e]));
+            },
+            [z]
+          ),
+          ee = (0, d.useCallback)(
+            (e, t) => {
+              Y(t);
+            },
+            [Y]
+          ),
+          et = (0, d.useCallback)(() => {
+            Y();
+          }, [Y]),
+          en = (0, d.useCallback)(
+            (e, t, n) => {
+              var r, i;
+              if (!e) return !1;
+              let o =
+                null !==
+                  (i =
+                    null === (r = e[1]) || void 0 === r
+                      ? void 0
+                      : r.toLowerCase()) && void 0 !== i
+                  ? i
+                  : "q";
+              if (K && O) {
+                let e = R({ from: K, to: O, promotion: o });
+                return Y(), !!e;
+              }
+              if (t && n) {
+                let e = R({ from: t, to: n, promotion: o });
+                return Y(), !!e;
+              }
+              return Y(K), !1;
+            },
+            [K, O, R, Y]
+          ),
+          er = (0, d.useMemo)(() => {
+            var e, t;
+            let n =
+                null == N
+                  ? void 0
+                  : null === (e = N.lastEval) || void 0 === e
+                    ? void 0
+                    : e.bestMove,
+              r =
+                null == N
+                  ? void 0
+                  : null === (t = N.eval) || void 0 === t
+                    ? void 0
+                    : t.moveClassification;
+            return n &&
+              j &&
+              r !== u.eK.Best &&
+              r !== u.eK.Opening &&
+              r !== u.eK.Forced &&
+              r !== u.eK.Perfect
+              ? [
+                  [
+                    n.slice(0, 2),
+                    n.slice(2, 4),
+                    (0, P.A)(m.k_[u.eK.Best]).spin(-G).toHexString(),
+                  ],
+                ]
+              : [];
+          }, [N, j, G]),
+          ei = (0, d.useMemo)(
+            () =>
+              (function (e) {
+                let {
+                    currentPositionAtom: t,
+                    clickedSquaresAtom: n,
+                    playableSquaresAtom: i,
+                    showPlayerMoveIconAtom: o = (0, l.eU)(!1),
+                  } = e,
+                  a = (0, d.forwardRef)((e, a) => {
+                    var l, c, u;
+                    let { children: h, square: m, style: b } = e,
+                      x = (0, s.md)(o),
+                      k = (0, s.md)(t),
+                      A = (0, s.md)(n),
+                      C = (0, s.md)(i),
+                      S = (0, s.md)(g.U),
+                      E =
+                        null === (l = k.lastMove) || void 0 === l
+                          ? void 0
+                          : l.from,
+                      j =
+                        null === (c = k.lastMove) || void 0 === c
+                          ? void 0
+                          : c.to,
+                      B =
+                        null == k
+                          ? void 0
+                          : null === (u = k.eval) || void 0 === u
+                            ? void 0
+                            : u.moveClassification,
+                      I = (0, d.useMemo)(
+                        () =>
+                          A.includes(m)
+                            ? f
+                            : E === m || j === m
+                              ? w(B)
+                              : void 0,
+                        [A, m, E, j, B]
+                      ),
+                      P = (0, d.useMemo)(
+                        () => (C.includes(m) ? p : void 0),
+                        [C, m]
+                      );
+                    return (0, r.jsxs)("div", {
+                      ref: a,
+                      style: {
+                        ...b,
+                        position: "relative",
+                        filter: S ? "hue-rotate(-".concat(S, "deg)") : void 0,
+                      },
+                      children: [
+                        h,
+                        I && (0, r.jsx)("div", { style: I }),
+                        P && (0, r.jsx)("div", { style: P }),
+                        B &&
+                          x &&
+                          m === j &&
+                          (0, r.jsx)(v(), {
+                            src: "/icons/".concat(B, ".png"),
+                            alt: "move-icon",
+                            width: 35,
+                            height: 35,
+                            style: {
+                              position: "absolute",
+                              top: "max(-12px, -1.8vw)",
+                              right: "max(-12px, -1.8vw)",
+                              maxWidth: "3.6vw",
+                              maxHeight: "3.6vw",
+                              zIndex: 100,
+                            },
+                          }),
+                      ],
+                    });
+                  });
+                return (a.displayName = "SquareRenderer"), a;
+              })({
+                currentPositionAtom: E,
+                clickedSquaresAtom: M,
+                playableSquaresAtom: T,
+                showPlayerMoveIconAtom: I,
+              }),
+            [E, M, T, I]
+          ),
+          eo = (0, d.useMemo)(
+            () =>
+              y.reduce(
+                (e, t) => (
+                  (e[t] = (e) => {
+                    let { squareWidth: n } = e;
+                    return (0, r.jsx)(i.A, {
+                      width: n,
+                      height: n,
+                      sx: {
+                        backgroundImage: "url(/piece/"
+                          .concat(q, "/")
+                          .concat(t, ".svg)"),
+                        backgroundSize: "contain",
+                      },
+                    });
+                  }),
+                  e
+                ),
+                {}
+              ),
+            [q]
+          ),
+          ea = (0, d.useMemo)(() => {
+            let e = {
+              borderRadius: "5px",
+              boxShadow: "0 2px 10px rgba(0, 0, 0, 0.5)",
+            };
+            return G ? { ...e, filter: "hue-rotate(".concat(G, "deg)") } : e;
+          }, [G]);
+        return (0, r.jsxs)(o.A, {
+          container: !0,
+          justifyContent: "center",
+          alignItems: "center",
+          wrap: "nowrap",
+          width: x,
+          children: [
+            _ &&
+              (0, r.jsx)(k, {
+                height:
+                  (null == Q
+                    ? void 0
+                    : null === (t = Q.current) || void 0 === t
+                      ? void 0
+                      : t.offsetHeight) ||
+                  x ||
+                  400,
+                boardOrientation: S,
+                currentPositionAtom: E,
+              }),
+            (0, r.jsxs)(o.A, {
+              container: !0,
+              rowGap: 1.5,
+              justifyContent: "center",
+              alignItems: "center",
+              paddingLeft: 2 * !!_,
+              size: "grow",
+              children: [
+                (0, r.jsx)(B, {
+                  color: S === u.Q1.White ? u.Q1.Black : u.Q1.White,
+                  gameAtom: b,
+                  player: S === u.Q1.White ? C : A,
+                }),
+                (0, r.jsx)(o.A, {
+                  container: !0,
+                  justifyContent: "center",
+                  alignItems: "center",
+                  ref: Q,
+                  size: 12,
+                  children: (0, r.jsx)(a.Ve, {
+                    id: "".concat(n, "-").concat(h),
+                    position: X,
+                    onPieceDrop: J,
+                    boardOrientation: S === u.Q1.White ? "white" : "black",
+                    customBoardStyle: ea,
+                    customArrows: er,
+                    isDraggablePiece: $,
+                    customSquare: ei,
+                    onSquareClick: V,
+                    onSquareRightClick: Z,
+                    onPieceDragBegin: ee,
+                    onPieceDragEnd: et,
+                    onPromotionPieceSelect: en,
+                    showPromotionDialog: U,
+                    promotionToSquare: O,
+                    animationDuration: 200,
+                    customPieces: eo,
+                  }),
+                }),
+                (0, r.jsx)(B, {
+                  color: S,
+                  gameAtom: b,
+                  player: S === u.Q1.White ? A : C,
+                }),
+              ],
+            }),
+          ],
+        });
+      }
+      let y = [
+        "wP",
+        "wB",
+        "wN",
+        "wR",
+        "wQ",
+        "wK",
+        "bP",
+        "bB",
+        "bN",
+        "bR",
+        "bQ",
+        "bK",
+      ];
+    },
+    32253: (e, t, n) => {
+      n.d(t, { K: () => d });
+      var r = n(47713),
+        i = n(24026),
+        o = n(14679),
+        a = n(43699),
+        l = n(39228),
+        s = n(19271),
+        c = n(14232);
+      let d = (e) => {
+          let [t, n] = (0, c.useState)(null);
+          return (
+            (0, c.useEffect)(() => {
+              e &&
+                (e === s.Qz.Stockfish11 || (0, r.TH)()) &&
+                u(e).then((e) => {
+                  n((t) => (null == t || t.shutdown(), e));
+                });
+            }, [e]),
+            t
+          );
+        },
+        u = (e) => {
+          switch (e) {
+            case s.Qz.Stockfish17:
+              return l.f.create(!1);
+            case s.Qz.Stockfish17Lite:
+              return l.f.create(!0);
+            case s.Qz.Stockfish16_1:
+              return a.m.create(!1);
+            case s.Qz.Stockfish16_1Lite:
+              return a.m.create(!0);
+            case s.Qz.Stockfish16:
+              return o.K.create(!1);
+            case s.Qz.Stockfish16NNUE:
+              return o.K.create(!0);
+            case s.Qz.Stockfish11:
+              return i.T.create();
+          }
+        };
+    },
+    37242: (e, t, n) => {
+      n.d(t, { v: () => o });
+      var r = n(85278),
+        i = n(14232);
+      function o(e, t) {
+        let [n, o] = (0, i.useState)(""),
+          [a, l] = (0, r.fp)(t);
+        return (
+          (0, i.useEffect)(() => {
+            var t;
+            o(e);
+            let n = window.localStorage.getItem(e);
+            if (!n) return;
+            let r = "undefined" === (t = n) ? void 0 : JSON.parse(t);
+            r && l(r);
+          }, [e, l]),
+          (0, i.useEffect)(() => {
+            n === e && window.localStorage.setItem(e, JSON.stringify(a));
+          }, [e, n, a]),
+          [a, l]
+        );
+      }
+    },
+    65897: (e, t, n) => {
+      n.d(t, { j: () => f });
+      var r = n(24307);
+      let i = null,
+        o = null,
+        a = new Map(),
+        l = {
+          move: "/sounds/move.mp3",
+          capture: "/sounds/capture.mp3",
+          illegalMove: "/sounds/error.mp3",
+        },
+        s = async (e) => {
+          o && clearTimeout(o),
+            (o = setTimeout(async () => {
+              i || (i = new AudioContext()),
+                "suspended" === i.state && (await i.resume());
+              let t = a.get(l[e]);
+              if (!t) {
+                let n = await fetch(l[e]),
+                  r = await i.decodeAudioData(await n.arrayBuffer());
+                (t = r), a.set(l[e], r);
+              }
+              let n = i.createBufferSource();
+              n.buffer = t;
+              let r = i.createGain();
+              (r.gain.value = 0.3),
+                n.connect(r),
+                r.connect(i.destination),
+                n.start();
+            }, 1));
+        },
+        c = () => s("capture"),
+        d = () => s("illegalMove"),
+        u = () => s("move"),
+        h = (e) => (e ? (e.captured ? c() : u()) : d());
+      var v = n(22277),
+        m = n(85278),
+        g = n(14232);
+      let f = (e) => {
+        let [t, n] = (0, m.fp)(e),
+          i = (0, g.useCallback)(
+            (e) => {
+              let t = new v.d$();
+              t.loadPgn(e), n(t);
+            },
+            [n]
+          ),
+          o = (0, g.useCallback)(
+            (e) => {
+              let t = new v.d$(null == e ? void 0 : e.fen);
+              (null == e ? void 0 : e.noHeaders) || (0, r.nt)(t, e), n(t);
+            },
+            [n]
+          ),
+          a = (0, g.useCallback)(() => {
+            let e = new v.d$();
+            if (0 === t.history().length) {
+              var n, r;
+              let i = t.pgn().split("]");
+              if (
+                ["1-0", "0-1", "1/2-1/2", "*"].includes(
+                  null !==
+                    (r =
+                      null === (n = i.at(-1)) || void 0 === n
+                        ? void 0
+                        : n.trim()) && void 0 !== r
+                    ? r
+                    : ""
+                )
+              )
+                return e.loadPgn(i.slice(0, -1).join("]") + "]"), e;
+            }
+            return e.loadPgn(t.pgn()), e;
+          }, [t]),
+          l = (0, g.useCallback)(
+            (e) => {
+              let t = e ? (0, r.w0)(e) : a();
+              t.load(t.getHeaders().FEN || v.OS, { preserveHeaders: !0 }), n(t);
+            },
+            [a, n]
+          ),
+          s = (0, g.useCallback)(
+            (e) => {
+              let t = a();
+              try {
+                let { comment: r, ...i } = e,
+                  o = t.move(i);
+                return r && t.setComment(r), n(t), h(o), o;
+              } catch (e) {
+                return d(), null;
+              }
+            },
+            [a, n]
+          ),
+          c = (0, g.useCallback)(
+            (e) => {
+              let t = a(),
+                r = null;
+              for (let n of e) r = t.move(n);
+              n(t), r && h(r);
+            },
+            [a, n]
+          );
+        return {
+          setPgn: i,
+          reset: o,
+          playMove: s,
+          undoMove: (0, g.useCallback)(() => {
+            let e = a(),
+              t = e.undo();
+            t && h(t), n(e);
+          }, [a, n]),
+          goToMove: (0, g.useCallback)(
+            (e, t) => {
+              if (e < 0) return;
+              let r = new v.d$();
+              r.loadPgn(t.pgn());
+              let i = t.history().length;
+              if (e > i) return;
+              let o = {};
+              for (let t = i; t > e; t--) o = r.undo();
+              n(r), h(o);
+            },
+            [n]
+          ),
+          resetToStartingPosition: l,
+          addMoves: c,
+        };
+      };
+    },
+    69846: (e, t, n) => {
+      n.d(t, { l: () => i });
+      var r = n(14232);
+      let i = () => {
+        var e, t, n;
+        let [i, o] = (0, r.useState)({
+          width:
+            null !==
+              (n =
+                null === (t = document) || void 0 === t
+                  ? void 0
+                  : null === (e = t.querySelector(".MuiGrid2-root")) ||
+                      void 0 === e
+                    ? void 0
+                    : e.clientWidth) && void 0 !== n
+              ? n
+              : 500,
+          height: window ? window.innerHeight - 120 : 500,
+        });
+        return (
+          (0, r.useEffect)(() => {
+            var e;
+            let t =
+              null === (e = document) || void 0 === e
+                ? void 0
+                : e.querySelector(".MuiGrid2-root");
+            if (!t) return;
+            let n = new ResizeObserver(() =>
+              o((e) => ({ ...e, width: t.clientWidth }))
+            );
+            return (
+              n.observe(t),
+              () => {
+                n.disconnect();
+              }
+            );
+          }, []),
+          (0, r.useEffect)(() => {
+            let e = () => {
+              o((e) => ({ ...e, height: window.innerHeight - 100 }));
+            };
+            return (
+              window.addEventListener("resize", e),
+              () => {
+                window.removeEventListener("resize", e);
+              }
+            );
+          }, []),
+          i
+        );
+      };
+    },
+    82831: (e, t, n) => {
+      n.d(t, { K: () => l });
+      var r = n(85278),
+        i = n(27064),
+        o = n(41615),
+        a = n(3816);
+      let l = (e) => {
+          var t, n, o, a;
+          let l = (0, r.md)(e),
+            { gameFromUrl: c } = (0, i.R)(),
+            d = l.getHeaders(),
+            u = d.White && "?" !== d.White ? d.White : void 0,
+            h = d.Black && "?" !== d.Black ? d.Black : void 0,
+            v =
+              (null == c
+                ? void 0
+                : null === (t = c.white) || void 0 === t
+                  ? void 0
+                  : t.name) ||
+              u ||
+              "White",
+            m =
+              (null == c
+                ? void 0
+                : null === (n = c.black) || void 0 === n
+                  ? void 0
+                  : n.name) ||
+              h ||
+              "Black",
+            g =
+              (null == c
+                ? void 0
+                : null === (o = c.white) || void 0 === o
+                  ? void 0
+                  : o.rating) ||
+              Number(d.WhiteElo) ||
+              void 0,
+            f =
+              (null == c
+                ? void 0
+                : null === (a = c.black) || void 0 === a
+                  ? void 0
+                  : a.rating) ||
+              Number(d.BlackElo) ||
+              void 0,
+            p = ((null == c ? void 0 : c.site) || d.Site || "unknown")
+              .toLowerCase()
+              .includes("chess.com"),
+            w = s(v, p && !!v && "White" !== v),
+            b = s(m, p && !!m && "Black" !== m);
+          return {
+            white: { name: v, rating: g, avatarUrl: null != w ? w : void 0 },
+            black: { name: m, rating: f, avatarUrl: null != b ? b : void 0 },
+          };
+        },
+        s = (e, t) => {
+          let { data: n } = (0, o.I)({
+            queryKey: ["CCAvatar", e],
+            enabled: t,
+            queryFn: () => (0, a.e)(e),
+            staleTime: 36e5,
+            gcTime: 864e5,
+          });
+          return n;
+        };
+    },
+    99509: (e, t, n) => {
+      n.d(t, { U: () => o, _: () => i });
+      var r = n(42200);
+      let i = (0, r.tG)("pieceSet", "maestro"),
+        o = (0, r.tG)("boardHue", 0);
+    },
+  },
+]);

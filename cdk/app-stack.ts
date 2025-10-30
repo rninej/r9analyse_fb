@@ -4,9 +4,9 @@ import {
   AccessLevel,
   Distribution,
   ResponseHeadersPolicy,
-  Function, 
-  FunctionCode, 
-  FunctionEventType
+  Function,
+  FunctionCode,
+  FunctionEventType,
 } from "aws-cdk-lib/aws-cloudfront";
 import { S3BucketOrigin } from "aws-cdk-lib/aws-cloudfront-origins";
 import { Bucket, BucketAccessControl } from "aws-cdk-lib/aws-s3";
@@ -124,8 +124,8 @@ export class AppStack extends cdk.Stack {
       }
     );
 
-    const rewriteFunction = new Function(this, 'RewriteFunction', {
-        code: FunctionCode.fromInline(`
+    const rewriteFunction = new Function(this, "RewriteFunction", {
+      code: FunctionCode.fromInline(`
           function handler(event) {
             var request = event.request;
             var uri = request.uri;
@@ -138,7 +138,7 @@ export class AppStack extends cdk.Stack {
 
             return request;
         }`),
-      });
+    });
 
     const hostedZone = HostedZone.fromLookup(this, "HostedZone", {
       domainName,
@@ -168,10 +168,12 @@ export class AppStack extends cdk.Stack {
       defaultBehavior: {
         origin: mainOriginAccessControl,
         responseHeadersPolicy,
-        functionAssociations: [{
+        functionAssociations: [
+          {
             function: rewriteFunction,
             eventType: FunctionEventType.VIEWER_REQUEST,
-        }],
+          },
+        ],
       },
       additionalBehaviors: {
         "/engines/*": {

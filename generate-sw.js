@@ -1,5 +1,4 @@
-
-const fs = require('fs');
+const fs = require("fs");
 
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
@@ -8,7 +7,7 @@ const firebaseConfig = {
   storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
   messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
   appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
-  measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID
+  measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
 };
 
 const swContent = `
@@ -38,6 +37,5 @@ messaging.onBackgroundMessage((payload) => {
 });
 `;
 
-fs.writeFileSync('public/firebase-messaging-sw.js', swContent);
-console.log('Firebase messaging service worker generated successfully.');
-
+fs.writeFileSync("public/firebase-messaging-sw.js", swContent);
+console.log("Firebase messaging service worker generated successfully.");

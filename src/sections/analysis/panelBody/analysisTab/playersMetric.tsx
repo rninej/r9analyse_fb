@@ -1,4 +1,4 @@
-import { Stack, Typography } from "@mui/material";
+import { Box, Stack, Typography } from "@mui/material";
 
 interface Props {
   title: string;
@@ -13,45 +13,42 @@ export default function PlayersMetric({
 }: Props) {
   return (
     <Stack
-      justifyContent="center"
+      direction="row"
+      justifyContent="space-between"
       alignItems="center"
-      flexDirection="row"
-      columnGap={{ xs: "8vw", md: 10 }}
+      sx={{
+        my: 2,
+        px: 2,
+        py: 1,
+        backgroundColor: "#3a3a3a",
+        borderRadius: "8px",
+      }}
     >
-      <ValueBlock value={whiteValue} color="white" />
-
-      <Typography align="center" fontSize="0.8em" noWrap>
+      <ValueBlock value={whiteValue} />
+      <Typography sx={{ fontWeight: 500, fontSize: "1rem", color: "#ffffff" }}>
         {title}
       </Typography>
-
-      <ValueBlock value={blackValue} color="black" />
+      <ValueBlock value={blackValue} />
     </Stack>
   );
 }
 
-const ValueBlock = ({
-  value,
-  color,
-}: {
-  value: string | number;
-  color: "white" | "black";
-}) => {
+const ValueBlock = ({ value }: { value: string | number }) => {
   return (
-    <Typography
-      align="center"
+    <Box
       sx={{
-        backgroundColor: color,
-        color: color === "white" ? "black" : "white",
+        p: 1.5,
+        borderRadius: "6px",
+        backgroundColor: "#4a4a4a",
+        minWidth: "80px",
+        textAlign: "center",
       }}
-      borderRadius="5px"
-      lineHeight="1em"
-      fontSize="0.9em"
-      padding={0.8}
-      fontWeight="500"
-      border="1px solid #424242"
-      noWrap
     >
-      {value}
-    </Typography>
+      <Typography
+        sx={{ fontWeight: "bold", fontSize: "1.1rem", color: "#ffffff" }}
+      >
+        {value}
+      </Typography>
+    </Box>
   );
 };

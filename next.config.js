@@ -1,9 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  distDir: 'out',
-  output: 'export',
+  distDir: "out",
+  output: "export",
   reactStrictMode: true,
-  swcMinify: true,
   images: {
     unoptimized: true,
   },

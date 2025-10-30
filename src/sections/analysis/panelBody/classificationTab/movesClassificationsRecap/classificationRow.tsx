@@ -1,5 +1,5 @@
 import { Color, MoveClassification } from "@/types/enums";
-import { Grid2 as Grid, Typography } from "@mui/material";
+import { Grid2 as Grid, Typography, Paper } from "@mui/material";
 import { useAtomValue } from "jotai";
 import { boardAtom, gameAtom, gameEvalAtom } from "../../../states";
 import { useMemo } from "react";
@@ -69,61 +69,83 @@ export default function ClassificationRow({ classification }: Props) {
   };
 
   return (
-    <Grid
-      container
-      justifyContent="space-evenly"
-      alignItems="center"
-      wrap="nowrap"
-      color={CLASSIFICATION_COLORS[classification]}
-      size={12}
+    <Paper
+      elevation={2}
+      sx={{
+        my: 0.5,
+        p: 1,
+        backgroundColor: "#3a3a3a",
+        borderRadius: "8px",
+        "&:hover": {
+          backgroundColor: "#4a4a4a",
+        },
+      }}
     >
       <Grid
         container
-        justifyContent="center"
+        justifyContent="space-between"
         alignItems="center"
-        width={"3rem"}
-        style={{ cursor: whiteNb ? "pointer" : "default" }}
-        onClick={() => handleClick(Color.White)}
-        fontSize="0.9rem"
-      >
-        {whiteNb}
-      </Grid>
-
-      <Grid
-        container
-        justifyContent="start"
-        alignItems="center"
-        width={"10rem"}
-        gap={1}
         wrap="nowrap"
+        color={CLASSIFICATION_COLORS[classification]}
+        size={12}
       >
-        <Image
-          src={`/icons/${classification}.png`}
-          alt="move-icon"
-          width={18}
-          height={18}
-          style={{
-            maxWidth: "3.5vw",
-            maxHeight: "3.5vw",
+        <Grid
+          container
+          justifyContent="center"
+          alignItems="center"
+          sx={{
+            cursor: whiteNb ? "pointer" : "default",
+            width: "4rem",
+            p: 1,
+            borderRadius: "6px",
+            "&:hover": { bgcolor: whiteNb ? "#5a5a5a" : "transparent" },
           }}
-        />
+          onClick={() => handleClick(Color.White)}
+        >
+          <Typography sx={{ fontWeight: "bold", fontSize: "1rem" }}>
+            {whiteNb}
+          </Typography>
+        </Grid>
 
-        <Typography align="center" fontSize="0.9rem">
-          {capitalize(classification)}
-        </Typography>
-      </Grid>
+        <Grid
+          container
+          justifyContent="start"
+          alignItems="center"
+          gap={1.5}
+          wrap="nowrap"
+          sx={{ flexGrow: 1, mx: 1 }}
+        >
+          <Image
+            src={`/icons/${classification}.png`}
+            alt="move-icon"
+            width={24}
+            height={24}
+          />
+          <Typography
+            sx={{ fontWeight: 500, fontSize: "1.1rem", color: "#ffffff" }}
+          >
+            {capitalize(classification)}
+          </Typography>
+        </Grid>
 
-      <Grid
-        container
-        justifyContent="center"
-        alignItems="center"
-        width={"3rem"}
-        style={{ cursor: blackNb ? "pointer" : "default" }}
-        onClick={() => handleClick(Color.Black)}
-        fontSize="0.9rem"
-      >
-        {blackNb}
+        <Grid
+          container
+          justifyContent="center"
+          alignItems="center"
+          sx={{
+            cursor: blackNb ? "pointer" : "default",
+            width: "4rem",
+            p: 1,
+            borderRadius: "6px",
+            "&:hover": { bgcolor: blackNb ? "#5a5a5a" : "transparent" },
+          }}
+          onClick={() => handleClick(Color.Black)}
+        >
+          <Typography sx={{ fontWeight: "bold", fontSize: "1rem" }}>
+            {blackNb}
+          </Typography>
+        </Grid>
       </Grid>
-    </Grid>
+    </Paper>
   );
 }

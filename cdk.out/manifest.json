@@ -21,18 +21,14 @@
         "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-123456789012-eu-west-3/4daa03e3a2768576d3f6b05c75280288d1fdc1f301b80722de2902e187abad3e.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
-        "additionalDependencies": [
-          "FreechessWebapp.assets"
-        ],
+        "additionalDependencies": ["FreechessWebapp.assets"],
         "lookupRole": {
           "arn": "arn:${AWS::Partition}:iam::123456789012:role/cdk-hnb659fds-lookup-role-123456789012-eu-west-3",
           "requiresBootstrapStackVersion": 8,
           "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
         }
       },
-      "dependencies": [
-        "FreechessWebapp.assets"
-      ],
+      "dependencies": ["FreechessWebapp.assets"],
       "metadata": {
         "/FreechessWebapp": [
           {
@@ -179,9 +175,7 @@
             "type": "aws:cdk:analytics:construct",
             "data": {
               "uuid": "*",
-              "layers": [
-                "*"
-              ],
+              "layers": ["*"],
               "environment": "*",
               "lambdaPurpose": "*",
               "timeout": "*",
@@ -200,19 +194,13 @@
           {
             "type": "aws:cdk:analytics:method",
             "data": {
-              "addMetadata": [
-                "*",
-                true
-              ]
+              "addMetadata": ["*", true]
             }
           },
           {
             "type": "aws:cdk:analytics:method",
             "data": {
-              "addMetadata": [
-                "*",
-                "*"
-              ]
+              "addMetadata": ["*", "*"]
             }
           }
         ],
@@ -232,9 +220,7 @@
           {
             "type": "aws:cdk:analytics:construct",
             "data": {
-              "layers": [
-                "*"
-              ],
+              "layers": ["*"],
               "environment": "*",
               "timeout": "*",
               "role": "*",
@@ -252,18 +238,13 @@
           {
             "type": "aws:cdk:analytics:method",
             "data": {
-              "addEnvironment": [
-                "*",
-                "*"
-              ]
+              "addEnvironment": ["*", "*"]
             }
           },
           {
             "type": "aws:cdk:analytics:method",
             "data": {
-              "addLayers": [
-                "*"
-              ]
+              "addLayers": ["*"]
             }
           },
           {
@@ -301,49 +282,37 @@
           {
             "type": "aws:cdk:analytics:method",
             "data": {
-              "addToPrincipalPolicy": [
-                {}
-              ]
+              "addToPrincipalPolicy": [{}]
             }
           },
           {
             "type": "aws:cdk:analytics:method",
             "data": {
-              "attachInlinePolicy": [
-                "*"
-              ]
+              "attachInlinePolicy": ["*"]
             }
           },
           {
             "type": "aws:cdk:analytics:method",
             "data": {
-              "attachInlinePolicy": [
-                "*"
-              ]
+              "attachInlinePolicy": ["*"]
             }
           },
           {
             "type": "aws:cdk:analytics:method",
             "data": {
-              "addToPrincipalPolicy": [
-                {}
-              ]
+              "addToPrincipalPolicy": [{}]
             }
           },
           {
             "type": "aws:cdk:analytics:method",
             "data": {
-              "addToPrincipalPolicy": [
-                {}
-              ]
+              "addToPrincipalPolicy": [{}]
             }
           },
           {
             "type": "aws:cdk:analytics:method",
             "data": {
-              "addToPrincipalPolicy": [
-                {}
-              ]
+              "addToPrincipalPolicy": [{}]
             }
           }
         ],
@@ -367,49 +336,37 @@
           {
             "type": "aws:cdk:analytics:method",
             "data": {
-              "attachToRole": [
-                "*"
-              ]
+              "attachToRole": ["*"]
             }
           },
           {
             "type": "aws:cdk:analytics:method",
             "data": {
-              "attachToRole": [
-                "*"
-              ]
+              "attachToRole": ["*"]
             }
           },
           {
             "type": "aws:cdk:analytics:method",
             "data": {
-              "addStatements": [
-                {}
-              ]
+              "addStatements": [{}]
             }
           },
           {
             "type": "aws:cdk:analytics:method",
             "data": {
-              "addStatements": [
-                {}
-              ]
+              "addStatements": [{}]
             }
           },
           {
             "type": "aws:cdk:analytics:method",
             "data": {
-              "addStatements": [
-                {}
-              ]
+              "addStatements": [{}]
             }
           },
           {
             "type": "aws:cdk:analytics:method",
             "data": {
-              "addStatements": [
-                {}
-              ]
+              "addStatements": [{}]
             }
           }
         ],
@@ -442,9 +399,7 @@
             "type": "aws:cdk:analytics:construct",
             "data": {
               "uuid": "*",
-              "layers": [
-                "*"
-              ],
+              "layers": ["*"],
               "environment": "*",
               "lambdaPurpose": "*",
               "timeout": "*",
@@ -463,19 +418,13 @@
           {
             "type": "aws:cdk:analytics:method",
             "data": {
-              "addMetadata": [
-                "*",
-                true
-              ]
+              "addMetadata": ["*", true]
             }
           },
           {
             "type": "aws:cdk:analytics:method",
             "data": {
-              "addMetadata": [
-                "*",
-                "*"
-              ]
+              "addMetadata": ["*", "*"]
             }
           }
         ],
@@ -508,9 +457,7 @@
             "type": "aws:cdk:analytics:construct",
             "data": {
               "uuid": "*",
-              "layers": [
-                "*"
-              ],
+              "layers": ["*"],
               "environment": "*",
               "lambdaPurpose": "*",
               "timeout": "*",
@@ -529,19 +476,13 @@
           {
             "type": "aws:cdk:analytics:method",
             "data": {
-              "addMetadata": [
-                "*",
-                true
-              ]
+              "addMetadata": ["*", true]
             }
           },
           {
             "type": "aws:cdk:analytics:method",
             "data": {
-              "addMetadata": [
-                "*",
-                "*"
-              ]
+              "addMetadata": ["*", "*"]
             }
           }
         ],
@@ -561,9 +502,7 @@
           {
             "type": "aws:cdk:analytics:construct",
             "data": {
-              "layers": [
-                "*"
-              ],
+              "layers": ["*"],
               "environment": "*",
               "timeout": "*",
               "role": "*",
@@ -581,18 +520,13 @@
           {
             "type": "aws:cdk:analytics:method",
             "data": {
-              "addEnvironment": [
-                "*",
-                "*"
-              ]
+              "addEnvironment": ["*", "*"]
             }
           },
           {
             "type": "aws:cdk:analytics:method",
             "data": {
-              "addLayers": [
-                "*"
-              ]
+              "addLayers": ["*"]
             }
           },
           {
@@ -622,33 +556,25 @@
           {
             "type": "aws:cdk:analytics:method",
             "data": {
-              "addToPrincipalPolicy": [
-                {}
-              ]
+              "addToPrincipalPolicy": [{}]
             }
           },
           {
             "type": "aws:cdk:analytics:method",
             "data": {
-              "attachInlinePolicy": [
-                "*"
-              ]
+              "attachInlinePolicy": ["*"]
             }
           },
           {
             "type": "aws:cdk:analytics:method",
             "data": {
-              "attachInlinePolicy": [
-                "*"
-              ]
+              "attachInlinePolicy": ["*"]
             }
           },
           {
             "type": "aws:cdk:analytics:method",
             "data": {
-              "addToPrincipalPolicy": [
-                {}
-              ]
+              "addToPrincipalPolicy": [{}]
             }
           }
         ],
@@ -672,33 +598,25 @@
           {
             "type": "aws:cdk:analytics:method",
             "data": {
-              "attachToRole": [
-                "*"
-              ]
+              "attachToRole": ["*"]
             }
           },
           {
             "type": "aws:cdk:analytics:method",
             "data": {
-              "attachToRole": [
-                "*"
-              ]
+              "attachToRole": ["*"]
             }
           },
           {
             "type": "aws:cdk:analytics:method",
             "data": {
-              "addStatements": [
-                {}
-              ]
+              "addStatements": [{}]
             }
           },
           {
             "type": "aws:cdk:analytics:method",
             "data": {
-              "addStatements": [
-                {}
-              ]
+              "addStatements": [{}]
             }
           }
         ],
@@ -799,49 +717,37 @@
           {
             "type": "aws:cdk:analytics:method",
             "data": {
-              "attachInlinePolicy": [
-                "*"
-              ]
+              "attachInlinePolicy": ["*"]
             }
           },
           {
             "type": "aws:cdk:analytics:method",
             "data": {
-              "attachInlinePolicy": [
-                "*"
-              ]
+              "attachInlinePolicy": ["*"]
             }
           },
           {
             "type": "aws:cdk:analytics:method",
             "data": {
-              "attachInlinePolicy": [
-                "*"
-              ]
+              "attachInlinePolicy": ["*"]
             }
           },
           {
             "type": "aws:cdk:analytics:method",
             "data": {
-              "attachInlinePolicy": [
-                "*"
-              ]
+              "attachInlinePolicy": ["*"]
             }
           },
           {
             "type": "aws:cdk:analytics:method",
             "data": {
-              "attachInlinePolicy": [
-                "*"
-              ]
+              "attachInlinePolicy": ["*"]
             }
           },
           {
             "type": "aws:cdk:analytics:method",
             "data": {
-              "attachInlinePolicy": [
-                "*"
-              ]
+              "attachInlinePolicy": ["*"]
             }
           }
         ],
@@ -873,25 +779,19 @@
           {
             "type": "aws:cdk:analytics:method",
             "data": {
-              "addStatements": [
-                {}
-              ]
+              "addStatements": [{}]
             }
           },
           {
             "type": "aws:cdk:analytics:method",
             "data": {
-              "attachToRole": [
-                "*"
-              ]
+              "attachToRole": ["*"]
             }
           },
           {
             "type": "aws:cdk:analytics:method",
             "data": {
-              "attachToRole": [
-                "*"
-              ]
+              "attachToRole": ["*"]
             }
           }
         ],
@@ -911,25 +811,19 @@
           {
             "type": "aws:cdk:analytics:method",
             "data": {
-              "addStatements": [
-                {}
-              ]
+              "addStatements": [{}]
             }
           },
           {
             "type": "aws:cdk:analytics:method",
             "data": {
-              "attachToRole": [
-                "*"
-              ]
+              "attachToRole": ["*"]
             }
           },
           {
             "type": "aws:cdk:analytics:method",
             "data": {
-              "attachToRole": [
-                "*"
-              ]
+              "attachToRole": ["*"]
             }
           }
         ],
@@ -949,25 +843,19 @@
           {
             "type": "aws:cdk:analytics:method",
             "data": {
-              "addStatements": [
-                {}
-              ]
+              "addStatements": [{}]
             }
           },
           {
             "type": "aws:cdk:analytics:method",
             "data": {
-              "attachToRole": [
-                "*"
-              ]
+              "attachToRole": ["*"]
             }
           },
           {
             "type": "aws:cdk:analytics:method",
             "data": {
-              "attachToRole": [
-                "*"
-              ]
+              "attachToRole": ["*"]
             }
           }
         ],
