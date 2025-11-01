@@ -1,164 +1,42 @@
-import {
-  Avatar,
-  Box,
-  Container,
-  Grid2 as Grid,
-  Typography,
-  Paper,
-  useTheme,
-  useMediaQuery,
-} from "@mui/material";
-import { PageTitle } from "@/components/pageTitle";
+import { Box, Container } from "@mui/material";
+import Grid from "@mui/material/Grid2";
+import Board from "@/components/board";
+import { GameReviewPanel } from "@/sections/analysis/GameReviewPanel";
+import { gameAtom } from "@/sections/analysis/states";
 import { usePlayersData } from "@/hooks/usePlayersData";
-import { gameAtom, gameEvalAtom } from "@/sections/analysis/states";
-import { useAtomValue } from "jotai";
-import { MoveClassification } from "@/types/enums";
-import ClassificationRow from "@/sections/analysis/panelBody/classificationTab/movesClassificationsRecap/classificationRow";
-import PlayersMetric from "@/sections/analysis/panelBody/analysisTab/playersMetric";
-import { useMemo } from "react";
-import GraphTab from "@/sections/analysis/panelBody/graphTab";
-
-const sortedMoveClassfications = [
-  MoveClassification.Splendid,
-  MoveClassification.Perfect,
-  MoveClassification.Best,
-  MoveClassification.Excellent,
-  MoveClassification.Okay,
-  MoveClassification.Opening,
-  MoveClassification.Inaccuracy,
-  MoveClassification.Mistake,
-  MoveClassification.Blunder,
-];
+import { Color } from "@/types/enums";
 
 export default function FullReview() {
   const { white, black } = usePlayersData(gameAtom);
-  const gameEval = useAtomValue(gameEvalAtom);
-  const theme = useTheme();
-  const isDesktop = useMediaQuery(theme.breakpoints.up("md"));
-
-  const whiteAccuracy = useMemo(() => {
-    if (!gameEval) return 0;
-    return gameEval.accuracy.white;
-  }, [gameEval]);
-
-  const blackAccuracy = useMemo(() => {
-    if (!gameEval) return 0;
-    return gameEval.accuracy.black;
-  }, [gameEval]);
-
-  if (!gameEval?.positions.length) {
-    return (
-      <Container maxWidth="md">
-        <PageTitle title="Game Review" />
-        <Paper
-          elevation={3}
-          sx={{ my: 4, p: 2, backgroundColor: "#2e2e2e", color: "white" }}
-        >
-          <Typography>
-            No game evaluation found. Please analyze a game first.
-          </Typography>
-        </Paper>
-      </Container>
-    );
-  }
 
   return (
-    <Container maxWidth="lg" sx={{ py: 4 }}>
-      <PageTitle title="Game Review" />
-      <Paper
-        elevation={3}
-        sx={{
-          my: 4,
-          p: { xs: 2, md: 4 },
-          backgroundColor: "#2e2e2e",
-          color: "white",
-          borderRadius: "16px",
-        }}
-      >
-        <Box
-          display="grid"
-          gridTemplateColumns={isDesktop ? "1fr 1fr" : "1fr"}
-          gap={{ xs: 4, md: 8 }}
-        >
-          {/* Left Column */}
-          <Box>
-            <Box sx={{ display: "flex", alignItems: "center", mb: 3 }}>
-              <Avatar
-                src="/icons/best.png"
-                sx={{ width: 64, height: 64, mr: 2 }}
-              />
-              <Box
-                sx={{
-                  p: 2,
-                  bgcolor: "#424242",
-                  borderRadius: "12px",
-                  color: "white",
-                  flexGrow: 1,
-                }}
-              >
-                <Typography variant="body1">
-                  Well done pouncing on that free piece.
-                </Typography>
-              </Box>
-            </Box>
-
-            <GraphTab />
-
-            <Grid
-              container
-              alignItems="center"
-              justifyContent="space-around"
-              sx={{ my: 3 }}
-            >
-              <Grid textAlign="center">
-                <Typography variant="h6">{white.name}</Typography>
-                <Avatar
-                  src="/piece/merida/wK.svg"
-                  variant="square"
-                  sx={{
-                    width: { xs: 100, md: 120 },
-                    height: { xs: 100, md: 120 },
-                    border: "3px solid #4caf50",
-                    borderRadius: "8px",
-                  }}
-                />
-              </Grid>
-              <Grid textAlign="center">
-                <Typography variant="h6" align="right">
-                  {black.name}
-                </Typography>
-                <Avatar
-                  src="/piece/merida/bK.svg"
-                  variant="square"
-                  sx={{
-                    width: { xs: 100, md: 120 },
-                    height: { xs: 100, md: 120 },
-                    border: "3px solid #f44336",
-                    borderRadius: "8px",
-                  }}
-                />
-              </Grid>
-            </Grid>
-          </Box>
-
-          {/* Right Column */}
-          <Box>
-            <PlayersMetric
-              title="Accuracy"
-              whiteValue={whiteAccuracy}
-              blackValue={blackAccuracy}
+    <Box
+      sx={{
+        backgroundColor: "#312e2b",
+        minHeight: "100vh",
+        py: 4,
+        display: "flex",
+        alignItems: "center",
+      }}
+    >
+      <Container maxWidth="lg">
+        <Grid container spacing={4} alignItems="flex-start">
+          <Grid sx={{ width: { xs: "100%", md: "66.66%" } }}>
+            <Board
+              id="review-board"
+              gameAtom={gameAtom}
+              whitePlayer={white}
+              blackPlayer={black}
+              boardOrientation={Color.White}
+              showEvaluationBar={false}
+              canPlay={false}
             />
-
-            <Grid container spacing={1} my={3}>
-              {sortedMoveClassfications.map((classification) => (
-                <Grid size={{ xs: 12, sm: 6 }} key={classification}>
-                  <ClassificationRow classification={classification} />
-                </Grid>
-              ))}
-            </Grid>
-          </Box>
-        </Box>
-      </Paper>
-    </Container>
+          </Grid>
+          <Grid sx={{ width: { xs: "100%", md: "33.33%" } }}>
+            <GameReviewPanel />
+          </Grid>
+        </Grid>
+      </Container>
+    </Box>
   );
 }
